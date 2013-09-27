@@ -2,6 +2,12 @@
 
 Seed Cerificate Application for Team Software process (219347/219348)
 
+The Seed Certificate Application provides a new way to handle requests for seed certificates and other related documents. In stead of making a request at the Department of Agriculture, our system makes it more easier, faster, secure and tracable.
+
+## Application Details
+
+Program based on [Laravel Framework](http://laravel.com)
+
 ## Member
 
 * Piyanggoon Pavachansatit        5410546202
