@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost:3306',
-			'database'  => 'tsp_laravel',
-			'username'  => 'root',
-			'password'  => '',
+			'host'      => '122.155.18.100',
+			'database'  => 'pawiscinth_laravel',
+			'username'  => 'pawiscinth_tsp3',
+			'password'  => 'Xiakim3',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
