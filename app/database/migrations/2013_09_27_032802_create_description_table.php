@@ -14,7 +14,15 @@ class CreateDescriptionTable extends Migration {
 	{
 		Schema::create('description', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->string('name');
+			$table->integer('age');
+			$table->string('nationality');
+			$table->string('identificationType');
+			$table->integer('identificationNumber');
+			$table->string('issuedDistrict');
+			$table->string('issuedProvince');
+			$table->string('address');
+			$table->integer('telNumber');
 			$table->timestamps();
 		});
 	}

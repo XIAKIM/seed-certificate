@@ -14,7 +14,19 @@ class CreateRm3Table extends Migration {
 	{
 		Schema::create('rm3', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->string('companyName');
+			$table->string('ownerName');
+			$table->string('companyAddress');
+			$table->string('certificateLanguage');
+			$table->string('testType');
+			$table->string('verifiedAmount');
+			$table->string('commonName');
+			$table->string('speciesName');
+			$table->string('source');
+			$table->string('chemical');
+			$table->string('seedAmount');
+			$table->string('totalWeight');
+			$table->integer('requestID');
 			$table->timestamps();
 		});
 	}

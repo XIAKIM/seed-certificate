@@ -14,7 +14,20 @@ class CreatePp9Table extends Migration {
 	{
 		Schema::create('pp9', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->string('companyName');
+			$table->integer('certificateNumber');
+			$table->string('createDate');
+			$table->string('expiredDate');
+			$table->string('speciesType');
+			$table->string('scientificName');
+			$table->string('speciesName');
+			$table->integer('unit');
+			$table->integer('amount');
+			$table->integer('value');
+			$table->string('departureCountry');
+			$table->string('departureCheckpoint');
+			$table->string('departureDate');
+			$table->integer('requestID');
 			$table->timestamps();
 		});
 	}

@@ -14,7 +14,11 @@ class CreatePp11Table extends Migration {
 	{
 		Schema::create('pp11', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->string('companyName');
+			$table->string('certificateType');
+			$table->integer('certificateNumber');
+			$table->string('reason');
+			$table->integer('requestID');
 			$table->timestamps();
 		});
 	}

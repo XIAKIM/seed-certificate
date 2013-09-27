@@ -14,7 +14,12 @@ class CreatePp12Table extends Migration {
 	{
 		Schema::create('pp12', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->string('companyName');
+			$table->string('certificateType');
+			$table->integer('certificateNumber');
+			$table->string('locationType');
+			$table->string('newLocation');
+			$table->integer('requestID');
 			$table->timestamps();
 		});
 	}

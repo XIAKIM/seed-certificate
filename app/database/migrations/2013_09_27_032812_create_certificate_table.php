@@ -14,7 +14,11 @@ class CreateCertificateTable extends Migration {
 	{
 		Schema::create('certificate', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->integer('certificateNumber');
+			$table->string('createDate');
+			$table->string('expiredDate');
+			$table->string('type');
+			$table->integer('userID');
 			$table->timestamps();
 		});
 	}

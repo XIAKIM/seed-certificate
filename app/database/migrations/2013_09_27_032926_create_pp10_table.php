@@ -14,7 +14,14 @@ class CreatePp10Table extends Migration {
 	{
 		Schema::create('pp10', function(Blueprint $table) {
 			$table->increments('id');
-			
+			$table->string('certificateType');
+			$table->integer('certifivateNumber');
+			$table->string('companyName');
+			$table->string('ownerName');
+			$table->string('companyAddress');
+			$table->string('collectingLocation');
+			$table->string('storingLocation');
+			$table->integer('requestID');
 			$table->timestamps();
 		});
 	}
