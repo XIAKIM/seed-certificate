@@ -11,7 +11,27 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::resource('/', 'UserController@index');
+Route::resource('/profile', 'UserController@show');
+Route::resource('/signup', 'UserController@create');
+Route::resource('/status', 'UserController@showStatus');
+
+Route::resource('/request', 'RequestController@index');
+Route::resource('/approve', 'RequestController@approve');
+Route::resource('/check', 'RequestController@check');
+Route::resource('/form', 'RequestController@showForm');
+
+Route::resource('/certificate', 'CertificateController@index');
+Route::get('/certificate/{id}', 'CertificateController@show');
+
+Route::get('/details', function() {
+	return View::make('details');
+});
+
+Route::get('/contact', function() {
+	return View::make('contact');
+});
+
+Route::get('/about', function() {
+	return View::make('about');
 });
