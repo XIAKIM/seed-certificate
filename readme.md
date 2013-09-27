@@ -8,6 +8,15 @@ The Seed Certificate Application provides a new way to handle requests for seed 
 
 Program based on [Laravel Framework](http://laravel.com)
 
+## Coding Standard
+
+Laravel follows the [PSR-0](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md) and [PSR-1](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md) coding standards. In addition to these standards, below is a list of other coding standards that should be followed:
+
+* Namespace declarations should be on the same line as <?php.
+* Class opening { should be on the same line as the class name.
+* Function and control structure opening { should be on a separate line.
+* Interface names are suffixed with Interface (FooInterface)
+
 ## Member
 
 * Piyanggoon Pavachansatit        5410546202
