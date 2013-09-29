@@ -17,9 +17,9 @@ class CreatePp1Table extends Migration {
 			$table->string('certificateType');
 			$table->string('companyName');
 			$table->string('ownerName');
-			$table->string('companyAddress');
-			$table->string('collectingLocation');
-			$table->string('storingAddress');
+			$table->text('companyAddress');
+			$table->text('collectingLocation');
+			$table->text('storingAddress');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

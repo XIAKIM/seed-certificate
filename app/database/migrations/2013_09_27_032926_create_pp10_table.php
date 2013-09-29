@@ -18,9 +18,9 @@ class CreatePp10Table extends Migration {
 			$table->integer('certifivateNumber');
 			$table->string('companyName');
 			$table->string('ownerName');
-			$table->string('companyAddress');
-			$table->string('collectingLocation');
-			$table->string('storingLocation');
+			$table->text('companyAddress');
+			$table->text('collectingLocation');
+			$table->text('storingLocation');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

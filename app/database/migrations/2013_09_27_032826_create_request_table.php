@@ -16,9 +16,9 @@ class CreateRequestTable extends Migration {
 			$table->increments('id');
 			$table->integer('formNumber');
 			$table->integer('requestNumber');
-			$table->string('date');
+			$table->dateTime('date');
 			$table->string('status');
-			$table->string('message');
+			$table->text('message');
 			$table->integer('userID');
 			$table->timestamps();
 		});

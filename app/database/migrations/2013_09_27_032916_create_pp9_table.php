@@ -16,8 +16,8 @@ class CreatePp9Table extends Migration {
 			$table->increments('id');
 			$table->string('companyName');
 			$table->integer('certificateNumber');
-			$table->string('createDate');
-			$table->string('expiredDate');
+			$table->dateTime('createDate');
+			$table->dateTime('expiredDate');
 			$table->string('speciesType');
 			$table->string('scientificName');
 			$table->string('speciesName');
@@ -26,7 +26,7 @@ class CreatePp9Table extends Migration {
 			$table->integer('value');
 			$table->string('departureCountry');
 			$table->string('departureCheckpoint');
-			$table->string('departureDate');
+			$table->dateTime('departureDate');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

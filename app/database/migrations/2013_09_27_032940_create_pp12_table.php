@@ -18,7 +18,7 @@ class CreatePp12Table extends Migration {
 			$table->string('certificateType');
 			$table->integer('certificateNumber');
 			$table->string('locationType');
-			$table->string('newLocation');
+			$table->text('newLocation');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

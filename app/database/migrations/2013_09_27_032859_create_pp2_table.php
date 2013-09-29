@@ -16,7 +16,7 @@ class CreatePp2Table extends Migration {
 			$table->increments('id');
 			$table->string('companyName');
 			$table->string('ownerName');
-			$table->string('companyAddress');
+			$table->text('companyAddress');
 			$table->string('arrivalCity');
 			$table->string('arrivalCountry');
 			$table->string('arrivalCheckpoint');

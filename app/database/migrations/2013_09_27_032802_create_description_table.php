@@ -18,11 +18,11 @@ class CreateDescriptionTable extends Migration {
 			$table->integer('age');
 			$table->string('nationality');
 			$table->string('identificationType');
-			$table->integer('identificationNumber');
+			$table->string('identificationNumber');
 			$table->string('issuedDistrict');
 			$table->string('issuedProvince');
-			$table->string('address');
-			$table->integer('telNumber');
+			$table->text('address');
+			$table->string('telNumber');
 			$table->timestamps();
 		});
 	}
