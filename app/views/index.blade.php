@@ -77,7 +77,7 @@
 						<button type="button" class="btn btn-default" data-dismiss="modal">
 							Sign in
 						</button>
-						<button type="submit" class="btn btn-default">
+						<button href="localhost:8000/signup" class="btn btn-default">
 							Sign up?
 						</button>
 					</div>
