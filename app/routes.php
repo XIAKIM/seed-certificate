@@ -15,6 +15,11 @@ Route::resource('/', 'UserController@index');
 Route::resource('/profile', 'UserController@show');
 Route::resource('/signup', 'UserController@create');
 Route::resource('/status', 'UserController@showStatus');
+Route::post('/login', 'UserController@loginAction');
+Route::any('/login', [
+	'as' => '/login',
+	'uses' => 'UserController@loginAction'
+]);
 
 Route::resource('/request', 'RequestController@index');
 Route::resource('/approve', 'RequestController@approve');

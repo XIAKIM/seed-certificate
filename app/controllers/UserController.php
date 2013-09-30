@@ -12,10 +12,76 @@ class UserController extends BaseController {
         $this->layout->content = View::make('mainpage');
 	}
 
-	public function loginAction()
+	/*public function loginAction()
 	{
-		//TODO login method
+		Log::error('test');
+
+		$errors = new MessageBag();
+        if ($old = Input::old("errors"))
+        {
+            $errors = $old;
+        }
+        $data = [
+            "errors" => $errors
+        ];
+        if (Input::server("REQUEST_METHOD") == "POST")
+        {
+            $validator = Validator::make(Input::all(), [
+                "username" => "required",
+                "password" => "required"
+            ]);
+            if ($validator->passes())
+            {
+                $credentials = [
+                    "username" => Input::get("username"),
+                    "password" => Input::get("password")
+                ];
+                if (Auth::attempt($credentials))
+                {
+                    return Redirect::route("/profile");
+                }
+            }
+            $data["errors"] = new MessageBag([
+                "password" => [
+                    "Username and/or password invalid."
+                ]
+            ]);
+            $data["username"] = Input::get("username");
+            return Redirect::route("/mainpage")
+                ->withInput($data);
+        }
+
+        return View::make("/mainpage", $data);
+	}*/
+
+	public function loginAction() 
+	{
+        if (Input::server("REQUEST_METHOD") == "POST")
+        {
+            $validator = Validator::make(Input::all(), [
+                "username" => "required",
+                "password" => "required"
+            ]);
+
+            if ($validator->passes())
+            {
+                $credentials = [
+                    "username" => Input::get("username"),
+                    "password" => Input::get("password")
+                ];
+                if (Auth::attempt($credentials))
+                {
+                    $this->layout->content = View::make('user.profile');
+                    return;
+                }
+            }
+            $data["username"] = Input::get("username");
+            $this->layout->content = View::make('mainpage');
+            return;
+        }
+        $this->layout->content = View::make('mainpage');
 	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
