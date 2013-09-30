@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-
+/** PP10 */
 class CreatePp10Table extends Migration {
 
 	/**

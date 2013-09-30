@@ -1,8 +1,8 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
+/** PP12 */
 class CreatePp12Table extends Migration {
 
 	/**

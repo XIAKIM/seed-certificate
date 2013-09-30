@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-
+/** PP8 */
 class CreatePp8Table extends Migration {
 
 	/**

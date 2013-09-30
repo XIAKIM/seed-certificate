@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-
+/** Description */
 class CreateDescriptionTable extends Migration {
 
 	/**
