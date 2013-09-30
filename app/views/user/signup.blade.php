@@ -52,5 +52,6 @@
 		<input type="text" class="form-control" placeholder='Tel Number'>
 	</div>
 	<button type="submit" class="btn btn-default">Sign in</button>
+	<button type="RESET" class="btn btn-default">Reset</button>
 </form>
 	@stop
