@@ -4,7 +4,7 @@
 	<table class="table">
 		<tr>
 			<td>Name</td>
-			<td>aaa</td>
+			<td></td>
 		</tr>
 		<tr>
 			<td>Age</td>
