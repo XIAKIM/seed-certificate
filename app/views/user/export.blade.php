@@ -4,26 +4,30 @@
   <h1>Export List</h1>
 </div>
 
-
 <div class="row">
-  <div class="span6">
+  <div class="col-md-6">
     <div class="col-lg-6">
       <div class="input-group">
         <input id='amount' type="text" class="form-control">
         <span class="input-group-btn">
           <button onclick='addRows()' class="btn btn-default" type="button">Go!</button>
         </span>
-      </div>
-    </div>
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+
 
   </div>
-  <div class='span5'></div>
-  <div class="span1">
+  <div class="col-md-4"></div>
 
-    <button type="reset" class="btn btn-default">Reset</button>
+  <div class="col-md-2">
+ <button type="reset" class="btn btn-default">Reset</button>
   </div>
-
 </div>
+<br>
+
+
+
+
 
 <table id='table' class="table">
   <tr id='addRow'>
