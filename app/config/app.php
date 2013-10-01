@@ -113,11 +113,10 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-<<<<<<< ca77d6ebe74b3eb57a8fd18343e9524a7da91545
-		//'Way\Generators\GeneratorsServiceProvider'
-=======
-	//	'Way\Generators\GeneratorsServiceProvider'
->>>>>>> 34f26db68d503c764d9d81e3d271ddf56336fc04
+
+
+
+
 	),
 
 	/*
