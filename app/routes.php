@@ -40,3 +40,11 @@ Route::get('/contact', function() {
 Route::get('/about', function() {
 	return View::make('about');
 });
+
+Route::get('/import', function() {
+	return View::make('user.import');
+});
+
+Route::get('/export', function() {
+	return View::make('user.export');
+});
