@@ -56,3 +56,7 @@ Route::get('/firstUser', function() {
 Route::get('/verification', function() {
 	return View::make('request.verification');
 });
+
+Route::get('/information', function() {
+	return View::make('user.information');
+});
