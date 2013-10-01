@@ -48,3 +48,7 @@ Route::get('/import', function() {
 Route::get('/export', function() {
 	return View::make('user.export');
 });
+
+Route::get('/firstUser', function() {
+	return View::make('user.firstUser');
+});
