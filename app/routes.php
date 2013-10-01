@@ -52,3 +52,7 @@ Route::get('/export', function() {
 Route::get('/firstUser', function() {
 	return View::make('user.firstUser');
 });
+
+Route::get('/verification', function() {
+	return View::make('request.verification');
+});
