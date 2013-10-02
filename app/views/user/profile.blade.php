@@ -42,4 +42,7 @@
 			<td></td>
 		</tr>
 	</table>
+	<button class="btn btn-default" type="">Edit</button>
+	<button class="btn btn-default" type="">Status</button>
+	<button class="btn btn-default" type="">Request</button>
 @stop

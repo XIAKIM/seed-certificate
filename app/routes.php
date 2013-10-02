@@ -110,6 +110,14 @@ Route::get('/accountVerificationAll', function() {
 	return View::make('request.accountVerificationAll');
 });
 
+Route::get('/seedVerificationPerson', function() {
+	return View::make('request.seedVerificationPerson');
+});
+
+Route::get('/Verification', function() {
+	return View::make('request.Verification');
+});
+
 Route::get('/information', function() {
 	return View::make('user.information');
 });
