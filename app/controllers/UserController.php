@@ -36,7 +36,8 @@ class UserController extends BaseController {
             {
                 $credentials = [
                     "username" => Input::get("username"),
-                    "password" => Input::get("password")
+                    "password" => Input::get("password"),
+                    "active" => 1
                 ];
                 if (Auth::attempt($credentials)) 
                 {
