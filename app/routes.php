@@ -106,6 +106,10 @@ Route::get('/seedVerificationAll', function() {
 	return View::make('request.seedVerificationAll');
 });
 
+Route::get('/accountVerificationAll', function() {
+	return View::make('request.accountVerificationAll');
+});
+
 Route::get('/information', function() {
 	return View::make('user.information');
 });
