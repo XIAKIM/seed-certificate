@@ -2,78 +2,69 @@
 
 class RequestController extends BaseController {
 	protected $layout = "index";
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
-	public function index()
+	
+	public function request()
 	{
-        return View::make('requests.index');
+
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
+	public function checkRequestAction()
 	{
-        return View::make('requests.create');
+
+	}	
+
+	public function requestForm()
+	{
+
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
+	public function createRequestAction()
 	{
-		//
+
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
+	public function verification()
 	{
-        return View::make('requests.show');
+
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
+	public function accountVerification()
 	{
-        return View::make('requests.edit');
+
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+	public function allAccountVerification()
 	{
-		//
+
 	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
+	public function accountApproveAction()
 	{
-		//
+
 	}
 
+	public function accountDenyAction()
+	{
+
+	}
+
+	public function seedVerification()
+	{
+
+	}
+
+	public function allSeedVerification()
+	{
+
+	}
+
+	public function seedApproveAction()
+	{
+
+	}
+
+	public function seedDenyAction()
+	{
+		
+	}
 }
