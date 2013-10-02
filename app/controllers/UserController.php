@@ -12,14 +12,32 @@ class UserController extends BaseController {
 	{
 		$this->layout->content = View::make('user.signup');
 	}
-
+	/* @author KimApiwat */ 
 	public function createAction()
 	{
-
+		if(Input::server("REQUEST_METHOD")=="POST")
+		{
+			$validator = Validator::make(Input::all(),[
+				"Username" => "required",
+				"Age"  => "required",
+				"Name" => "required",
+				"Address" => "required",
+				"Issued Province" => "required",
+				"Nationality" => "required",
+				"Nationality Type" => "required",
+				"Nationality Numbrt" => "required",
+				"Issued District" => "required",
+				"Issued Province" => "required",
+				"Identification Number" => "required",
+				"Tel Number" => "required"]);
+			
+				
+		}
 	}
 
 	public function status()
 	{
+
 		$this->layout->content = View::make('user.status');
 	}
 
@@ -71,14 +89,17 @@ class UserController extends BaseController {
 	{
 	
 	}
-
-	public function deleteAction()
+	/* Delete User by id */
+	/* @author Kimapiwat */ 
+	public function deleteAction($id)
 	{
-
+		$affected = DB::table('User')->delete(1);
 	}
 
+	/* @author Kimapiwat */
 	public function logoutAction()
 	{
-
+		Auth::logout();
+		// todo : Delete session 
 	}
 }
