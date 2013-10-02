@@ -42,7 +42,7 @@ class UserController extends BaseController {
                 if (Auth::attempt($credentials)) 
                 {
                 	Session::put('userID', Auth::user()->id);
-                	return Redirect::route('/profile');
+                	return Redirect::route('/afterlogin');
                 }
             }
             $data["username"] = Input::get("username");
@@ -50,6 +50,11 @@ class UserController extends BaseController {
             return;
         }
         $this->layout->content = View::make('mainpage');
+	}
+
+	public function afterLogin()
+	{
+		$this->layout->content = View::make('user.afterlogin');	
 	}
 
 	public function profile()

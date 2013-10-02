@@ -36,6 +36,11 @@ Route::any('/login', [
 	'uses' => 'UserController@loginAction'
 ]);
 
+Route::any('/afterlogin', [
+	'as' => '/afterlogin',
+	'uses' => 'UserController@afterLogin'
+]);
+
 Route::any('/profile', [
 	'as' => '/profile',
 	'uses' => 'UserController@profile'
