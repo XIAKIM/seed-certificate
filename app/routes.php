@@ -102,6 +102,10 @@ Route::get('/verification', function() {
 	return View::make('request.verification');
 });
 
+Route::get('/seedVerificationAll', function() {
+	return View::make('request.seedVerificationAll');
+});
+
 Route::get('/information', function() {
 	return View::make('user.information');
 });
