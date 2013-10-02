@@ -1,5 +1,8 @@
 @extends('index')
 @section('content')
+	@if(Session::has('userID'))
+        <h2>{{ Session::get('userID') }}</h2>
+	@endif
 		<img src="" alt="" class="img-thumbnail">
 	<table class="table">
 		<tr>

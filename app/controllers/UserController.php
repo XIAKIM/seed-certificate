@@ -2,57 +2,26 @@
 
 class UserController extends BaseController {
 	protected $layout = "index";
-	/**
-	 * Display a listing of the resource.
-	 *
-	 * @return Response
-	 */
+
 	public function index()
 	{
         $this->layout->content = View::make('mainpage');
 	}
 
-	/*public function loginAction()
+	public function signup()
 	{
-		Log::error('test');
+		$this->layout->content = View::make('user.signup');
+	}
 
-		$errors = new MessageBag();
-        if ($old = Input::old("errors"))
-        {
-            $errors = $old;
-        }
-        $data = [
-            "errors" => $errors
-        ];
-        if (Input::server("REQUEST_METHOD") == "POST")
-        {
-            $validator = Validator::make(Input::all(), [
-                "username" => "required",
-                "password" => "required"
-            ]);
-            if ($validator->passes())
-            {
-                $credentials = [
-                    "username" => Input::get("username"),
-                    "password" => Input::get("password")
-                ];
-                if (Auth::attempt($credentials))
-                {
-                    return Redirect::route("/profile");
-                }
-            }
-            $data["errors"] = new MessageBag([
-                "password" => [
-                    "Username and/or password invalid."
-                ]
-            ]);
-            $data["username"] = Input::get("username");
-            return Redirect::route("/mainpage")
-                ->withInput($data);
-        }
+	public function createAction()
+	{
 
-        return View::make("/mainpage", $data);
-	}*/
+	}
+
+	public function status()
+	{
+		$this->layout->content = View::make('user.status');
+	}
 
 	public function loginAction() 
 	{
@@ -69,10 +38,10 @@ class UserController extends BaseController {
                     "username" => Input::get("username"),
                     "password" => Input::get("password")
                 ];
-                if (Auth::attempt($credentials))
+                if (Auth::attempt($credentials)) 
                 {
-                    $this->layout->content = View::make('user.profile');
-                    return;
+                	Session::put('userID', Auth::user()->id);
+                	return Redirect::route('/profile');
                 }
             }
             $data["username"] = Input::get("username");
@@ -82,67 +51,28 @@ class UserController extends BaseController {
         $this->layout->content = View::make('mainpage');
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
+	public function profile()
 	{
-        $this->layout->content = View::make('user.signup');
+		$this->layout->content = View::make('user.profile');
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
+	public function edit()
 	{
-		//TODO save user to database
+		$this->layout->content = View::make('user.edit');
 	}
 
-	public function show()
+	public function updateAction()
 	{
-		//get userID from session and show
-        $this->layout->content = View::make('user.profile');
+	
 	}
 
-	public function showStatus() 
+	public function deleteAction()
 	{
-		$this->layout->content = View::make('user.status');
-	}
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-        return View::make('users.edit');
+
 	}
 
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
+	public function logoutAction()
 	{
-		//
-	}
 
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
 	}
-
 }

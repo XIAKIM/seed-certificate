@@ -11,14 +11,54 @@
 |
 */
 
-Route::resource('/', 'UserController@index');
-Route::resource('/profile', 'UserController@show');
-Route::resource('/signup', 'UserController@create');
-Route::resource('/status', 'UserController@showStatus');
-Route::post('/login', 'UserController@loginAction');
+Route::any('/', [
+	'as' => '/',
+	'uses' => 'UserController@index'
+]);
+
+Route::any('/', [
+	'as' => '/signup',
+	'uses' => 'UserController@signup'
+]);
+
+Route::any('/', [
+	'as' => '/create',
+	'uses' => 'UserController@createAction'
+]);
+
+Route::any('/', [
+	'as' => '/status',
+	'uses' => 'UserController@status'
+]);
+
 Route::any('/login', [
 	'as' => '/login',
 	'uses' => 'UserController@loginAction'
+]);
+
+Route::any('/profile', [
+	'as' => '/profile',
+	'uses' => 'UserController@profile'
+]);
+
+Route::any('/edit', [
+	'as' => '/edit',
+	'uses' => 'UserController@edit'
+]);
+
+Route::any('/update', [
+	'as' => '/update',
+	'uses' => 'UserController@updateAction'
+]);
+
+Route::any('/delete', [
+	'as' => '/delete',
+	'uses' => 'UserController@deleteAction'
+]);
+
+Route::any('/logout', [
+	'as' => '/logout',
+	'uses' => 'UserController@logoutAction'
 ]);
 
 Route::resource('/request', 'RequestController@index');
