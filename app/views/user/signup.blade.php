@@ -1,57 +1,46 @@
 @extends('index')
 @section('content')
 <div class="page-header">
-	<h1>Sign UP!!! </h1>
+	<title>Sign Up</title>
 </div>
+<form role="form">
+	<div class="bs-docs-grid">
+		<div class="row">
+			<div class="col-md-1">Name :  </div>
+			<div class="col-md-4"><input type="text" class="form-control" placeholder="Username"></div>
+			<div class="col-md-1">Age : </div>
+			<div class="col-md-2"><input type="text" class="form-control" placeholder="age"></div>
+			<div class="col-md-2">Nationality : </div>
+			<div class="col-md-2"><input type="text" class="form-control" placeholder="Nationality"></div>
+		</div>
+		<br>
 
+		<div class="row">
+			<div class="col-md-2">Identification Type : </div>
+			<div class="col-md-4"><input type="text" class="form-control" placeholder="Identification Type "></div>
+			<div class="col-md-2"> Identification Number: </div>
+			<div class="col-md-4"><input type="text" class="form-control" placeholder="Nationality Number"></div>
+		</div>
+<br>
+		<div class="row">
+			<div class="col-md-2">Issued District : </div>
+			<div class="col-md-4"><input type="text" class="form-control" placeholder="Issued District"></div>
+			<div class="col-md-2">Issued Province : </div>
+			<div class="col-md-4"><input type="text" class="form-control" placeholder="Issued Province'"></div>
+		</div>
 
-
-<form id='signup'>
-	<div class="input-group">
-		<span class="input-group-addon">Name       </span>
-		<input type="text" class="form-control" placeholder="Username">
+<br>
+		<div class="row">
+			<div class="col-md-1">Address: </div>
+			<div class="col-md-9"><textarea class="form-control" rows="3"></textarea></div>
+		</div>
+<br>
+		<div class="row">
+			<div class="col-md-2">Tel Number : </div>
+			<div class="col-md-3"><input type="text" class="form-control" placeholder='Tel Number'></div>
+			<div class='col-md-1'>Email :</div>
+			<div class='col-md-3'><input type="text" class="form-control" placeholder='Email'></div>
+		</div>
 	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Age</span>
-		<input type="text" class="form-control" placeholder="age">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Nationality</span>
-		<input type="text" class="form-control" placeholder="Nationality">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Nationality Type</span>
-		<input type="text" class="form-control" placeholder="Nationality Type">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Nationality Number</span>
-		<input type="text" class="form-control" placeholder="Nationality Number">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Issued District</span>
-		<input type="text" class="form-control" placeholder="Issued District">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Issued Province'</span>
-		<input type="text" class="form-control" placeholder="Issued Province'">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Address</span>
-		<input type="text" class="form-control" placeholder="Address">
-	</div>
-
-	<div class="input-group">
-		<span class="input-group-addon">Tel Number</span>
-		<input type="text" class="form-control" placeholder='Tel Number'>
-	</div>
-	<button type="submit" class="btn btn-default">Sign in</button>
-	<button type="RESET" class="btn btn-default">Reset</button>
 </form>
-	@stop
+@stop
