@@ -5,7 +5,7 @@ class RequestController extends BaseController {
 	
 	public function request()
 	{
-
+		$this->layout->content = View::make('request.request');
 	}
 
 	public function checkRequestAction()

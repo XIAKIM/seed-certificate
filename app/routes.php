@@ -66,7 +66,7 @@ Route::any('/logout', [
 	'uses' => 'UserController@logoutAction'
 ]);
 
-Route::resource('/request', 'RequestController@index');
+Route::resource('/request', 'RequestController@request');
 Route::resource('/approve', 'RequestController@approve');
 Route::resource('/check', 'RequestController@check');
 Route::resource('/form', 'RequestController@showForm');
