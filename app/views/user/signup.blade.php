@@ -21,7 +21,7 @@
 			<div class="col-md-2"> Identification Number: </div>
 			<div class="col-md-4"><input type="text" class="form-control" placeholder="Nationality Number"></div>
 		</div>
-<br>
+		<br>
 		<div class="row">
 			<div class="col-md-2">Issued District : </div>
 			<div class="col-md-4"><input type="text" class="form-control" placeholder="Issued District"></div>
@@ -29,18 +29,21 @@
 			<div class="col-md-4"><input type="text" class="form-control" placeholder="Issued Province'"></div>
 		</div>
 
-<br>
+		<br>
 		<div class="row">
 			<div class="col-md-1">Address: </div>
 			<div class="col-md-9"><textarea class="form-control" rows="3"></textarea></div>
 		</div>
-<br>
+		<br>
 		<div class="row">
 			<div class="col-md-2">Tel Number : </div>
 			<div class="col-md-3"><input type="text" class="form-control" placeholder='Tel Number'></div>
 			<div class='col-md-1'>Email :</div>
 			<div class='col-md-3'><input type="text" class="form-control" placeholder='Email'></div>
 		</div>
+		<input class="btn btn-default" type="submit" value="Submit">
+		<input class="btn btn-default" type="reset" value="Reset">
 	</div>
+
 </form>
 @stop
