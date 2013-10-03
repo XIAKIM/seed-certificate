@@ -114,6 +114,10 @@ Route::get('/seedVerificationPerson', function() {
 	return View::make('request.seedVerificationPerson');
 });
 
+Route::get('/verificationUser', function() {
+	return View::make('request.verificationUser');
+});
+
 Route::get('/Verification', function() {
 	return View::make('request.Verification');
 });
