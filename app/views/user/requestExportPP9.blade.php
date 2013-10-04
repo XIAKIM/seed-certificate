@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="page-header">
-  <h1>Request for Import List (PP8)</h1>
+  <h1>Request for Export List (PP8)</h1>
 </div>
 <div class="row">
   <div class="col-md-2 col-md-offset-8 ">Created Date: </div>
@@ -62,20 +62,20 @@
             <input type="text" class="form-control" name='value'placeholder="Value">
           </div>
           <div class="input-group">
-            <span class="input-group-addon">Departure Country</span>
-            <input type="text" class="form-control" name='departureCountry' placeholder="Departure Country">
+            <span class="input-group-addon">Arrival Country</span>
+            <input type="text" class="form-control" name='departureCountry' placeholder="Arrival Country">
           </div>
           <div class="input-group">
-            <span class="input-group-addon">Imported Checkpoint</span>
-            <input type="text" class="form-control" name='importedCheckpoint' placeholder="Imported Checkpoint">
+            <span class="input-group-addon">Exported Checkpoint</span>
+            <input type="text" class="form-control" name='importedCheckpoint' placeholder="Exported Checkpoint">
           </div>
           <div class="input-group">
-            <span class="input-group-addon">Imported Date</span>
-            <input type="text" class="form-control" name='importedDate' placeholder="Imported Date">
+            <span class="input-group-addon">Exportted Date</span>
+            <input type="text" class="form-control" name='importedDate' placeholder="Exported Date">
           </div>
         </div>
         <div class="modal-footer">
-          <button onclick='addRowsOfImport()' type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+          <button onclick='addRowsOfExport()' type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div><!-- /.modal-content -->
@@ -103,9 +103,9 @@
     <th>Unit</th>
     <th>Amount</th>
     <th>Value</th>
-    <th>Departure\nCountry</th>
-    <th>Imported\nCheckpoint</th>
-    <th>Imported\nDate</th>
+    <th>Arrival<br>Country</th>
+    <th>Exported<br>Checkpoint</th>
+    <th>Exported<br>Date</th>
 
   </tr>
 </table>
