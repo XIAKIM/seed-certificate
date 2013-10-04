@@ -40,39 +40,47 @@
           <div class="input-group">
             <span class="input-group-addon">Type</span>
             <!-- <input type="text" class="form-control"  placeholder="Type"> -->
-            {{ Form::text("types", null, ["class" => "form-control"] ) }}
+            {{ Form::text("type", null, ["class" => "form-control"] ,["placeholder"=>"Type"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Common Name</span>
-            <input type="text" class="form-control" name='commonName' placeholder="Common Name">
+            <!-- <input type="text" class="form-control" name='commonName' placeholder="Common Name"> -->
+            {{ Form::text("commonName", null, ["class" => "form-control"] ,["placeholder"=>"Common Name"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Science Name</span>
-            <input type="text" class="form-control" name='scienceName'placeholder="Science Name">
+            <!-- <input type="text" class="form-control" name='scienceName'placeholder="Science Name"> -->
+            {{ Form::text("scienceName", null, ["class" => "form-control"] ,["placeholder"=>"Science Name"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Unit</span>
-            <input type="text" class="form-control" name='unit' placeholder="Unit">
+            <!-- <input type="text" class="form-control" name='unit' placeholder="Unit"> -->
+            {{ Form::text("unit", null, ["class" => "form-control"] ,["placeholder"=>"Unit"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Amount</span>
-            <input type="text" class="form-control" name='amount' placeholder="Amount">
+            <!-- <input type="text" class="form-control" name='amount' placeholder="Amount"> -->
+            {{ Form::text("amount", null, ["class" => "form-control"] ,["placeholder"=>"Amount"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Value</span>
-            <input type="text" class="form-control" name='value'placeholder="Value">
+            <!-- <input type="text" class="form-control" name='value'placeholder="Value"> -->
+            {{ Form::text("value", null, ["class" => "form-control"] ,["placeholder"=>"Value"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Arrival Country</span>
-            <input type="text" class="form-control" name='departureCountry' placeholder="Arrival Country">
+            <!-- <input type="text" class="form-control" name='departureCountry' placeholder="Arrival Country"> -->
+            {{ Form::text("arrivalCountry", null, ["class" => "form-control"] ,["placeholder"=>"Arrival Country"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Exported Checkpoint</span>
-            <input type="text" class="form-control" name='importedCheckpoint' placeholder="Exported Checkpoint">
+            <!-- <input type="text" class="form-control" name='importedCheckpoint' placeholder="Exported Checkpoint"> -->
+          {{ Form::text("exportedCheckpoint", null, ["class" => "form-control"] ,["placeholder"=>"Exported Checkpoint"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Exportted Date</span>
-            <input type="text" class="form-control" name='importedDate' placeholder="Exported Date">
+            <!-- <input type="text" class="form-control" name='importedDate' placeholder="Exported Date"> -->
+            {{ Form::text("exportedDate", null, ["class" => "form-control"] ,["placeholder"=>"Exported Date"]) }}
           </div>
         </div>
         <div class="modal-footer">
