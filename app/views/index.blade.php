@@ -70,16 +70,13 @@
                 					{{ $error }}
             					</div>
         					@endif
-        					{{ Form::submit("login") }}
+        					{{ Form::submit("Login" , ["class" => "btn btn-default"] ) }}
     					{{ Form::close() }}
 					</div>
 					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">
-							Sign in
-						</button>
-						<button href="localhost:8000/signup" class="btn btn-default">
-							Sign up?
-						</button>
+						{{  Form::open(["route" => "/signup"]) }}
+							{{ Form::submit('Sign Up', ["class" => "btn btn-default"] ) }}
+						{{  Form::close() }}
 					</div>
 				</div><!-- /.modal-content -->
 			</div><!-- /.modal-dialog -->
