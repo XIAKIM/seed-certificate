@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="page-header">
-  <h1>Request for Export List (PP8)</h1>
+  <h1>Request for Export List (PP9)</h1>
 </div>
 <div class="row">
   <div class="col-md-2 col-md-offset-8 ">Created Date: </div>
@@ -22,7 +22,7 @@
   <div class="col-md-2 ">______________</div>
 </div>
 <br>
-
+{{ Form::open(["route" => "/requestPP9", "class" => "form-horizontal"]) }}
 <div class="row">
   <div class="col-md-6">
    <!-- Button trigger modal -->
@@ -39,7 +39,8 @@
         <div class="modal-body">
           <div class="input-group">
             <span class="input-group-addon">Type</span>
-            <input type="text" class="form-control" name='type' placeholder="Type">
+            <!-- <input type="text" class="form-control"  placeholder="Type"> -->
+            {{ Form::text("types", null, ["class" => "form-control"] ) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Common Name</span>
@@ -83,7 +84,7 @@
   </div><!-- /.modal -->
 
 </div>
-
+ {{ Form::close() }}
 
 
 <div class="col-md-4"></div>

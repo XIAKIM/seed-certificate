@@ -103,4 +103,10 @@ class UserController extends BaseController {
 		Auth::logout();
 		// todo : Delete session 
 	}
+
+	public function requestPP9()
+	{
+		$this->layout->content = View::make('request.requestPP9');
+		// todo : Delete session 
+	}
 }

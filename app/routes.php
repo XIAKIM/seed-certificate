@@ -66,6 +66,11 @@ Route::any('/logout', [
 	'uses' => 'UserController@logoutAction'
 ]);
 
+Route::any('/requestPP9', [
+	'as' => '/requestPP9',
+	'uses' => 'UserController@requestPP9'
+]);
+
 Route::resource('/request', 'RequestController@request');
 Route::resource('/approve', 'RequestController@approve');
 Route::resource('/check', 'RequestController@check');
@@ -91,7 +96,7 @@ Route::get('/requstPP8', function() {
 });
 
 Route::get('/requestPP9', function() {
-	return View::make('user.requestPP9');
+	return View::make('request.requestPP9');
 });
 
 Route::get('/firstUser', function() {
