@@ -16,17 +16,17 @@ Route::any('/', [
 	'uses' => 'UserController@index'
 ]);
 
-Route::any('/', [
+Route::any('/signup', [
 	'as' => '/signup',
 	'uses' => 'UserController@signup'
 ]);
 
-Route::any('/', [
+Route::any('/create', [
 	'as' => '/create',
 	'uses' => 'UserController@createAction'
 ]);
 
-Route::any('/', [
+Route::any('/status', [
 	'as' => '/status',
 	'uses' => 'UserController@status'
 ]);

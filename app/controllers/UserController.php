@@ -17,6 +17,7 @@ class UserController extends BaseController {
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
+			
 			$validator = Validator::make(Input::all(),[
 				"Username" => "required",
 				"Age"  => "required",
