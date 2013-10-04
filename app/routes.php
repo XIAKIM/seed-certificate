@@ -86,17 +86,26 @@ Route::get('/about', function() {
 	return View::make('about');
 });
 
-Route::get('/import', function() {
-	return View::make('user.import');
+Route::get('/requstPP8', function() {
+	return View::make('user.requestPP8');
 });
 
-Route::get('/export', function() {
-	return View::make('user.export');
+Route::get('/requestPP9', function() {
+	return View::make('user.requestPP9');
 });
 
 Route::get('/firstUser', function() {
 	return View::make('user.firstUser');
 });
+
+Route::get('/vertifyPP8', function() {
+	return View::make('user.vertifyPP8');
+});
+
+Route::get('/vertifyPP9', function() {
+	return View::make('user.vertifyPP9');
+});
+
 
 Route::get('/verification', function() {
 	return View::make('request.verification');
@@ -112,6 +121,10 @@ Route::get('/accountVerificationAll', function() {
 
 Route::get('/seedVerificationPerson', function() {
 	return View::make('request.seedVerificationPerson');
+});
+
+Route::get('/verificationUser', function() {
+	return View::make('request.verificationUser');
 });
 
 Route::get('/Verification', function() {
