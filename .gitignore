@@ -4,3 +4,5 @@ app/config/database.php
 composer.phar
 composer.lock
 .DS_Store
+
+app/views/user/signup.blade.php

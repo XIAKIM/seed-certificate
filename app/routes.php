@@ -119,12 +119,20 @@ Route::get('/accountVerificationAll', function() {
 	return View::make('request.accountVerificationAll');
 });
 
+Route::get('/accountVerification', function() {
+	return View::make('request.accountVerification');
+});
+
 Route::get('/seedVerificationPerson', function() {
 	return View::make('request.seedVerificationPerson');
 });
 
 Route::get('/verificationUser', function() {
 	return View::make('request.verificationUser');
+});
+
+Route::get('/informationPP1Officer', function() {
+	return View::make('request.informationPP1Officer');
 });
 
 Route::get('/Verification', function() {
