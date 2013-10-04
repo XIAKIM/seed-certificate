@@ -1,4 +1,4 @@
-@extends('index')
+
 @section('content')
 <div class = "container">
 			<h1>Request Form (PP1)</h1>
@@ -55,30 +55,33 @@
 					<label>Certificate of Collecting Seed________</label>
 					<br />
 					</p>
-					<form role="form">
+					{{ Form::open(["route" => "/requestPP1", "role" => "form"]) }}
+					<!-- <form role="form"> -->
 						<div class="form-group">
 							<label>Company Name:</label>
-							<input type="text" class="form-control">
-						
+							<!-- <input type="text" class="form-control"> -->
+							 {{ Form::text("companyName", null, ["class" => "form-control"] ) }}	
 							<label>Owner Name:</label>
-							<input type="text" class="form-control">
+							<!-- <input type="text" class="form-control"> -->
+							{{ Form::text("ownerName", null, ["class" => "form-control"] ) }}	
 						</div>
-						<br />
 						<div class="form-group">
 							<label>Company Address:</label>
-							<input type="textarea" class="form-control">
+							<!-- <input type="textarea" class="form-control"> -->
+							{{ Form::text("companyAddress", null, ["class" => "form-control"] ) }}	
 						</div>
-						<br />
 						<div class="form-group">
 							<label>Collecting Location:</label>
-							<input type="textarea" class="form-control">
+							<!-- <input type="textarea" class="form-control"> -->
+							{{ Form::text("collectingLocation", null, ["class" => "form-control"] ) }}	
 						</div>
-						<br />
 						<div class="form-group">
 							<label>Storing Location:</label>
-							<input type="textarea" class="form-control">
+							<!-- <input type="textarea" class="form-control"> -->
+							{{ Form::text("storingLocation", null, ["class" => "form-control"] ) }}	
 						</div>
-					</form>
+					<!-- </form> -->
+					 {{ Form::close() }}
 
 				</div>
 

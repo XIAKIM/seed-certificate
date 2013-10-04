@@ -71,6 +71,10 @@ Route::any('/requestPP9', [
 	'uses' => 'UserController@requestPP9'
 ]);
 
+Route::any('/requestPP1', [
+	'as' => '/requestPP1',
+	'uses' => 'UserController@requestPP1'
+]);
 Route::resource('/request', 'RequestController@request');
 Route::resource('/approve', 'RequestController@approve');
 Route::resource('/check', 'RequestController@check');
