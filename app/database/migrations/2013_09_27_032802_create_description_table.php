@@ -17,6 +17,7 @@ class CreateDescriptionTable extends Migration {
 			$table->string('name');
 			$table->string('lastName');
 			$table->integer('age');
+			$table->string('email');
 			$table->string('nationality');
 			$table->string('identificationType');
 			$table->string('identificationNumber');
