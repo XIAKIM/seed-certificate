@@ -86,12 +86,12 @@ Route::get('/about', function() {
 	return View::make('about');
 });
 
-Route::get('/import', function() {
-	return View::make('user.import');
+Route::get('/requstImportPP8', function() {
+	return View::make('user.requestImportPP8');
 });
 
 Route::get('/export', function() {
-	return View::make('user.export');
+	return View::make('user.requestExportPP9');
 });
 
 Route::get('/firstUser', function() {
