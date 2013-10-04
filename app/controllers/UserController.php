@@ -114,4 +114,9 @@ class UserController extends BaseController {
 		$this->layout->content = View::make('request.requestPP1');
 		// todo : Delete session 
 	}
+
+	public function requestPP8()
+	{
+		$this->layout->content = View::make('request.requestPP8');
+	}
 }
