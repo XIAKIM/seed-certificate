@@ -107,10 +107,6 @@
 	<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
 	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/table.js"></script>
-<<<<<<< HEAD
 	<script type="text/javascript" src="js/request.js"></script>
-=======
-
->>>>>>> 3f833bf063986d1ced4d0618cbec97f208ddeddd
 </body>
 </html>

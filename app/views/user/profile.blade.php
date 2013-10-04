@@ -1,7 +1,11 @@
 @extends('index')
 @section('content')
+	profile.blade.php
 @if(Session::has('userID'))
-<h2>{{ Session::get('userID') }}</h2>
+	<?php 
+		$user = User::find(Session::get('userID'))
+	?>
+	<h2>{{ Hello, {{ $user->id , $user->username }}</h2>
 @endif
 
 <img src="" alt="" class="img-thumbnail">
