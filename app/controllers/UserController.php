@@ -94,7 +94,7 @@ class UserController extends BaseController {
 	/* @author Kimapiwat */ 
 	public function deleteAction($id)
 	{
-		$affected = DB::table('User')->delete(1);
+		$affected = DB::table('User')->delete($id);
 	}
 
 	/* @author Kimapiwat */

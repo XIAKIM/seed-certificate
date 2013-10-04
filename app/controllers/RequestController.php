@@ -15,44 +15,36 @@ class RequestController extends BaseController {
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
 
-			$validator = validator::make(Input::all(),[
-					/// what is input ????
-				//////
-				]);
+			// $validator = validator::make(Input::get("select-request")[
+			// 		"select-request" => "required";
+			// 	]);
 
-			// if($validator->passes()){
+			$selectrequest = input::get("select-request");
 
+			if($selectrequest == "3"){
 
-			// 	// $requestFormType => Input::get(" ");
-			// 	if($requestFormType == "PP"){
+				Session::put('requestType',$selectrequest);
+				return Redirect::route('/request/form');
 
-			// 	}
-			// 	else if($requestFormType == "PP1"){
+			}
+			else if ($selectrequest == "4"){
 
-			// 	}
-			// 	else if($requestFormType == "PP2"){
+				Session::put('requestType',$selectrequest);
+				return Redirect::route('/request/form');
 
-			// 	}
-			// 	else if($requestFormType == "PP8"){
+			}
+			else if ($selectrequest == "5"){
 
-			// 	}
-			// 	else if($requestFormType == "PP9"){
+				Session::put('requestType',$selectrequest);
+				return Redirect::route('/request/form');
 
-			// 	}
-			// 	else if($requestFormType == "PP10"){
+			}
+			else if ($selectrequest == "6"){
 
-			// 	}
-			// 	else if($requestFormType == "PP11"){
+				Session::put('requestType',$selectrequest);
+				return Redirect::route('/request/form');
 
-			// 	}
-			// 	else if($requestFormType == "PP12"){
-
-			// 	}
-			// 	else if($requestFormType == "RM3"){
-
-			// 	}
-
-			// }
+			}
 
 
 
@@ -62,7 +54,9 @@ class RequestController extends BaseController {
 	// @author Varunyu
 	public function requestForm()
 	{
-		$this->layout->content = View::make('request.form');
+
+		$this->layout->content = View::make('request.informationPP1User');
+
 	}
 
 	// @author Varunyu
@@ -107,7 +101,9 @@ class RequestController extends BaseController {
 
 	public function accountDenyAction($id)
 	{
-
+		// DB::table('User')->delete($id);
+		$user = User::find($id);
+		$user-> delete($id);
 	}
 
 	// @author Varunyu
