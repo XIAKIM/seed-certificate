@@ -8,7 +8,6 @@ class UserSeederTableSeeder extends Seeder {
             [
                 "username" => "admin",
                 "password" => Hash::make('admin'),
-                "email"    => "pawis.joe@gmail.com",
                 "role"     => "officer",
                 "active"   => 1,
                 "descriptionID" => 1
