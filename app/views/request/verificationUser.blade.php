@@ -41,9 +41,10 @@
 </div>
 
 <div>
-<button type="button" class="btn btn-default">Default</button>
+  <br>
+<button type="button" class="btn btn-default">Apporve</button>
 
-<button data-toggle="modal" href="#formSignup" type="button" class="btn btn-default">Default</button>
+<button data-toggle="modal" href="#formSignup" type="button" class="btn btn-default">Deny</button>
   <!-- Modal -->
   <div class="modal fade" id="formSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -58,7 +59,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary">Submit</button>
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
