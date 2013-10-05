@@ -93,16 +93,35 @@ class RequestController extends BaseController {
 		$this->layout->content = View::make('request.verificationUser', compact('description'));
 	}
 
-	// @ author Varunyu
 	public function accountApproveAction($id)
 	{
-		// DB::update('update users set active = 1 where id = ? , $id');
-		// $id = Session::get('userID');
-		$user = User::find($id);
-		$user->active = 1;
+		//generate new user
+		$user = new User;
+		$user->username = 'entrepreneur' . $id;
+		//random password
+		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		$password = substr(str_shuffle($chars), 0, 10);
+		$user->password = Hash::make($password);
+		$user->role = 'entrepreneur';
+		$user->descriptionID = $id;
 		$user->save();
 
+		//set description to approved
+		$description = Description::find($id);
+		$description->status = 1;
+		$description->save();
 
+		//sending username and password to email
+		$data = array(
+    		'username' => $user->username,
+    		'password' => $password
+		);
+		Mail::send('emails.welcome', $data, function($message)
+		{
+    		$message->to($description->email)->subject('Welcome!');
+		});
+
+		return Redirect::route('/verificationAccountAll');
 	}
 
 	public function accountDenyAction($id)

@@ -12,8 +12,13 @@
         <tbody>
           @foreach ($descriptions as $description)
             <tr>
-              <td><a href="/verificationAccount/{{ $description->id }}">{{ $description->name }} {{ $description->lastName }}</a></td>
-              <td>Waiting</td>
+              @if($description->status == 0)
+                <td><a href="/verificationAccount/{{ $description->id }}">{{ $description->name }} {{ $description->lastName }}</a></td>
+                <td><p style="color: red">Waiting</p></td>
+              @else
+                <td>{{ $description->name }} {{ $description->lastName }}</td>
+                <td><p style="color: green">Approved</p></td>
+              @endif
             </tr>
           @endforeach
         </tbody>

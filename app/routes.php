@@ -111,6 +111,18 @@ Route::any('/verificationAccount/{id}', [
 	'uses' => 'RequestController@verificationUser'
 ]);
 
+Route::any('/accountApprove/{id}', [
+	'as' => '/accountApprove/{id}',
+	'uses' => 'RequestController@accountApproveAction'
+]);
+
+Route::any('/accountDeny/{id}', [
+	'as' => '/accountDeny/{id}',
+	'uses' => 'RequestController@accountDenyAction'
+]);
+
+
+
 Route::get('/details', function() {
 	return View::make('details');
 });

@@ -44,6 +44,7 @@ class UserController extends BaseController {
 				$description->issuedProvince = Input::get('issuedProvince');
 				$description->address = Input::get('address');
 				$description->telNumber = Input::get('telNumber');
+				$description->status = 0;
 				$description->save();
 				$message = "Register completed please identify information at Seed government office";
 				return Redirect::route('/afterregister');
@@ -76,8 +77,7 @@ class UserController extends BaseController {
             {
                 $credentials = [
                     "username" => Input::get("username"),
-                    "password" => Input::get("password"),
-                    "active" => 1
+                    "password" => Input::get("password")
                 ];
                 if (Auth::attempt($credentials)) 
                 {

@@ -43,7 +43,9 @@
 <div>
   <br>
 
-<button  type="button" class="btn btn-default">Approve</button>
+{{ Form::open(array('action' => array('RequestController@accountApproveAction', $description  ->id))) }}
+    {{ Form::submit('Approve', ["class" => "btn btn-primary"])}}
+{{ Form::close() }}
 
 <button data-toggle="modal" href="#denySignup" type="button" class="btn btn-default">Deny</button>
   <!-- Modal -->
