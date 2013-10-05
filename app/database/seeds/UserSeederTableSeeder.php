@@ -9,7 +9,6 @@ class UserSeederTableSeeder extends Seeder {
                 "username" => "admin",
                 "password" => Hash::make('admin'),
                 "role"     => "officer",
-                "active"   => 1,
                 "descriptionID" => 1
             ]
         ];

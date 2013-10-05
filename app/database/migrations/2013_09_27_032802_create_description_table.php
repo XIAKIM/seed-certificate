@@ -25,6 +25,7 @@ class CreateDescriptionTable extends Migration {
 			$table->string('issuedProvince');
 			$table->text('address');
 			$table->string('telNumber');
+			$table->integer('status');
 			$table->timestamps();
 		});
 	}
