@@ -42,11 +42,12 @@
 
 <div>
   <br>
-<button type="button" class="btn btn-default">Apporve</button>
 
-<button data-toggle="modal" href="#formSignup" type="button" class="btn btn-default">Deny</button>
+<button  type="button" class="btn btn-default">Approve</button>
+
+<button data-toggle="modal" href="#denySignup" type="button" class="btn btn-default">Deny</button>
   <!-- Modal -->
-  <div class="modal fade" id="formSignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal fade" id="denySignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
        <!--  <div class="modal-header">
