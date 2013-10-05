@@ -14,48 +14,46 @@
 				<div class="col-md-4">
 					<div class="panel panel-default">
 						<div class="panel-body ">
-							Request Number:
+							Request Number: {{ $request->id }}
 							<br />
-							Approved Date:
+							Approved Date: 
 							<br />
 							Officer Name:
 						</div>
 
 					</div>
 					<p>
-						Created Date:
+						Created Date: {{ $request->created_at }}
 					</p>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
 <p>
-					<label>Name:</label> ________________________
+					<label>Name:</label> {{ $description->name }} {{ $description->lastName }}
 					
-					<label>Age:</label> ______
+					<label>Age:</label> {{ $description->age }}
 					
-					<label>Nationality:</label> ____________
+					<label>Nationality:</label> {{ $description->nationality }}
 					
-					<label>Identification Type:</label> _______________
+					<label>Identification Type:</label> {{ $description->identificationType }}
 					
-					<label>Identification Number: </label>______________
+					<label>Identification Number: </label> {{ $description->identificationNumber }}
 					
-					<label>Issued District:</label> __________________
+					<label>Issued District:</label> {{ $description->issuedDistrict }}
 					
-					<label>Issued Province:</label> __________________
+					<label>Issued Province:</label> {{ $description->issuedProvince }}
 					
-					<label>Address:</label>  ______________________________________________________
-					______________________________________________________
-					______________________________________________________
+					<label>Address:</label>  {{ $description->address }}
 					<br />
-					<label>Tel Number:</label> _________________
+					<label>Tel Number:</label> {{ $description->telNumber }}
 					<br />
-					<label>Desired Certificate Type:________</label>
+					<label>Desired Certificate Type:</label> พพ{{ $type['type'] }}.
 					
-					<label>Certificate of Collecting Seed________</label>
+					<label>Certificate of Collecting Seed</label>
 					<br />
 					</p>
-					{{ Form::open(["route" => "/requestPP1", "role" => "form"]) }}
+					{{ Form::open(["route" => "/createPP1Request", "role" => "form"]) }}
 					<!-- <form role="form"> -->
 						<div class="form-group">
 							<label>Company Name:</label>
@@ -80,8 +78,12 @@
 							<!-- <input type="textarea" class="form-control"> -->
 							{{ Form::text("storingLocation", null, ["class" => "form-control"] ) }}	
 						</div>
+						<div class="form-group">
+							<button class="btn btn-default">Reset</button>
+							{{ Form::submit('Submit', ["class" => "btn btn-primary"])}}
+						</div>
 					<!-- </form> -->
-					 {{ Form::close() }}
+					{{ Form::close() }}
 
 				</div>
 

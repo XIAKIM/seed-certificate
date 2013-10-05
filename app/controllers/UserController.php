@@ -46,7 +46,6 @@ class UserController extends BaseController {
 				$description->telNumber = Input::get('telNumber');
 				$description->status = 0;
 				$description->save();
-				$message = "Register completed please identify information at Seed government office";
 				return Redirect::route('/afterregister');
 			}
 			else return Redirect::route('/afterregister')->with('error', true);

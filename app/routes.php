@@ -81,9 +81,19 @@ Route::any('/request', [
 	'uses' => 'RequestController@request'
 ]);
 
+Route::any('/checkrequest', [
+	'as' => '/checkrequest',
+	'uses' => 'RequestController@checkRequestAction'
+]);
+
 Route::any('/requestPP1', [
 	'as' => '/requestPP1',
 	'uses' => 'RequestController@requestPP1'
+]);
+
+Route::any('/createPP1Request', [
+	'as' => '/createPP1Request',
+	'uses' => 'RequestController@createPP1RequestAction'
 ]);
 
 Route::any('/requestPP8', [
@@ -91,9 +101,19 @@ Route::any('/requestPP8', [
 	'uses' => 'RequestController@requestPP8'
 ]);
 
+Route::any('/createPP8Request', [
+	'as' => '/createPP8Request',
+	'uses' => 'RequestController@createPP8RequestAction'
+]);
+
 Route::any('/requestPP9', [
 	'as' => '/requestPP9',
 	'uses' => 'RequestController@requestPP9'
+]);
+
+Route::any('/createPP9Request', [
+	'as' => '/createPP9Request',
+	'uses' => 'RequestController@createPP9RequestAction'
 ]);
 
 Route::any('/verification', [
@@ -101,8 +121,8 @@ Route::any('/verification', [
 	'uses' => 'RequestController@verification'
 ]);
 
-Route::any('/verificationAccountAll', [
-	'as' => '/verificationAccountAll',
+Route::any('/verificationAccount', [
+	'as' => '/verificationAccount',
 	'uses' => 'RequestController@verificationAccountAll'
 ]);
 
@@ -121,6 +141,26 @@ Route::any('/accountDeny/{id}', [
 	'uses' => 'RequestController@accountDenyAction'
 ]);
 
+// Route::any('/verificationAccountAll', [
+// 	'as' => '/verificationAccountAll',
+// 	'uses' => 'RequestController@verificationAccountAll'
+// ]);
+
+// Route::any('/verificationAccount/{id}', [
+// 	'as' => '/verificationAccount/{id}',
+// 	'uses' => 'RequestController@verificationUser'
+// ]);
+
+// Route::any('/accountApprove/{id}', [
+// 	'as' => '/accountApprove/{id}',
+// 	'uses' => 'RequestController@accountApproveAction'
+// ]);
+
+// Route::any('/accountDeny/{id}', [
+// 	'as' => '/accountDeny/{id}',
+// 	'uses' => 'RequestController@accountDenyAction'
+// ]);
+
 
 
 Route::get('/details', function() {
@@ -135,59 +175,4 @@ Route::get('/about', function() {
 	return View::make('about');
 });
 
-Route::get('/requstPP8', function() {
-	return View::make('user.requestPP8');
-});
 
-Route::get('/requestPP9', function() {
-	return View::make('request.requestPP9');
-});
-
-Route::get('/firstUser', function() {
-	return View::make('user.firstUser');
-});
-
-Route::get('/vertifyPP8', function() {
-	return View::make('user.vertifyPP8');
-});
-
-Route::get('/vertifyPP9', function() {
-	return View::make('user.vertifyPP9');
-});
-
-
-Route::get('/verification', function() {
-	return View::make('request.verification');
-});
-
-Route::get('/seedVerificationAll', function() {
-	return View::make('request.seedVerificationAll');
-});
-
-Route::get('/accountVerificationAll', function() {
-	return View::make('request.accountVerificationAll');
-});
-
-Route::get('/accountVerification', function() {
-	return View::make('request.accountVerification');
-});
-
-Route::get('/seedVerificationPerson', function() {
-	return View::make('request.seedVerificationPerson');
-});
-
-Route::get('/verificationUser', function() {
-	return View::make('request.verificationUser');
-});
-
-Route::get('/informationPP1Officer', function() {
-	return View::make('request.informationPP1Officer');
-});
-
-Route::get('/Verification', function() {
-	return View::make('request.Verification');
-});
-
-Route::get('/information', function() {
-	return View::make('user.information');
-});

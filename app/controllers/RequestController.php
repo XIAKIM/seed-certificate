@@ -14,44 +14,24 @@ class RequestController extends BaseController {
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
-
-			// $validator = validator::make(Input::get("select-request")[
-			// 		"select-request" => "required";
-			// 	]);
-
 			$selectrequest = input::get("select-request");
-
-			if($selectrequest == "3"){
-
-				Session::put('requestType',$selectrequest);
-				return Redirect::route('/request/form');
-
-			}
-			else if ($selectrequest == "4"){
-
-				Session::put('requestType',$selectrequest);
-				return Redirect::route('/request/form');
-
-			}
-			else if ($selectrequest == "5"){
-
-				Session::put('requestType',$selectrequest);
-				return Redirect::route('/request/form');
-
-			}
-			else if ($selectrequest == "6"){
-
-				Session::put('requestType',$selectrequest);
-				return Redirect::route('/request/form');
-
-			}
+			Session::put('type', $selectrequest);
+			return Redirect::route('/requestPP1');
 		}
 	}	
 
 	// @author Varunyu
 	public function requestPP1()
 	{
-		$this->layout->content = View::make('request.requestPP1');
+		$user = User::find(Session::get('userID'));
+		$description = Description::find($user->descriptionID);
+		$type = ['type' => Session::get('type')];
+		$request = new Requests;
+		$request->status = 'Waiting';
+		$request->userID = Session::get('userID');
+		$request->save();
+		Session::put('requestID', $request->id);
+		$this->layout->content = View::make('request.requestPP1', compact('description', 'type', 'request'));
 	}
 
 	public function requestPP8()
@@ -64,8 +44,36 @@ class RequestController extends BaseController {
 		$this->layout->content = View::make('request.requestPP9');
 	}
 
-	// @author Varunyu
-	public function createRequestAction()
+	public function createPP1RequestAction()
+	{
+		if(Input::server("REQUEST_METHOD")=="POST")
+		{
+			$validator = Validator::make(Input::all(),[
+				"companyName" => "required",
+				"ownerName" => "required",
+				"companyAddress" => "required",
+				"collectingLocation"  => "required",
+				"storeLocation" => "required"
+			]);
+			if($validator->passes())
+			{
+				$pp1 = new PP1;
+
+				$pp1->save();
+				return Redirect::route('/afterregister');
+			}
+		}
+	}
+
+	public function createPP8RequestAction()
+	{
+		if(Input::server("REQUEST_METHOD")=="POST")
+		{
+
+		}
+	}
+
+	public function createPP9RequestAction()
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
@@ -121,7 +129,7 @@ class RequestController extends BaseController {
     		$message->to($description->email)->subject('Welcome!');
 		});
 
-		return Redirect::route('/verificationAccountAll');
+		return Redirect::route('/verificationAccount');
 	}
 
 	public function accountDenyAction($id)
@@ -135,7 +143,7 @@ class RequestController extends BaseController {
 		});
 
 		$description->delete();
-		return Redirect::route('/verificationAccountAll');
+		return Redirect::route('/verificationAccount');
 	}
 
 	// @author Varunyu
