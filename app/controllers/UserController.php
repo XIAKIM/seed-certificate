@@ -54,6 +54,7 @@ class UserController extends BaseController {
 
 	public function status()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('user.status');
 	}
 
@@ -93,16 +94,19 @@ class UserController extends BaseController {
 
 	public function afterLogin()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('user.afterlogin');	
 	}
 
 	public function profile()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('user.profile');
 	}
 
 	public function edit()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('user.edit');
 	}
 
@@ -121,22 +125,6 @@ class UserController extends BaseController {
 	public function logoutAction()
 	{
 		Auth::logout();
-		// todo : Delete session 
-	}
-
-	public function requestPP9()
-	{
-		$this->layout->content = View::make('request.requestPP9');
-		// todo : Delete session 
-	}
-	public function requestPP1()
-	{
-		$this->layout->content = View::make('request.requestPP1');
-		// todo : Delete session 
-	}
-
-	public function requestPP8()
-	{
-		$this->layout->content = View::make('request.requestPP8');
+		return Redirect::route('/');
 	}
 }

@@ -4,9 +4,9 @@
 	<title>Seed Certificate</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- stylesheet -->
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/css/bootstrap.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/css/bootstrap-theme.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}">
 </head>
 <body>
 	<!-- header -->
@@ -40,11 +40,22 @@
 
 					</ul>
 					
-					<form class="navbar-form navbar-left navbar-right">
-						<!-- Button trigger modal -->
-						<a data-toggle="modal" href="#myModal" class="btn btn-default navbar-btn">Sign in/up</a>
-
-					</form>
+					<ul class="nav navbar-nav navbar-right">
+						@if(Auth::guest())
+							<!-- Button trigger modal -->
+							<a data-toggle="modal" href="#myModal" class="btn btn-default navbar-btn">Sign in/up</a>
+						@else
+      						<li class="dropdown">
+        						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }}&nbsp;<b class="caret"></b></a>
+        						<ul class="dropdown-menu">
+          							<li><a href="/profile"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Profile</a></li>
+          							<li><a href="/status"><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;&nbsp;Status</a></li>
+          							<li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout</a></li>
+        						</ul>
+      						</li>
+						@endif
+					</ul>
+					
 
 				</div><!-- /.navbar-collapse -->
 			</div>

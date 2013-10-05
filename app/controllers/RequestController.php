@@ -45,18 +45,23 @@ class RequestController extends BaseController {
 				return Redirect::route('/request/form');
 
 			}
-
-
-
 		}
 	}	
 
 	// @author Varunyu
 	public function requestPP1()
 	{
-
 		$this->layout->content = View::make('request.requestPP1');
+	}
 
+	public function requestPP8()
+	{
+		$this->layout->content = View::make('request.requestPP8');
+	}
+
+	public function requestPP9()
+	{
+		$this->layout->content = View::make('request.requestPP9');
 	}
 
 	// @author Varunyu
@@ -75,17 +80,18 @@ class RequestController extends BaseController {
 	}
 
 	// @author Varunyu
-	public function accountVerification()
+	public function verificationAccountAll()
 	{
-		$this->layout->content = View::make('request.accountVerification');
+		$descriptions = Description::all();
+		$this->layout->content = View::make('request.verificationAccountAll', compact('descriptions'));
 	}
 
 	// @author Varunyu
-	public function allAccountVerification()
+	public function verificationUser($id)
 	{
-		$this->layout->content = View::make('request.allAccountVerification');
+		$description= Description::find($id);
+		$this->layout->content = View::make('request.verificationUser', compact('description'));
 	}
-
 
 	// @ author Varunyu
 	public function accountApproveAction($id)

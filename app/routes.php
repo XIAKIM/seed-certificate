@@ -11,6 +11,8 @@
 |
 */
 
+//UserController Routes
+
 Route::any('/', [
 	'as' => '/',
 	'uses' => 'UserController@index'
@@ -71,28 +73,43 @@ Route::any('/afterregister', [
 	'uses' => 'UserController@afterregister'
 ]);
 
-Route::any('/requestPP9', [
-	'as' => '/requestPP9',
-	'uses' => 'UserController@requestPP9'
+
+//RequestController Routes
+
+Route::any('/request', [
+	'as' => '/request',
+	'uses' => 'RequestController@request'
 ]);
 
 Route::any('/requestPP1', [
 	'as' => '/requestPP1',
-	'uses' => 'UserController@requestPP1'
+	'uses' => 'RequestController@requestPP1'
 ]);
 
 Route::any('/requestPP8', [
 	'as' => '/requestPP8',
-	'uses' => 'UserController@requestPP8'
+	'uses' => 'RequestController@requestPP8'
 ]);
 
-Route::resource('/request', 'RequestController@request');
-Route::resource('/approve', 'RequestController@approve');
-Route::resource('/check', 'RequestController@check');
-Route::resource('/form', 'RequestController@showForm');
+Route::any('/requestPP9', [
+	'as' => '/requestPP9',
+	'uses' => 'RequestController@requestPP9'
+]);
 
-Route::resource('/certificate', 'CertificateController@index');
-Route::get('/certificate/{id}', 'CertificateController@show');
+Route::any('/verification', [
+	'as' => '/verification',
+	'uses' => 'RequestController@verification'
+]);
+
+Route::any('/verificationAccountAll', [
+	'as' => '/verificationAccountAll',
+	'uses' => 'RequestController@verificationAccountAll'
+]);
+
+Route::any('/verificationAccount/{id}', [
+	'as' => '/verificationAccount/{id}',
+	'uses' => 'RequestController@verificationUser'
+]);
 
 Route::get('/details', function() {
 	return View::make('details');
