@@ -22,7 +22,7 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="index.html">XIAKIM</a>
+					<a class="navbar-brand" href="/">XIAKIM</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -70,10 +70,12 @@
                 					{{ $error }}
             					</div>
         					@endif
-        					{{ Form::submit("Login" , ["class" => "btn btn-default"] ) }}
-    					{{ Form::close() }}
+        					
+    					
 					</div>
 					<div class="modal-footer">
+							{{ Form::submit("Login" , ["class" => "btn btn-default"] ) }}
+						{{ Form::close() }}
 						{{  Form::open(["route" => "/signup"]) }}
 							{{ Form::submit('Sign Up', ["class" => "btn btn-default"] ) }}
 						{{  Form::close() }}
@@ -95,7 +97,9 @@
 
 	<!-- footer -->
 	<footer>
-		<h2>This is FOOTER.</h2>
+		<div style="height: 300px; background-color: #bdc3c7">
+			
+		</div>
 	</footer>
 	<!-- end footer -->
 

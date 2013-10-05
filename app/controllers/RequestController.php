@@ -52,10 +52,10 @@ class RequestController extends BaseController {
 	}	
 
 	// @author Varunyu
-	public function requestForm()
+	public function requestPP1()
 	{
 
-		$this->layout->content = View::make('request.informationPP1User');
+		$this->layout->content = View::make('request.requestPP1');
 
 	}
 

@@ -1,7 +1,3 @@
-<?php 
-	//@author   Kimapiwat
-	//@Date :	Fri Oct 4 2013	
-?>
 @extends('index')
 @section('content')
 	afterlogin.blade.php

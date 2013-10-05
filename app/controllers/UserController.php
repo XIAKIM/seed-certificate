@@ -12,34 +12,54 @@ class UserController extends BaseController {
 	{
 		$this->layout->content = View::make('user.signup');
 	}
-	/* @author KimApiwat */ 
+	
 	public function createAction()
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
-			
 			$validator = Validator::make(Input::all(),[
-				"Username" => "required",
-				"Age"  => "required",
-				"Name" => "required",
-				"Address" => "required",
-				"Issued Province" => "required",
-				"Nationality" => "required",
-				"Nationality Type" => "required",
-				"Nationality Numbrt" => "required",
-				"Issued District" => "required",
-				"Issued Province" => "required",
-				"Identification Number" => "required",
-				"Tel Number" => "required"]);
-			
-				
+				"name" => "required",
+				"lastname" => "required",
+				"email" => "required",
+				"age"  => "required",
+				"nationality" => "required",
+				"identificationType" => "required",
+				"identificationNumber" => "required",
+				"issuedDistrict" => "required",
+				"issuedProvince" => "required",
+				"address" => "required",
+				"telNumber" => "required"
+			]);
+			if($validator->passes())
+			{
+				$description = new Description;
+				$description->name = Input::get('name');
+				$description->lastName = Input::get('lastname');
+				$description->email = Input::get('email');
+				$description->age = Input::get('age');
+				$description->nationality = Input::get('nationality');
+				$description->identificationType = Input::get('identificationType');
+				$description->identificationNumber = Input::get('identificationNumber');
+				$description->issuedDistrict = Input::get('issuedDistrict');
+				$description->issuedProvince = Input::get('issuedProvince');
+				$description->address = Input::get('address');
+				$description->telNumber = Input::get('telNumber');
+				$description->save();
+				$message = "Register completed please identify information at Seed government office";
+				return Redirect::route('/afterregister');
+			}
+			else return Redirect::route('/afterregister')->with('error', true);
 		}
 	}
 
 	public function status()
 	{
-
 		$this->layout->content = View::make('user.status');
+	}
+
+	public function afterregister()
+	{
+		$this->layout->content = View::make('user.afterregister');
 	}
 
 	public function loginAction() 

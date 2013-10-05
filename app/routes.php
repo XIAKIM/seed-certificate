@@ -66,6 +66,11 @@ Route::any('/logout', [
 	'uses' => 'UserController@logoutAction'
 ]);
 
+Route::any('/afterregister', [
+	'as' => '/afterregister',
+	'uses' => 'UserController@afterregister'
+]);
+
 Route::any('/requestPP9', [
 	'as' => '/requestPP9',
 	'uses' => 'UserController@requestPP9'
