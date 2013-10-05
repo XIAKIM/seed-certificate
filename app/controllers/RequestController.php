@@ -116,7 +116,7 @@ class RequestController extends BaseController {
     		'username' => $user->username,
     		'password' => $password
 		);
-		Mail::send('emails.welcome', $data, function($message)
+		Mail::send('emails.welcome', $data, function($message) use ($description)
 		{
     		$message->to($description->email)->subject('Welcome!');
 		});
@@ -126,9 +126,16 @@ class RequestController extends BaseController {
 
 	public function accountDenyAction($id)
 	{
-		// DB::table('User')->delete($id);
-		$user = User::find($id);
-		$user-> delete($id);
+		$description = Description::find($id);
+
+		$data = ['comment' => Input::get('comment')];
+		Mail::send('emails.welcome2', $data, function($message) use ($description)
+		{
+    		$message->to($description->email)->subject('Welcome!');
+		});
+
+		$description->delete();
+		return Redirect::route('/verificationAccountAll');
 	}
 
 	// @author Varunyu

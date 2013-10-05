@@ -116,9 +116,9 @@
 
 
 	<!-- javascript library -->
-	<script type="text/javascript" src="js/jquery-2.0.3.js"></script>
-	<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/table.js"></script>
-	<script type="text/javascript" src="js/request.js"></script>
+	<script type="text/javascript" src="{{URL::asset('js/jquery-2.0.3.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('bootstrap/js/bootstrap.min.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('js/table.js')}}"></script>
+	<script type="text/javascript" src="{{URL::asset('js/request.js')}}"></script>
 </body>
 </html>

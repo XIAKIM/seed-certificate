@@ -43,7 +43,7 @@
 <div>
   <br>
 
-{{ Form::open(array('action' => array('RequestController@accountApproveAction', $description  ->id))) }}
+{{ Form::open(array('action' => array('RequestController@accountApproveAction', $description->id))) }}
     {{ Form::submit('Approve', ["class" => "btn btn-primary"])}}
 {{ Form::close() }}
 
@@ -58,11 +58,13 @@
           <h4 class="modal-title">Comment :</h4>
         <!-- </div> -->
         <div class="modal-body">
-          <textarea rows='5' cols="85"></textarea>
+          {{ Form::open(array('action' => array('RequestController@accountDenyAction', $description->id))) }}
+            {{ Form::textarea('comment', null, ["rows" => "5", "cols" => "85"]) }}
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            {{ Form::submit('Submit', ["class" => "btn btn-primary"])}}  
+          {{ Form::close() }}
         </div>
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
