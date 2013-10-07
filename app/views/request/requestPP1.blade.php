@@ -74,9 +74,9 @@
 							{{ Form::text("collectingLocation", null, ["class" => "form-control"] ) }}	
 						</div>
 						<div class="form-group">
-							<label>Storing Location:</label>
+							<label>Storing Address:</label>
 							<!-- <input type="textarea" class="form-control"> -->
-							{{ Form::text("storingLocation", null, ["class" => "form-control"] ) }}	
+							{{ Form::text("storingAddress", null, ["class" => "form-control"] ) }}	
 						</div>
 						<div class="form-group">
 							<button class="btn btn-default">Reset</button>

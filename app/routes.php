@@ -86,6 +86,11 @@ Route::any('/checkrequest', [
 	'uses' => 'RequestController@checkRequestAction'
 ]);
 
+Route::any('/afterrequest', [
+	'as' => '/afterrequest',
+	'uses' => 'RequestController@afterRequest'
+]);
+
 Route::any('/requestPP1', [
 	'as' => '/requestPP1',
 	'uses' => 'RequestController@requestPP1'
@@ -141,25 +146,30 @@ Route::any('/accountDeny/{id}', [
 	'uses' => 'RequestController@accountDenyAction'
 ]);
 
-// Route::any('/verificationAccountAll', [
-// 	'as' => '/verificationAccountAll',
-// 	'uses' => 'RequestController@verificationAccountAll'
-// ]);
+Route::any('/verificationSeed', [
+	'as' => '/verificationSeed',
+	'uses' => 'RequestController@verificationSeedAll'
+]);
 
-// Route::any('/verificationAccount/{id}', [
-// 	'as' => '/verificationAccount/{id}',
-// 	'uses' => 'RequestController@verificationUser'
-// ]);
+Route::any('/verificationSeed/pp1/{id}', [
+	'as' => '/verificationSeed/pp1/{id}',
+	'uses' => 'RequestController@verificationSeedPersonPP1'
+]);
 
-// Route::any('/accountApprove/{id}', [
-// 	'as' => '/accountApprove/{id}',
-// 	'uses' => 'RequestController@accountApproveAction'
-// ]);
+Route::any('/verificationSeed/pp1/information/{id}', [
+	'as' => '/verificationSeed/pp1/information/{id}',
+	'uses' => 'RequestController@verificationSeedPP1'
+]);
 
-// Route::any('/accountDeny/{id}', [
-// 	'as' => '/accountDeny/{id}',
-// 	'uses' => 'RequestController@accountDenyAction'
-// ]);
+Route::any('/pp1verify/{id}', [
+	'as' => '/pp1verify/{id}',
+	'uses' => 'RequestController@pp1VerifyAction'
+]);
+
+Route::any('/pp1deny/{id}', [
+	'as' => '/pp1deny/{id}',
+	'uses' => 'RequestController@pp1DenyAction'
+]);
 
 
 

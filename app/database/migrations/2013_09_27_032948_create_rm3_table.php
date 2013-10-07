@@ -26,6 +26,7 @@ class CreateRm3Table extends Migration {
 			$table->string('chemical');
 			$table->string('seedAmount');
 			$table->string('totalWeight');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

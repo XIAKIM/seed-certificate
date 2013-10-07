@@ -27,6 +27,7 @@ class CreatePp9Table extends Migration {
 			$table->string('departureCountry');
 			$table->string('departureCheckpoint');
 			$table->dateTime('departureDate');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

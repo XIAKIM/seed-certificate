@@ -18,6 +18,7 @@ class CreatePp11Table extends Migration {
 			$table->string('certificateType');
 			$table->integer('certificateNumber');
 			$table->string('reason');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

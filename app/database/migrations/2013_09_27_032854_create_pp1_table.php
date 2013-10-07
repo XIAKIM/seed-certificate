@@ -20,6 +20,7 @@ class CreatePp1Table extends Migration {
 			$table->text('companyAddress');
 			$table->text('collectingLocation');
 			$table->text('storingAddress');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

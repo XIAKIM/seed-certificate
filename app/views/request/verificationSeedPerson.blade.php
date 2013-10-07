@@ -9,16 +9,12 @@
 			<th>Type</th>
 			<th>Status</th>	
 		</tr>
-		<tr>
-			<td>Selling Seed Certification พพ3</td>
-			<td>Approve</td>
-		</tr>
-		<tr>
-			<td>Export Seed Certification พพ6</td>
-			<td>Lab</td>
-		</tr>
+		@foreach($pp1s as $pp1)
+			<tr>
+				<td><a href="/verificationSeed/pp1/information/{{ $pp1->id }}">พพ{{ $pp1->certificateType }}.</a></td>
+				<td>{{ Requests::find($pp1->requestID)->status }}</td>
+			</tr>
+		@endforeach
 	</table>
-	<button type="button" class="btn btn-default">Back</button>
-	<button type="button" class="btn btn-default">User Information</button>
 </div>
 @stop

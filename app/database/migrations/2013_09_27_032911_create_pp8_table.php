@@ -29,6 +29,7 @@ class CreatePp8Table extends Migration {
 			$table->integer('PPNumber');
 			$table->string('arrivalCheckpoint');
 			$table->dateTime('arrivalDate');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

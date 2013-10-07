@@ -28,6 +28,7 @@ class CreatePp2Table extends Migration {
 			$table->string('transportRoute');
 			$table->string('temporayLocation');
 			$table->string('passingPeriod');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

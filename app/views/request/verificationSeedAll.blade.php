@@ -11,8 +11,9 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
-        <h2>Artima Mahahemarat</h2>
-        <h2>Piyawut Kamwiset</h2>
+        @foreach ($pp1s as $pp1)
+          <h3><a href="/verificationSeed/pp1/{{ $pp1->userID }}">{{ Description::find(User::find($pp1->userID)->descriptionID)->name }} {{ Description::find(User::find($pp1->userID)->descriptionID)->lastName }}</a></h3>
+        @endforeach
       </div>
     </div>
   </div>
