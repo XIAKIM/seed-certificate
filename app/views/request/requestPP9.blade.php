@@ -34,7 +34,7 @@
       <div class="modal-content">
         <div class="modal-header">
 
-          <h4 class="modal-title">import Information</h4>
+          <h4 class="modal-title">Export Information</h4>
         </div>
         <div class="modal-body">
           <div class="input-group">
