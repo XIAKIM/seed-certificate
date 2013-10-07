@@ -8,7 +8,6 @@ function addRowsOfImport(){
 		var numCol = new Array();
 		var node = document.getElementById('table').childNodes[1];
 		var newrow = document.createElement("tr");
-		
 		newCol0 = document.createElement("td");
 		newCol0.innerHTML = numImport+1;
 		newrow.appendChild(newCol0);
@@ -42,11 +41,11 @@ function addRowsOfImport(){
 		newrow.appendChild(newCol7);
 
 		newCol8 = document.createElement("td");
-		newCol8.innerHTML = document.getElementsByName('importedCheckpoint')[0].value;
+		newCol8.innerHTML = document.getElementsByName('ImportedCheckpoint')[0].value;
 		newrow.appendChild(newCol8);
 
 		newCol9 = document.createElement("td");
-		newCol9.innerHTML = document.getElementsByName('importedDate')[0].value;
+		newCol9.innerHTML = document.getElementsByName('ImportedDate')[0].value;
 		newrow.appendChild(newCol9);
 		node.appendChild(newrow);
 
@@ -88,15 +87,15 @@ function addRowsOfExport(){
 		newrow.appendChild(newCol6);
 
 		newCol7 = document.createElement("td");
-		newCol7.innerHTML = document.getElementsByName('departureCountry')[0].value;
+		newCol7.innerHTML = document.getElementsByName('arrivalCountry')[0].value;
 		newrow.appendChild(newCol7);
 
 		newCol8 = document.createElement("td");
-		newCol8.innerHTML = document.getElementsByName('importedCheckpoint')[0].value;
+		newCol8.innerHTML = document.getElementsByName('exportedCheckpoint')[0].value;
 		newrow.appendChild(newCol8);
 
 		newCol9 = document.createElement("td");
-		newCol9.innerHTML = document.getElementsByName('importedDate')[0].value;
+		newCol9.innerHTML = document.getElementsByName('exportedDate')[0].value;
 		newrow.appendChild(newCol9);
 		node.appendChild(newrow);
 
