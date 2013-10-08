@@ -173,6 +173,26 @@ Route::any('/pp1deny/{id}', [
 
 
 
+Route::any('/certificate/pp3/{id}', [
+	'as' => '/certificate/pp3/{id}',
+	'uses' => 'CertificateController@showPP3'
+]);
+
+Route::any('/certificate/pp4/{id}', [
+	'as' => '/certificate/pp4/{id}',
+	'uses' => 'CertificateController@showPP4'
+]);
+
+Route::any('/certificate/pp5/{id}', [
+	'as' => '/certificate/pp5/{id}',
+	'uses' => 'CertificateController@showPP5'
+]);
+
+Route::any('/certificate/pp6/{id}', [
+	'as' => '/certificate/pp6/{id}',
+	'uses' => 'CertificateController@showPP6'
+]);
+
 Route::get('/details', function() {
 	return View::make('details');
 });

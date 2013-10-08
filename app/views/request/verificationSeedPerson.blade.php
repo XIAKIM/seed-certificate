@@ -3,7 +3,7 @@
 <div class = "container">
 	<h1>Seed Verification</h1>
 	<br>
-	<h2>Mr. Piyawut Kamwiset request list</h2>
+	<h2>{{ Description::find(User::find($pp1s[0]->userID)->descriptionID)->name }} {{ Description::find(User::find($pp1s[0]->userID)->descriptionID)->lastName }} request list</h2>
 	<table class="table">
 		<tr>
 			<th>Type</th>

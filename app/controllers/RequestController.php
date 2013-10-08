@@ -164,7 +164,7 @@ class RequestController extends BaseController {
 	// @author Varunyu
 	public function verificationSeedAll()
 	{
-		if(Auth::guest() || Auth::user()->role != "entrepreneur") return Redirect::route('/');
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$pp1s = Requests::where('type', '=', 'pp1')->groupBy('userID')->get();
 		$pp8s = Requests::where('type', '=', 'pp8')->groupBy('userID')->get();
 		$pp9s = Requests::where('type', '=', 'pp9')->groupBy('userID')->get();

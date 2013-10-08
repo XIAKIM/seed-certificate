@@ -3,22 +3,22 @@
 class CertificateController extends BaseController {
 	protected $layout = "index";
 	
-	public function showPP3()
+	public function showPP3($id)
 	{
 
 	}
 
-	public function showPP4()
+	public function showPP4($id)
 	{
 
 	}
 
-	public function showPP5()
+	public function showPP5($id)
 	{
 
 	}
 
-	public function showPP6()
+	public function showPP6($id)
 	{
 		
 	}

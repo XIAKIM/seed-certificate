@@ -82,9 +82,10 @@
 			</div>
 		<div class="row">
 			<div class="col-md-12">
-				{{ Form::open(["action" => ["RequestController@pp1VerifyAction", $pp1->id]]) }}
-    				{{ Form::submit('Verify', ["class" => "btn btn-success"])}}
-				{{ Form::close() }}
+				@if(Requests::find($pp1->requestID)->status == 'Waiting')
+					{{ Form::open(["action" => ["RequestController@pp1VerifyAction", $pp1->id]]) }}
+	    				{{ Form::submit('Verify', ["class" => "btn btn-success"])}}
+					{{ Form::close() }}
 				<button data-toggle="modal" href="#denySignup" type="button" class="btn btn-danger">Deny</button>
 				  <!-- Modal -->
 				  <div class="modal fade" id="denySignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -96,17 +97,20 @@
 				          <h4 class="modal-title">Comment :</h4>
 				        <!-- </div> -->
 				        <div class="modal-body">
-				          {{ Form::open(["action" => ["RequestController@pp1DenyAction", $pp1->id]]) }}
-				            {{ Form::textarea('comment', null, ["rows" => "5", "cols" => "85"]) }}
+				          	{{ Form::open(["action" => ["RequestController@pp1DenyAction", $pp1->id]]) }}
+				            	{{ Form::textarea('comment', null, ["rows" => "5", "cols" => "85"]) }}
 				        </div>
 				        <div class="modal-footer">
 				            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				            {{ Form::submit('Submit', ["class" => "btn btn-primary"])}}  
+				            	{{ Form::submit('Submit', ["class" => "btn btn-primary"])}}  
 				          {{ Form::close() }}
+
 				        </div>
 				      </div><!-- /.modal-content -->
+				
 				    </div><!-- /.modal-dialog -->
 				  </div><!-- /.modal -->
+				@endif
 			</div>
 		</div>
 @stop
