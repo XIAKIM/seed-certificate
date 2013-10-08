@@ -5,13 +5,27 @@ var numExport=0;
 
 function addRowsOfImport(){
 
+	if(document.getElementsByName('type')[0].value==('')
+		|| document.getElementsByName('commonName')[0].value==('')
+		|| document.getElementsByName('scienceName')[0].value==('')
+		|| document.getElementsByName('unit')[0].value==('')
+		|| document.getElementsByName('amount')[0].value==('')
+		|| document.getElementsByName('value')[0].value==('')
+		|| document.getElementsByName('departureCountry')[0].value ==('')
+		|| document.getElementsByName('ImportedCheckpoint')[0].value==('')
+		|| document.getElementsByName('ImportedDate')[0].value==(''))	
+	{
+		alert('please input the data');
+	}
+
+	else {
 		var numCol = new Array();
 		var node = document.getElementById('table').childNodes[1];
 		var newrow = document.createElement("tr");
 		newCol0 = document.createElement("td");
 		newCol0.innerHTML = numImport+1;
 		newrow.appendChild(newCol0);
-	
+
 		newCol1 = document.createElement("td");
 		newCol1.innerHTML = document.getElementsByName('type')[0].value;
 		newrow.appendChild(newCol1);
@@ -51,17 +65,32 @@ function addRowsOfImport(){
 
 		numImport++;
 		emptyFill();
+	}
 }
 function addRowsOfExport(){
+	if(document.getElementsByName('type')[0].value==('')
+		|| document.getElementsByName('commonName')[0].value==('')
+		|| document.getElementsByName('scienceName')[0].value==('')
+		|| document.getElementsByName('unit')[0].value==('')
+		|| document.getElementsByName('amount')[0].value==('')
+		|| document.getElementsByName('value')[0].value==('')
+		|| document.getElementsByName('arrivalCountry')[0].value ==('')
+		|| document.getElementsByName('exportedCheckpoint')[0].value==('')
+		|| document.getElementsByName('exportedDate')[0].value==(''))	
+	{
+		alert('please input the data');
+	}
+
+	else {
 
 		var numCol = new Array();
 		var node = document.getElementById('table').childNodes[1];
 		var newrow = document.createElement("tr");
-		
+
 		newCol0 = document.createElement("td");
 		newCol0.innerHTML = numImport+1;
 		newrow.appendChild(newCol0);
-	
+
 		newCol1 = document.createElement("td");
 		newCol1.innerHTML = document.getElementsByName('type')[0].value;
 		newrow.appendChild(newCol1);
@@ -101,6 +130,27 @@ function addRowsOfExport(){
 
 		numImport++;
 		emptyFill();
+	}
+}
+function checkFill()
+{
+	if(document.getElementsByName('type')[0].value==('')
+		|| document.getElementsByName('commonName')[0].value==('')
+		|| document.getElementsByName('scienceName')[0].value==('')
+		|| document.getElementsByName('unit')[0].value==('')
+		|| document.getElementsByName('amount')[0].value==('')
+		|| document.getElementsByName('value')[0].value==('')
+		|| document.getElementsByName('departureCountry')[0].value ==('')
+		|| document.getElementsByName('ImportedCheckpoint')[0].value==('')
+		|| document.getElementsByName('ImportedDate')[0].value==(''))	
+	{
+		alert('please input the data');
+	}
+
+	else {
+		addRowsOfImport();
+	}
+
 }
 
 function emptyFill(){
