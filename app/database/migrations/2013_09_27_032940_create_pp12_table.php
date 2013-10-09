@@ -22,7 +22,20 @@ class CreatePp12Table extends Migration {
 			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
+			
+
+			// $table->string('newLocation'); 
+			$table->string('newLocationAddressNo');
+			$table->string('newLocationAddressMoo');
+			$table->string('newLocationAddressSoi');
+			$table->string('newLocationAddressRoad');
+			$table->string('newLocationAddressSubDistrict');
+			$table->string('newLocationAddressDistrict');
+			$table->string('newLocationAddressProvince');
+			$table->string('newLocationAddressPostCoe');
+		
 		});
+
 	}
 
 

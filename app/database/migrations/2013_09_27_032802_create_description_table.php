@@ -25,13 +25,13 @@ class CreateDescriptionTable extends Migration {
 			$table->string('issuedProvince');
 
 			$table->text('userAddressNo');
-			$table->text('userMoo');
-			$table->text('userSoi');
-			$table->text('userRoad');
-			$table->text('userSubDistrict');
-			$table->text('userDistrict');
-			$table->text('userProvince');
-			$table->text('userPostalCode');
+			$table->text('userAddressMoo');
+			$table->text('userAddressSoi');
+			$table->text('userAddressRoad');
+			$table->text('userAddressSubDistrict');
+			$table->text('userAddressDistrict');
+			$table->text('userAddressProvince');
+			$table->text('userAddressPostalCode');
 
 			$table->string('telNumber');
 			$table->integer('status');

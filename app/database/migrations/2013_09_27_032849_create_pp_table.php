@@ -21,7 +21,8 @@ class CreatePpTable extends Migration {
 			$table->string('scientificName');
 			$table->string('speciesName');
 			$table->string('tradeMark');
-			
+				
+			//$table->text('collectingLocation');
 			$table->text('collectingLocationNo');
 			$table->text('collectingLocationMoo');
 			$table->text('collectingLocationSoi');

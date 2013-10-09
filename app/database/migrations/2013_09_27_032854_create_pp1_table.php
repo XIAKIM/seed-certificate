@@ -17,7 +17,8 @@ class CreatePp1Table extends Migration {
 			$table->string('certificateType');
 			$table->string('companyName');
 			$table->string('ownerName');
-
+			
+			//$table->text('companyAddress');
 			$table->text('companyAddressNo');
 			$table->text('companyAddressMoo');
 			$table->text('companyAddressSoi');
@@ -26,7 +27,7 @@ class CreatePp1Table extends Migration {
 			$table->text('companyAddressDistrict');
 			$table->text('companyAddressProvince');
 			$table->text('companyAddressPostalCode');
-			
+			//$table->text('collectingLocation');	
 			$table->text('collectingLocationNo');
 			$table->text('collectingLocationMoo');
 			$table->text('collectingLocationSoi');
@@ -36,8 +37,17 @@ class CreatePp1Table extends Migration {
 			$table->text('collectingLocationProvince');
 			$table->text('collectingLocationPostalCode');
 
+			//$table->text('storingAddress');
+			$table->text('storingAddressNo');
+			$table->text('storingAddressMoo');
+			$table->text('storingAddressSoi');
+			$table->text('storingAddressRoad');
+			$table->text('storingAddressSubDistrict');
+			$table->text('storingAddressDistrict');
+			$table->text('storingAddressProvince');
+			$table->text('storingAddressPostalCode');
 
-			$table->text('storingAddress');
+			
 			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();

@@ -16,7 +16,6 @@ class CreateRm3Table extends Migration {
 			$table->increments('id');
 			$table->string('companyName');
 			$table->string('ownerName');
-			$table->string('companyAddress');
 			$table->string('certificateLanguage');
 			$table->string('testType');
 			$table->string('verifiedAmount');
@@ -29,6 +28,16 @@ class CreateRm3Table extends Migration {
 			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
+
+			// $table->string('companyAddress');
+			$table->string('companyAddressNo');
+			$table->string('companyAddressMoo');
+			$table->string('companyAddressSoi');
+			$table->string('companyAddressRoad');
+			$table->string('companyAddressSubDistrict');
+			$table->string('companyAddressDistrict');
+			$table->string('companyAddressProvince');
+			$table->string('companyAddressPostalCode');
 		});
 	}
 

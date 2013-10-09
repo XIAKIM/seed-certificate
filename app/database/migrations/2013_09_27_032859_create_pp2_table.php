@@ -16,7 +16,6 @@ class CreatePp2Table extends Migration {
 			$table->increments('id');
 			$table->string('companyName');
 			$table->string('ownerName');
-			$table->text('companyAddress');
 			$table->string('arrivalCity');
 			$table->string('arrivalCountry');
 			$table->string('arrivalCheckpoint');
@@ -31,6 +30,16 @@ class CreatePp2Table extends Migration {
 			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
+
+
+			$table->string('companyAddressNo');
+			$table->string('companyAddressMoo');
+			$table->string('companyAddressSoi');
+			$table->string('companyAddressRoad');
+			$table->string('companyAddressTambol');
+			$table->string('companyAddressDistrict');
+			$table->string('companyAddressProvince');
+			$table->string('companyAddressPostalCode');
 		});
 	}
 
