@@ -34,7 +34,10 @@
 
 		<div class="row">
 			<div class="col-md-1">Address: </div>
-			<div class="col-md-9"><p>{{ $description->address }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressNo }}</p></div>
+			<div class="col-md-1">Moo: </div>
+			<div class="col-md-1"><p>{{ $description->userMoo }}</p></div>
+
 		</div>
 
 		<div class="row">
