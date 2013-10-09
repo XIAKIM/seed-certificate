@@ -41,15 +41,15 @@
 			<div class="col-md-1"><p>{{ $description->userSoi }}</p></div>
 			<div class="col-md-1">Road: </div>
 			<div class="col-md-1"><p>{{ $description->userRoad }}</p></div>
-			<div class="col-md-1">subDistrict: </div>
-			<div class="col-md-2"><p>{{ $description->userSubDistrict }}</p></div>
+			<div class="col-md-1">Sub District: </div>
+			<div class="col-md-1"><p>{{ $description->userSubDistrict }}</p></div>
 		</div>
 
 		<div class="row">
 			<div class="col-md-1">District: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressDistrict }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressDistrict }}</p></div>
 			<div class="col-md-1">Province: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressProvince }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressProvince }}</p></div>
 			<div class="col-md-1">PostalCode: </div>
 			<div class="col-md-1"><p>{{ $description->userAddressPostalCode }}</p></div>
 			
