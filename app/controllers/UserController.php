@@ -27,7 +27,6 @@ class UserController extends BaseController {
 				"identificationNumber" => "required",
 				"issuedDistrict" => "required",
 				"issuedProvince" => "required",
-				"address" => "required",
 				"telNumber" => "required"
 			]);
 			if($validator->passes())
@@ -44,13 +43,13 @@ class UserController extends BaseController {
 				$description->issuedProvince = Input::get('issuedProvince');
 
 				$description->userAddressNo = Input::get('userAddressNo');
-				$description->userMoo = Input::get('userAddressMoo');
-				$description->userSoi = Input::get('userAddressSoi');
-				$description->userRoad = Input::get('userAddressRoad');
-				$description->userSubDistrict = Input::get('userAddressSubDistrict');
-				$description->userDistrict = Input::get('userAddressDistrict');
-				$description->userProvince = Input::get('userAddressProvince');
-				$description->userPostalCode = Input::get('userAddressPostalCode');
+				$description->userAddressMoo = Input::get('userAddressMoo');
+				$description->userAddressSoi = Input::get('userAddressSoi');
+				$description->userAddressRoad = Input::get('userAddressRoad');
+				$description->userAddressSubDistrict = Input::get('userAddressSubDistrict');
+				$description->userAddressDistrict = Input::get('userAddressDistrict');
+				$description->userAddressProvince = Input::get('userAddressProvince');
+				$description->userAddressPostalCode = Input::get('userAddressPostalCode');
 
 				$description->telNumber = Input::get('telNumber');
 				$description->status = 0;

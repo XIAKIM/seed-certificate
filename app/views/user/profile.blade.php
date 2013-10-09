@@ -61,25 +61,25 @@
 
 			<label class="col-md-1 control-label">Moo </label>
 			<div class="col-md-1">
-				<div class="form-control"><p>{{ $description->userMoo }}</p></div>
+				<div class="form-control"><p>{{ $description->userAddressMoo }}</p></div>
 			</div>			
 
 
 			<label class="col-md-1 control-label">Soi </label>
 			<div class="col-md-1">
-				<div class="form-control"><p>{{ $description->userSoi }}</p></div>
+				<div class="form-control"><p>{{ $description->userAddressSoi }}</p></div>
 			</div>
 
 			<label class="col-md-1 control-label">Road </label>
 			<div class="col-md-1">
-				<div class="form-control"><p>{{ $description->userRoad }}</p></div>
+				<div class="form-control"><p>{{ $description->userAddressRoad }}</p></div>
 			</div>
 		</div>
 
 		<div class="row form-group">
 			<label class="col-md-2 control-label">Sub District  </label>
 			<div class="col-md-4">
-				<div class="form-control"><p>{{ $description->userSubDistrict }}</p></div>
+				<div class="form-control"><p>{{ $description->userAddressSubDistrict }}</p></div>
 			</div>
 
 			<label class="col-md-2 control-label">District </label>
