@@ -61,10 +61,7 @@ class RequestController extends BaseController {
 		{
 			$validator = Validator::make(Input::all(),[
 				"companyName" => "required",
-				"ownerName" => "required",
-				"companyAddress" => "required",
-				"collectingLocation"  => "required",
-				"storingAddress" => "required"
+				"ownerName" => "required"
 			]);
 			if($validator->passes())
 			{
@@ -92,8 +89,6 @@ class RequestController extends BaseController {
 				$pp1->collectingLocationProvince = Input::get('collectingLocationProvince');
 				$pp1->collectingLocationPostalCode = Input::get('collectingLocationPostalCode');
 
-
-				$pp1->storingAddress = Input::get('storingAddress');
 				$pp1->userID = Session::get('userID');
 				$pp1->requestID = Session::get('requestID');
 				$pp1->save();

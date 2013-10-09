@@ -94,7 +94,7 @@ class UserController extends BaseController {
                 }
             }
         }
-        $this->layout->content = View::make('mainpage');
+        return Redirect::route('/')->withInput()->with('error', 'Username and/or password invalid.'); 
 	}
 
 	public function afterLogin()
