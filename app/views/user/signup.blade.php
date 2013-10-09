@@ -72,11 +72,50 @@
         </div>
 
         <div class="form-group">
-        	<label for="addressLabel" class="col-lg-2 control-label">Address</label>
-        	<div class="col-lg-8">
-        		{{ Form::text("address", null, ["class" => "form-control"]) }}
+        	<label for="addressNoLabel" class="col-lg-1 control-label">Address</label>
+        	<div class="col-lg-1">
+        		{{ Form::text("userAddressNo", null, ["class" => "form-control"]) }}
         	</div>
+
+            <label for="MooLabel" class="col-lg-1 control-label">Moo</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressMoo", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="SoiLabel" class="col-lg-1 control-label">Soi</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressSoi", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="RoadLabel" class="col-lg-1 control-label">Road</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressRoad", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="SubDistrictLabel" class="col-lg-1 control-label">Sub District</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressSubDistrict", null, ["class" => "form-control"]) }}
+            </div>    
         </div>
+
+        <div class="form-group">
+            <label for="DistrictLabel" class="col-lg-1 control-label">District</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressDistrict", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="ProvinceLabel" class="col-lg-1 control-label">Province</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressProvince", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="PostalCodeLabel" class="col-lg-1 control-label">Postal Code</label>
+            <div class="col-lg-1">
+                {{ Form::text("userAddressPostalCode", null, ["class" => "form-control"]) }}
+            </div>
+            
+        </div>
+
 		<div class="form-group">
 			<label for="telNumberLabel" class="col-lg-2 control-label">Telephone Number</label>
 			<div class="col-lg-8"> 

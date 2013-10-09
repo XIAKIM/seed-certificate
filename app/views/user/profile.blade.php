@@ -36,13 +36,13 @@
 			<div class="col-md-1">Address: </div>
 			<div class="col-md-1"><p>{{ $description->userAddressNo }}</p></div>
 			<div class="col-md-1">Moo: </div>
-			<div class="col-md-1"><p>{{ $description->userMoo }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressMoo }}</p></div>
 			<div class="col-md-1">Soi: </div>
-			<div class="col-md-1"><p>{{ $description->userSoi }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressSoi }}</p></div>
 			<div class="col-md-1">Road: </div>
-			<div class="col-md-1"><p>{{ $description->userRoad }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressRoad }}</p></div>
 			<div class="col-md-1">Sub District: </div>
-			<div class="col-md-1"><p>{{ $description->userSubDistrict }}</p></div>
+			<div class="col-md-1"><p>{{ $description->userAddressSubDistrict }}</p></div>
 		</div>
 
 		<div class="row">
