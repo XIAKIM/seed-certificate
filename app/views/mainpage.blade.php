@@ -1,4 +1,4 @@
 @extends('index')
 @section('content')
-	mainpage.blade
+	<center><h1>Welcome to Seed Certificate Application</h1></center>
 @stop

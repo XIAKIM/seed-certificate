@@ -85,9 +85,6 @@ class UserController extends BaseController {
                 	return Redirect::route('/afterlogin');
                 }
             }
-            $data["username"] = Input::get("username");
-            $this->layout->content = View::make('mainpage');
-            return;
         }
         $this->layout->content = View::make('mainpage');
 	}
@@ -95,9 +92,17 @@ class UserController extends BaseController {
 	public function afterLogin()
 	{
 		if(Auth::guest()) return Redirect::route('/');
+		if(Auth::user()->role == 'officer' || Auth::user()->role == 'lab') return Redirect::route('/afteradminlogin');
 		$this->layout->content = View::make('user.afterlogin');	
 	}
 
+	public function afterAdminLogin()
+	{
+		if(Auth::guest()) return Redirect::route('/');
+		if(Auth::user()->role == 'entrepreneur') return Redirect::route('/');
+		$description = Description::find(Auth::user()->descriptionID);
+		$this->layout->content = View::make('user.firstPageLab', compact('description'));
+	}
 	public function profile()
 	{
 		if(Auth::guest()) return Redirect::route('/');
@@ -114,13 +119,31 @@ class UserController extends BaseController {
 
 	public function editAction()
 	{
-
+		if (Input::server("REQUEST_METHOD") == "POST")
+        {
+            $validator = Validator::make(Input::all(), [
+                "passwordOld" => "required",
+                "password1" => "required",
+                "password2" => "required",
+            ]);
+            if ($validator->passes())
+            {
+            	Log::error(Input::get('passwordOld'));
+            	Log::error(Input::get('password1'));
+            	Log::error(Input::get('password2'));
+            	Log::error(Auth::user()->password);
+            	Log::error(Hash::make(Input::get('passwordOld')));
+            	if(Hash::check(Input::get('passwordOld'), Auth::user()->password) && Input::get('password1') == Input::get('password2'))
+            	{
+            		Auth::user()->password = Hash::make(Input::get('password2'));
+            		Auth::user()->save();
+            		return Redirect::route('/profile');
+            	}
+            }
+            return Redirect::route('/');
+        }
 	}
 
-	public function updateAction()
-	{
-	
-	}
 	/* Delete User by id */
 	/* @author Kimapiwat */ 
 	public function deleteAction($id)

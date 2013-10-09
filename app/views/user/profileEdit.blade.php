@@ -10,28 +10,21 @@
 		<label for="inputOldPassword" class="col-lg-2 control-label">Old Password</label>
 		<div class="col-lg-10">
 			<!-- <input type="password" class="form-control" id="inputOldPassword" placeholder="Password"> -->
-			{{ Form::text("passwordOld", null, ["class" => "form-control"]) }}
+			{{ Form::password("passwordOld", ["class" => "form-control"]) }}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputNewPassword1" class="col-lg-2 control-label">New Password</label>
 		<div class="col-lg-10">
 			<!-- <input type="password" class="form-control" id="inputNewPassword1" placeholder="Password"> -->
-			{{ Form::text("password1", null, ["class" => "form-control"]) }}
+			{{ Form::password("password1", ["class" => "form-control"]) }}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputNewPassword2" class="col-lg-2 control-label">Corfirm New Password</label>
 		<div class="col-lg-10">
 			<!-- <input type="password" class="form-control" id="inputNewPassword2" placeholder="Password"> -->
-			{{ Form::text("password2", null, ["class" => "form-control"]) }}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-		<div class="col-lg-10">
-			<!-- <input type="email" class="form-control" id="inputEmail1" placeholder="Email"> -->
-			{{ Form::text("email", null, ["class" => "form-control"]) }}
+			{{ Form::password("password2", ["class" => "form-control"]) }}
 		</div>
 	</div>
 	<div class="form-group">

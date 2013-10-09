@@ -6,8 +6,8 @@ class UserSeederTableSeeder extends Seeder {
 	{
         $descriptions = [
             [
-                "name" => "test",
-                "lastName" => "test",
+                "name" => "Name",
+                "lastName" => "Lastname",
                 "age" => "20",
                 "email" => "pawis.joe@gmail.com",
                 "nationality" => "test",

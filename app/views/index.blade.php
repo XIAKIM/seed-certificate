@@ -29,13 +29,13 @@
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
 						<li class="active">
-							<a href="#">About</a>
+							<a href="/about">About</a>
 						</li>
 						<li>
-							<a href="#">Detail</a>
+							<a href="/details">Details</a>
 						</li>
 						<li>
-							<a href="#">Contact us</a>
+							<a href="/contact">Contact us</a>
 						</li>
 
 					</ul>
@@ -46,7 +46,7 @@
 							<a data-toggle="modal" href="#myModal" class="btn btn-default navbar-btn">Sign in/up</a>
 						@else
       						<li class="dropdown">
-        						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->username }}&nbsp;<b class="caret"></b></a>
+        						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Description::find(Auth::user()->descriptionID)->name }} {{ Description::find(Auth::user()->descriptionID)->lastName }}&nbsp;<b class="caret"></b></a>
         						<ul class="dropdown-menu">
           							<li><a href="/profile"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Profile</a></li>
           							<li><a href="/status"><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;&nbsp;Status</a></li>

@@ -5,9 +5,9 @@
 		<h1>Verification</h1>		
 		<br></br>
 		<p align="center">
-			<button type="button" class="btn btn-primary btn-lg">Account Verification</button>
+			<a href="/verificationAccount" class="btn btn-primary btn-lg">Account Verification</a>
 			<br><br>
-			<button type="button" class="btn btn-primary btn-lg">Seed Request Verification</button>
+			<a href="/verificationSeed" class="btn btn-primary btn-lg">Seed Request Verification</a>
 		</p>
 	</div>
 </div>

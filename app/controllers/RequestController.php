@@ -124,6 +124,7 @@ class RequestController extends BaseController {
 		//random password
 		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		$password = substr(str_shuffle($chars), 0, 10);
+
 		$user->password = Hash::make($password);
 		$user->role = 'entrepreneur';
 		$user->descriptionID = $id;
