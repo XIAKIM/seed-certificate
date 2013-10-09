@@ -1,6 +1,5 @@
 @extends('index')
 @section('content')
-	<div class="img-resize"><img src="http://www.siamganesh.com/all_gods/new/garuda/garuda3.jpg" class="centerimg">
 			</div>
 			<h2 class="textcenter">Seed Collecting Certification</h2>
 			<label class="pull-left">Certificate No. .....</label>

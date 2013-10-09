@@ -90,23 +90,114 @@
 					<!-- <input type="text" class="form-control"> -->
 					{{ Form::text("ownerName", null, ["class" => "form-control"] ) }}	
 				</div>
-				<div class="form-group">
-					<label>Company Address:</label>
-					<!-- <input type="textarea" class="form-control"> -->
-					{{ Form::text("companyAddress", null, ["class" => "form-control"] ) }}	
-				</div>
-				<div class="form-group">
-					<label>Collecting Location:</label>
-					<!-- <input type="textarea" class="form-control"> -->
-					{{ Form::text("collectingLocation", null, ["class" => "form-control"] ) }}	
-				</div>
 
+				<div class="form-group">
+        			<label for="addressNoLabel" class="col-lg-2 control-label">Address</label>
+        		<div class="col-lg-3">
+        			{{ Form::text("companyAddressNo", null, ["class" => "form-control"]) }}
+        		</div>
 
-				<!-- <div class="form-group">
-					<label>Storing Address:</label>
-					<input type="textarea" class="form-control">
-					{{ Form::text("storingAddress", null, ["class" => "form-control"] ) }}	
-				</div> -->
+            		<label for="MooLabel" class="col-lg-1 control-label">Moo</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("companyAddressMoo", null, ["class" => "form-control"]) }}
+            	</div>
+              
+        		</div>
+
+       			<div class="form-group">           
+
+            		<label for="SoiLabel" class="col-lg-2 control-label">Soi</label>
+           		<div class="col-lg-3">
+                	{{ Form::text("companyAddressSoi", null, ["class" => "form-control"]) }}
+            	</div>  
+
+            		<label for="RoadLabel" class="col-lg-1 control-label">Road</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("companyAddressRoad", null, ["class" => "form-control"]) }}
+            	</div>  
+        		</div>
+
+        		<div class="form-group">
+
+            		<label for="SubDistrictLabel" class="col-lg-2 control-label">Sub District</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("companyAddressSubDistrict", null, ["class" => "form-control"]) }}
+            	</div>  
+
+            		<label for="DistrictLabel" class="col-lg-1 control-label">District</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("companyAddressDistrict", null, ["class" => "form-control"]) }}
+            	</div>           
+            
+        		</div>
+
+        <div class="form-group">            
+
+            <label for="ProvinceLabel" class="col-lg-2 control-label">Province</label>
+            <div class="col-lg-3">
+                {{ Form::text("companyAddressProvince", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="PostalCodeLabel" class="col-lg-1 control-label">Postal Code</label>
+            <div class="col-lg-3">
+                {{ Form::text("companyAddressPostalCode", null, ["class" => "form-control"]) }}
+            </div>
+            
+        </div>
+
+				<div class="form-group">
+        			<label for="addressNoLabel" class="col-lg-2 control-label">Address</label>
+        		<div class="col-lg-3">
+        			{{ Form::text("collectingLocationNo", null, ["class" => "form-control"]) }}
+        		</div>
+
+            		<label for="MooLabel" class="col-lg-1 control-label">Moo</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("collectingLocationMoo", null, ["class" => "form-control"]) }}
+            	</div>
+              
+        		</div>
+
+       			<div class="form-group">           
+
+            		<label for="SoiLabel" class="col-lg-2 control-label">Soi</label>
+           		<div class="col-lg-3">
+                	{{ Form::text("collectingLocationSoi", null, ["class" => "form-control"]) }}
+            	</div>  
+
+            		<label for="RoadLabel" class="col-lg-1 control-label">Road</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("collectingLocationRoad", null, ["class" => "form-control"]) }}
+            	</div>  
+        		</div>
+
+        		<div class="form-group">
+
+            		<label for="SubDistrictLabel" class="col-lg-2 control-label">Sub District</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("collectingLocationSubDistrict", null, ["class" => "form-control"]) }}
+            	</div>  
+
+            		<label for="DistrictLabel" class="col-lg-1 control-label">District</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("collectingLocationDistrict", null, ["class" => "form-control"]) }}
+            	</div>           
+            
+        		</div>
+
+        <div class="form-group">            
+
+            <label for="ProvinceLabel" class="col-lg-2 control-label">Province</label>
+            <div class="col-lg-3">
+                {{ Form::text("collectingLocationProvince", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="PostalCodeLabel" class="col-lg-1 control-label">Postal Code</label>
+            <div class="col-lg-3">
+                {{ Form::text("collectingLocationPostalCode", null, ["class" => "form-control"]) }}
+            </div>
+            
+        </div>
 
 				<div class="form-group">
         			<label for="addressNoLabel" class="col-lg-2 control-label">Address</label>
