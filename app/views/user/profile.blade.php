@@ -2,76 +2,114 @@
 @section('content')
 	<h2>Hello, {{ Auth::user()->username }}</h2>
 	<img src="" alt="" class="img-thumbnail">
-	<div class="bs-docs-grid">
-		<div class="row">
-			<div class='col-md-1'>User :</div>
-			<div class='col-md-2'>{{ Auth::user()->username }}</div>
+	<div class="panel panel-default">
+		<div class="panel-body">
+		<form class="form-horizontal" role="form">
+			<!-- User  -->			
+			<div class="row form-group">
+				<label class="col-md-1 control-label"> User  </label>
+				<div class='col-md-11'>
+					<div class="form-control">{{ Auth::user()->username }}</div>
+				</div>
+			</div>
+			<!-- Name  -->			
+			<div class="row form-group">
+				<label class="col-md-1 control-label">Name  </label>
+				<div class="col-md-11"> 
+					<div class="form-control">{{ $description->name }} {{ $description->lastName }}</div>
+				</div>
+			</div>
+			<!-- Age and Nationality -->			
+			<div class-"row form-group">
+				<label class="col-md-1 control-label">Age  </label>
+				<div class="col-md-1">
+					<div class="form-control">{{ $description->age }}</div>
+				</div>
+				<label class="col-md-2 control-label"> Nationality  </label>	
+				<div class="col-md-2">
+					<div class="form-control">{{ $description->nationality }}</div>	
+				</div>
+			</div>
+
+			<div class="row form-group">
+				<label class="col-md-2 control-label"> Identification Type  </label> 
+				<div class="col-md-2">
+					<div class="col-md-4 form-control">{{ $description->identificationType }}</div>
+				</div>
+			</div>
+			<div class="row form-group">
+				<label class="col-md-2 control-label">Identification Number  </label> 			
+				<div class="col-md-5">
+					<div class="col-md-5 form-control"> {{ $description->identificationNumber}} </div>
+				</div>			
+			</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Issued District  </label>
+			<div class="col-md-4">
+				<div class="form-control">{{ $description->issuedDistrict }}</div>
+			</div>
+			<label class="col-md-2 control-label">Issued Province  </label>
+			<div class="col-md-4">
+				<div class="form-control"> {{ $description->issuedProvince }}</div>
+			</div>
+		</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label"> Address No.  </label>
+			<div class="col-md-1">
+				<div class="form-control"><p>{{ $description->userAddressNo }}</p></div>
+			</div>
+
+			<label class="col-md-1 control-label">Moo </label>
+			<div class="col-md-1">
+				<div class="form-control"><p>{{ $description->userMoo }}</p></div>
+			</div>			
+
+
+			<label class="col-md-1 control-label">Soi </label>
+			<div class="col-md-1">
+				<div class="form-control"><p>{{ $description->userSoi }}</p></div>
+			</div>
+
+			<label class="col-md-1 control-label">Road </label>
+			<div class="col-md-1">
+				<div class="form-control"><p>{{ $description->userRoad }}</p></div>
+			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-1">Name :  </div>
-			<div class="col-md-4">{{ $description->name }} {{ $description->lastName }}</div>
-			<div class="col-md-1">Age : </div>
-			<div class="col-md-2">{{ $description->age }}</div>
-			<div class="col-md-2">Nationality : </div>
-			<div class="col-md-2">{{ $description->nationality }}</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Sub District  </label>
+			<div class="col-md-4">
+				<div class="form-control"><p>{{ $description->userSubDistrict }}</p></div>
+			</div>
+
+			<label class="col-md-2 control-label">District </label>
+			<div class="col-md-4">
+				<div class="form-control"><p>{{ $description->userAddressDistrict }}</p></div>
+			</div>
 		</div>
 
-		<div class="row">
-			<div class="col-md-2">Identification Type : </div>
-			<div class="col-md-4">{{ $description->identificationType }}</div>
-			<div class="col-md-3"> Identification Number: </div>
-			<div class="col-md-4">{{ $description->identificationNumber }}</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-2">Issued District : </div>
-			<div class="col-md-4">{{ $description->issuedDistrict }}</div>
-			<div class="col-md-2">Issued Province : </div>
-			<div class="col-md-4">{{ $description->issuedProvince }}</div>
-		</div>
-
-
-
-
-		<div class="row">
-			<div class="col-md-1">Address: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressNo }}</p></div>
-			<div class="col-md-1">Moo: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressMoo }}</p></div>			
-		</div>
-
-		<div class="row">			
-			<div class="col-md-1">Soi: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressSoi }}</p></div>
-			<div class="col-md-1">Road: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressRoad }}</p></div>					
-		</div>
-
-		<div class="row">	
-			<div class="col-md-1">Sub District: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressSubDistrict }}</p></div>
-			<div class="col-md-1">District: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressDistrict }}</p></div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-1">Province: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressProvince }}</p></div>
-			<div class="col-md-1">PostalCode: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressPostalCode }}</p></div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Province </label>
+			<div class="col-md-4">
+				<div class="form-control"><p>{{ $description->userAddressProvince }}</p></div>
+			</div>
 			
-		</div>		
+			<label class="col-md-2 control-label">PostalCode: </label>
+			<div class="col-md-4">
+				<div class="form-control"><p>{{ $description->userAddressPostalCode }}</p></div>
+			</div>
+		</div>
 
-
-
-
-		<div class="row">
-			<div class="col-md-2">Tel Number : </div>
-			<div class="col-md-3">{{ $description->telNumber }}</div>
+		<div class="row form-group">
+			<label class="col-md-2 control-label">Tel Number  </label>
+			<div class="col-md-4">
+				<div class="form-control">{{ $description->telNumber }}</div>
+			</div>
 		</div>
 
 		<a href="/profile/edit" class="btn btn-default">Edit</a>
+		</form>
 	</div>
+</div>
 
 @stop
