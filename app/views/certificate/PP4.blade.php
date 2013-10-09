@@ -5,13 +5,13 @@
 			<div class="img-resize"><img src="http://www.siamganesh.com/all_gods/new/garuda/garuda3.jpg" class="centerimg">
 			</div>
 			<h2 class="textcenter">Seed Selling Certification</h2>
-			<label class="pull-left">Certificate No. .....</label>
+			<label class="pull-left">Certificate No. {{ $certificate->id }}</label>
 			<label class="pull-right">Department of Agriculture</label>
 			<br />
 			<center>
 				<label>This cerificate for</label>
 				<br />
-				.........................................................................................................
+				{{ Description::find(User::find($certificate->userID)->descriptionID)->name }} {{ Description::find(User::find($certificate->userID)->descriptionID)->lastName }}
 			</center>
 			<label>Company address</label>...................<label>Moo</label>.....<label>Soi</label>.....<label>Road</label>...................
 			<br />
@@ -26,9 +26,11 @@
 			<label>Storage Location No.</label>................... <label>Moo</label>................... <label>Soi</label>................... <label>Road</label>...................
 			<br />
 			<br />
-			<label>This certification is available on</label>................... <label>Month</label>................... <label>B.E.</label>...................
+			<label>This certification is available on</label> {{ $certificate->created_at }}
 			<br />
-			<label>can be used until 31 December</label>................... <label>and can be used only the location that states in this certification.</label>................... 
+			<label>can be used until</label> {{ $certificate->expiredDate}}
+			<br />
+			<label>and can be used only the location that states in this certification.</label>................... 
 			<br />
 			
 			

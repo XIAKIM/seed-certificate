@@ -13,9 +13,9 @@
 				Here is your initial username and password.
 				<br><br>
 				<p align="center">
-					username: ______________
+					username: {{ $username }}
 					<br>
-					password: ______________
+					password: {{ $password }}
 				</p>
 				<br><br>
 				You can change them after the first login, in the (what) page.

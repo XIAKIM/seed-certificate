@@ -139,7 +139,7 @@ class RequestController extends BaseController {
     		'username' => $user->username,
     		'password' => $password
 		);
-		Mail::send('emails.welcome', $data, function($message) use ($description)
+		Mail::send('emails.genUserPass', $data, function($message) use ($description)
 		{
     		$message->to($description->email)->subject('Welcome!');
 		});
@@ -152,7 +152,7 @@ class RequestController extends BaseController {
 		$description = Description::find($id);
 
 		$data = ['comment' => Input::get('comment')];
-		Mail::send('emails.welcome2', $data, function($message) use ($description)
+		Mail::send('emails.deniedAccount', $data, function($message) use ($description)
 		{
     		$message->to($description->email)->subject('Welcome!');
 		});

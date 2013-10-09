@@ -9,7 +9,7 @@
 			<center>
 				<label>This cerificate for</label>
 				<br />
-				.........................................................................................................
+				{{ Description::find(User::find($certificate->userID)->descriptionID)->name }} {{ Description::find(User::find($certificate->userID)->descriptionID)->lastName }}
 			</center>
 			<label>Company address</label>...................<label>Moo</label>.....<label>Soi</label>.....<label>Road</label>...................
 			<br />
@@ -20,20 +20,21 @@
 				This certification allows the owner for selling seed follow matra 14 of seed enactment 2518 B.E. reform again in seed enactment 2535 B.E.(second copy) and seed lists that had already requested to the officer.
 			</p>
 			<br />
-			<label>Collecting Location No.</label>................... <label>Moo</label>................... <label>Soi</label>................... <label>Road</label>...................
-			<br />
+			
 			<label>Storage Location No.</label>................... <label>Moo</label>................... <label>Soi</label>................... <label>Road</label>...................
 			<br />
 			<br />
-			<label>This certification is available on</label>................... <label>Month</label>................... <label>B.E.</label>...................
+			<label>This certification is available on</label> {{ $certificate->created_at }}
 			<br />
-			<label>can be used until 31 December</label>................... <label>and can be used only the location that states in this certification.</label>................... 
+			<label>can be used until</label> {{ $certificate->expiredDate}}
+			<br />
+			<label>and can be used only the location that states in this certification.</label>................... 
 			<br />
 			
 			
 			
 			<div class="pull-right">
-				<label>(signature)</label>...............<label>officer</label>
+				<label>(signature)</label> ............... <label>officer</label>
 				<center>
 					(.........................)
 				</center>

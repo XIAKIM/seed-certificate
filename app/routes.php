@@ -50,6 +50,11 @@ Route::any('/profile', [
 
 Route::any('/edit', [
 	'as' => '/edit',
+	'uses' => 'UserController@editAction'
+]);
+
+Route::any('/profile/edit', [
+	'as' => '/profile/edit',
 	'uses' => 'UserController@edit'
 ]);
 
@@ -173,23 +178,23 @@ Route::any('/pp1deny/{id}', [
 
 
 
-Route::any('/certificate/pp3/{id}', [
-	'as' => '/certificate/pp3/{id}',
+Route::any('/certificate/pp3', [
+	'as' => '/certificate/pp3',
 	'uses' => 'CertificateController@showPP3'
 ]);
 
-Route::any('/certificate/pp4/{id}', [
-	'as' => '/certificate/pp4/{id}',
+Route::any('/certificate/pp4', [
+	'as' => '/certificate/pp4',
 	'uses' => 'CertificateController@showPP4'
 ]);
 
-Route::any('/certificate/pp5/{id}', [
-	'as' => '/certificate/pp5/{id}',
+Route::any('/certificate/pp5', [
+	'as' => '/certificate/pp5',
 	'uses' => 'CertificateController@showPP5'
 ]);
 
-Route::any('/certificate/pp6/{id}', [
-	'as' => '/certificate/pp6/{id}',
+Route::any('/certificate/pp6', [
+	'as' => '/certificate/pp6',
 	'uses' => 'CertificateController@showPP6'
 ]);
 

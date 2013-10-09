@@ -55,7 +55,8 @@ class UserController extends BaseController {
 	public function status()
 	{
 		if(Auth::guest()) return Redirect::route('/');
-		$this->layout->content = View::make('user.status');
+		$pp1s = PP1::where('userID', '=', Auth::user()->id)->get();
+		$this->layout->content = View::make('user.status', compact('pp1s'));
 	}
 
 	public function afterregister()
@@ -100,13 +101,20 @@ class UserController extends BaseController {
 	public function profile()
 	{
 		if(Auth::guest()) return Redirect::route('/');
-		$this->layout->content = View::make('user.profile');
+		$description = Description::find(Auth::user()->descriptionID);
+		$this->layout->content = View::make('user.profile', compact('description'));
 	}
 
 	public function edit()
 	{
 		if(Auth::guest()) return Redirect::route('/');
-		$this->layout->content = View::make('user.edit');
+		$description = Description::find(Auth::user()->descriptionID);
+		$this->layout->content = View::make('user.profileEdit', compact('description'));
+	}
+
+	public function editAction()
+	{
+
 	}
 
 	public function updateAction()
