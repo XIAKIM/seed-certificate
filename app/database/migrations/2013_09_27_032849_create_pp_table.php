@@ -21,7 +21,16 @@ class CreatePpTable extends Migration {
 			$table->string('scientificName');
 			$table->string('speciesName');
 			$table->string('tradeMark');
-			$table->text('collectingLocation');
+			
+			$table->text('collectingLocationNo');
+			$table->text('collectingLocationMoo');
+			$table->text('collectingLocationSoi');
+			$table->text('collectingLocationRoad');
+			$table->text('collectingLocationTambol');
+			$table->text('collectingLocationDistrict');
+			$table->text('collectingLocationProvince');
+			$table->text('collectingLocationPostalCode');
+
 			$table->string('fSpeciesOwner');
 			$table->string('mSpeciesOwner');
 			$table->string('dominance');

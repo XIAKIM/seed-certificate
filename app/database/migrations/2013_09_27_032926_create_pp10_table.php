@@ -18,8 +18,28 @@ class CreatePp10Table extends Migration {
 			$table->integer('certifivateNumber');
 			$table->string('companyName');
 			$table->string('ownerName');
-			$table->text('companyAddress');
-			$table->text('collectingLocation');
+
+			// $table->text('companyAddress');
+			$table->text('companyAddressNo');
+			$table->text('companyAddressMoo');
+			$table->text('companyAddressSoi');
+			$table->text('companyAddressRoad');
+			$table->text('companyAddressTambol');
+			$table->text('companyAddressDistrict');
+			$table->text('companyAddressProvince');
+			$table->text('companyAddressPostalCode');
+
+			// $table->text('collectingLocation');
+			$table->text('collectingLocationNo');
+			$table->text('collectingLocationMoo');
+			$table->text('collectingLocationSoi');
+			$table->text('collectingLocationRoad');
+			$table->text('collectingLocationTambol');
+			$table->text('collectingLocationDistrict');
+			$table->text('collectingLocationProvince');
+			$table->text('collectingLocationPostalCode');
+
+
 			$table->text('storingLocation');
 			$table->integer('requestID');
 			$table->timestamps();
