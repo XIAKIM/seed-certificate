@@ -47,7 +47,7 @@ class RequestController extends BaseController {
 
 	public function afterRequest()
 	{
-		$this->layout->content = View::make('request.afterRequest');	
+		$this->layout->content = View::make('request.afteruserrequest');	
 	}
 
 	public function createPP1RequestAction()
