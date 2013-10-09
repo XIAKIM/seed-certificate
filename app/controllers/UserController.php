@@ -42,7 +42,16 @@ class UserController extends BaseController {
 				$description->identificationNumber = Input::get('identificationNumber');
 				$description->issuedDistrict = Input::get('issuedDistrict');
 				$description->issuedProvince = Input::get('issuedProvince');
-				$description->address = Input::get('address');
+
+				$description->userAddressNo = Input::get('userAddressNo');
+				$description->userMoo = Input::get('userMoo');
+				$description->userSoi = Input::get('userSoi');
+				$description->userRoad = Input::get('userRoad');
+				$description->userSubDistrict = Input::get('userSubDistrict');
+				$description->userDistrict = Input::get('userDistrict');
+				$description->userProvince = Input::get('userProvince');
+				$description->userPostalCode = Input::get('userPostalCode');
+
 				$description->telNumber = Input::get('telNumber');
 				$description->status = 0;
 				$description->save();

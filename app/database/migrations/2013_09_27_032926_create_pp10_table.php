@@ -24,7 +24,7 @@ class CreatePp10Table extends Migration {
 			$table->text('companyAddressMoo');
 			$table->text('companyAddressSoi');
 			$table->text('companyAddressRoad');
-			$table->text('companyAddressTambol');
+			$table->text('companyAddressSubDistrict');
 			$table->text('companyAddressDistrict');
 			$table->text('companyAddressProvince');
 			$table->text('companyAddressPostalCode');
@@ -34,7 +34,7 @@ class CreatePp10Table extends Migration {
 			$table->text('collectingLocationMoo');
 			$table->text('collectingLocationSoi');
 			$table->text('collectingLocationRoad');
-			$table->text('collectingLocationTambol');
+			$table->text('collectingLocationSubDistrict');
 			$table->text('collectingLocationDistrict');
 			$table->text('collectingLocationProvince');
 			$table->text('collectingLocationPostalCode');

@@ -28,7 +28,7 @@ class CreateDescriptionTable extends Migration {
 			$table->text('userMoo');
 			$table->text('userSoi');
 			$table->text('userRoad');
-			$table->text('userTambol');
+			$table->text('userSubDistrict');
 			$table->text('userDistrict');
 			$table->text('userProvince');
 			$table->text('userPostalCode');

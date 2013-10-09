@@ -72,8 +72,27 @@ class RequestController extends BaseController {
 				$pp1->certificateType = Session::get('type');
 				$pp1->companyName = Input::get('companyName');
 				$pp1->ownerName = Input::get('ownerName');
-				$pp1->companyAddress = Input::get('companyAddress');
-				$pp1->collectingLocation = Input::get('collectingLocation');
+
+
+				$pp1->companyAddressNo = Input::get('companyAddressNo');
+				$pp1->companyAddressMoo = Input::get('companyAddressMoo');
+				$pp1->companyAddressSoi = Input::get('companyAddressSoi');
+				$pp1->companyAddressRoad = Input::get('companyAddressRoad');
+				$pp1->companyAddressSubDistrict = Input::get('companyAddressSubDistrict');
+				$pp1->companyAddressDistrict = Input::get('companyAddressDistrict');
+				$pp1->companyAddressProvince = Input::get('companyAddressProvince');
+				$pp1->companyAddressPostalCode = Input::get('companyAddressPostalCode');
+
+				$pp1->collectingLocationNo = Input::get('collectingLocationNo');
+				$pp1->collectingLocationMoo = Input::get('collectingLocationMoo');
+				$pp1->collectingLocationSoi = Input::get('collectingLocationSoi');
+				$pp1->collectingLocationRoad = Input::get('collectingLocationRoad');
+				$pp1->collectingLocationSubDistrict = Input::get('collectingLocationSubDistrict');
+				$pp1->collectingLocationDistrict = Input::get('collectingLocationDistrict');
+				$pp1->collectingLocationProvince = Input::get('collectingLocationProvince');
+				$pp1->collectingLocationPostalCode = Input::get('collectingLocationPostalCode');
+
+
 				$pp1->storingAddress = Input::get('storingAddress');
 				$pp1->userID = Session::get('userID');
 				$pp1->requestID = Session::get('requestID');

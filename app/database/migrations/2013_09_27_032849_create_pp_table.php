@@ -26,7 +26,7 @@ class CreatePpTable extends Migration {
 			$table->text('collectingLocationMoo');
 			$table->text('collectingLocationSoi');
 			$table->text('collectingLocationRoad');
-			$table->text('collectingLocationTambol');
+			$table->text('collectingLocationSubDistrict');
 			$table->text('collectingLocationDistrict');
 			$table->text('collectingLocationProvince');
 			$table->text('collectingLocationPostalCode');
