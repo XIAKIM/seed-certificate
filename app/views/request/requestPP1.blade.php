@@ -100,11 +100,68 @@
 					<!-- <input type="textarea" class="form-control"> -->
 					{{ Form::text("collectingLocation", null, ["class" => "form-control"] ) }}	
 				</div>
-				<div class="form-group">
+
+
+				<!-- <div class="form-group">
 					<label>Storing Address:</label>
-					<!-- <input type="textarea" class="form-control"> -->
+					<input type="textarea" class="form-control">
 					{{ Form::text("storingAddress", null, ["class" => "form-control"] ) }}	
-				</div>
+				</div> -->
+
+				<div class="form-group">
+        			<label for="addressNoLabel" class="col-lg-2 control-label">Address</label>
+        		<div class="col-lg-3">
+        			{{ Form::text("storingAddressNo", null, ["class" => "form-control"]) }}
+        		</div>
+
+            		<label for="MooLabel" class="col-lg-1 control-label">Moo</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("storingAddressMoo", null, ["class" => "form-control"]) }}
+            	</div>
+              
+        		</div>
+
+       			<div class="form-group">           
+
+            		<label for="SoiLabel" class="col-lg-2 control-label">Soi</label>
+           		<div class="col-lg-3">
+                	{{ Form::text("storingAddressSoi", null, ["class" => "form-control"]) }}
+            	</div>  
+
+            		<label for="RoadLabel" class="col-lg-1 control-label">Road</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("storingAddressRoad", null, ["class" => "form-control"]) }}
+            	</div>  
+        		</div>
+
+        		<div class="form-group">
+
+            		<label for="SubDistrictLabel" class="col-lg-2 control-label">Sub District</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("storingAddressSubDistrict", null, ["class" => "form-control"]) }}
+            	</div>  
+
+            		<label for="DistrictLabel" class="col-lg-1 control-label">District</label>
+            	<div class="col-lg-3">
+                	{{ Form::text("storingAddressDistrict", null, ["class" => "form-control"]) }}
+            	</div>           
+            
+        		</div>
+
+        <div class="form-group">            
+
+            <label for="ProvinceLabel" class="col-lg-2 control-label">Province</label>
+            <div class="col-lg-3">
+                {{ Form::text("storingAddressProvince", null, ["class" => "form-control"]) }}
+            </div>
+
+            <label for="PostalCodeLabel" class="col-lg-1 control-label">Postal Code</label>
+            <div class="col-lg-3">
+                {{ Form::text("storingAddressPostalCode", null, ["class" => "form-control"]) }}
+            </div>
+            
+        </div>
+
 				<div class="form-group">
 					<button class="btn btn-default">Reset</button>
 					{{ Form::submit('Submit', ["class" => "btn btn-primary"])}}

@@ -87,8 +87,7 @@
               
         </div>
 
-        <div class="form-group">
-            
+        <div class="form-group">           
 
             <label for="SoiLabel" class="col-lg-2 control-label">Soi</label>
             <div class="col-lg-3">
