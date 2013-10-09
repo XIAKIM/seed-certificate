@@ -46,8 +46,7 @@
 			<div class="col-md-2"><p>{{ $description->userAddressSoi }}</p></div>
 			<div class="col-md-1">Road: </div>
 			<div class="col-md-2"><p>{{ $description->userAddressRoad }}</p></div>
-			<div class="col-md-1">Sub District: </div>
-			<div class="col-md-2"><p>{{ $description->userAddressSubDistrict }}</p></div>
+			<div class="col-md-1">Sub District: </div>			
 		</div>
 
 		<div class="row">	
