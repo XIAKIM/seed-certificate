@@ -6,6 +6,7 @@ class RequestController extends BaseController {
 	// @author Varunyu
 	public function request()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('request.request');
 	}
 
@@ -23,9 +24,11 @@ class RequestController extends BaseController {
 	// @author Varunyu
 	public function requestPP1()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$user = User::find(Session::get('userID'));
 		$description = Description::find($user->descriptionID);
 		$type = ['type' => Session::get('type')];
+		if(Auth::)
 		$request = new Requests;
 		$request->status = 'Waiting';
 		$request->userID = Session::get('userID');
@@ -37,16 +40,19 @@ class RequestController extends BaseController {
 
 	public function requestPP8()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('request.requestPP8');
 	}
 
 	public function requestPP9()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('request.requestPP9');
 	}
 
 	public function afterRequest()
 	{
+		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('request.afteruserrequest');	
 	}
 
@@ -97,6 +103,7 @@ class RequestController extends BaseController {
 	// @author Varunyu
 	public function verification()
 	{
+		if(Auth::guest() || Auth::user()->role == 'entrepreneur') return Redirect::route('/');
 		$this->layout->content = View::make('request.verification');
 	}
 
@@ -175,12 +182,14 @@ class RequestController extends BaseController {
 	// @author Varunyu
 	public function verificationSeedPersonPP1($id)
 	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$pp1s = PP1::where('userID', '=', $id)->get();
 		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
 	}
 
 	public function verificationSeedPP1($id)
 	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$pp1 = PP1::find($id);
 		$this->layout->content = View::make('request.verificationPP1', compact('pp1'));
 	}
