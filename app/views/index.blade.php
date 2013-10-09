@@ -70,6 +70,8 @@
 						</button>
 						<h4 class="modal-title">Sign in</h4>
 					</div>
+
+
 					<div class="modal-body">
 						{{ Form::open(["route"       => "/login"]) }}
         					{{ Form::label("username", "Username") }}
@@ -81,12 +83,11 @@
                 					{{ $error }}
             					</div>
         					@endif
-        					
-    					
+    					{{ Form::submit("Login" , ["class" => "btn btn-default"] ) }}
+						{{ Form::close() }}
 					</div>
 					<div class="modal-footer">
-							{{ Form::submit("Login" , ["class" => "btn btn-default"] ) }}
-						{{ Form::close() }}
+							
 						{{  Form::open(["route" => "/signup"]) }}
 							{{ Form::submit('Sign Up', ["class" => "btn btn-default"] ) }}
 						{{  Form::close() }}
