@@ -15,7 +15,16 @@ class UserSeederTableSeeder extends Seeder {
                 "identificationNumber" => "test",
                 "issuedDistrict" => "test",
                 "issuedProvince" => "test",
-                "address" => "test",
+
+                "userAddressNo" => "test",
+                "userAddressMoo" => "test",
+                "userAddressSoi" => "test",
+                "userAddressRoad" => "test",
+                "userAddressSubDistrict" => "test",
+                "userAddressDistrict" => "test",
+                "userAddressProvince" => "test",
+                "userAddressPostalCode" => "test",
+
                 "telNumber" => "023456789",
                 "status" => 1
             ]
