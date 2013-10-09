@@ -28,7 +28,6 @@ class RequestController extends BaseController {
 		$user = User::find(Session::get('userID'));
 		$description = Description::find($user->descriptionID);
 		$type = ['type' => Session::get('type')];
-		if(Auth::)
 		$request = new Requests;
 		$request->status = 'Waiting';
 		$request->userID = Session::get('userID');
