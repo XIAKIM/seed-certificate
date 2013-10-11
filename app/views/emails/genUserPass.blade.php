@@ -7,11 +7,9 @@
 				<br><br>
 				Here is your initial username and password.
 				<br><br>
-				<p align="center">
-					username: {{ $email }}
-					<br>
-					password: {{ $password }}
-				</p>
+				username: {{ $email }}
+				<br>
+				password: {{ $password }}
 				<br><br>
 				You can change them after the first login, in the (what) page.
 			</p>

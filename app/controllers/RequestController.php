@@ -31,7 +31,7 @@ class RequestController extends BaseController {
 		$request = new Requests;
 		$request->status = 'Waiting';
 		$request->userID = Session::get('userID');
-		$request->message = 'test Message';
+		$request->message = 'waiting';
 		$request->type = 'pp1';
 		$request->save();
 		Session::put('requestID', $request->id);

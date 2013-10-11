@@ -9,7 +9,7 @@ class UserSeederTableSeeder extends Seeder {
                 "name" => "Name",
                 "lastName" => "Lastname",
                 "age" => "20",
-                "email" => "pawis.joe@gmail.com",
+                "email" => "pawisjoe@gmail.com",
                 "nationality" => "test",
                 "identificationType" => "test",
                 "identificationNumber" => "test",
@@ -38,7 +38,7 @@ class UserSeederTableSeeder extends Seeder {
             [
                 "username" => "admin",
                 "password" => Hash::make('admin'),
-                "email" => "pawis.joe@gmail.com",
+                "email" => "pawisjoe@gmail.com",
                 "role"     => "officer",
                 "descriptionID" => 1
             ]

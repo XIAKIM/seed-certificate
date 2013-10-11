@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Seed Certificate</title>
@@ -22,17 +22,17 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">XIAKIM</a>
+					<a class="navbar-brand" href="/">Seed Certificate Application</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
-						<li class="active">
-							<a href="/about">About</a>
-						</li>
 						<li>
 							<a href="/details">Details</a>
+						</li>
+						<li>
+							<a href="/about">About</a>
 						</li>
 						<li>
 							<a href="/contact">Contact us</a>
@@ -110,11 +110,6 @@
 
 
 	<!-- footer -->
-	<footer>
-		<div style="height: 300px; background-color: #bdc3c7">
-			
-		</div>
-	</footer>
 	<!-- end footer -->
 
 
