@@ -102,7 +102,9 @@
 
 	<!-- content -->
 	<div class="container">
-		@yield('content')
+		<div class="panel panel-default">
+			@yield('content')
+		</div>
 	</div>
 	<!-- end content -->
 

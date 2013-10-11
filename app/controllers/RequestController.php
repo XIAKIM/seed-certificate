@@ -31,6 +31,7 @@ class RequestController extends BaseController {
 		$request = new Requests;
 		$request->status = 'Waiting';
 		$request->userID = Session::get('userID');
+		$request->message = 'test Message';
 		$request->type = 'pp1';
 		$request->save();
 		Session::put('requestID', $request->id);
@@ -88,6 +89,15 @@ class RequestController extends BaseController {
 				$pp1->collectingLocationDistrict = Input::get('collectingLocationDistrict');
 				$pp1->collectingLocationProvince = Input::get('collectingLocationProvince');
 				$pp1->collectingLocationPostalCode = Input::get('collectingLocationPostalCode');
+				
+				$pp1->storingAddressNo = Input::get('collectingLocationNo');	
+				$pp1->storingAddressMoo = Input::get('collectingLocationMoo');				
+				$pp1->storingAddressSoi = Input::get('collectingLocationSoi');				
+				$pp1->storingAddressRoad = Input::get('collectingLocationRoad');				
+				$pp1->storingAddressSubDistrict = Input::get('collectingLocationSubDistrict');
+				$pp1->storingAddressDistrict = Input::get('collectingLocationDistrict');			
+				$pp1->storingAddressProvince	= Input::get('collectingLocationProvince');	
+				$pp1->storingAddressPostalCode = Input::get('collectingLocationPostalCode');				
 
 				$pp1->userID = Session::get('userID');
 				$pp1->requestID = Session::get('requestID');

@@ -35,7 +35,7 @@
 				</div>
 				<label class="col-md-2 control-label"> Identifcation Number </label>
 				<div class="col-md-4">
-					<div class="form-control"> {{$description->indentificationNumber}}</div>
+					<div class="form-control"> {{$description->identificationNumber}}</div>
 				</div>
 			</div>
 			
