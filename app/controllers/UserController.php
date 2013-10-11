@@ -77,14 +77,14 @@ class UserController extends BaseController {
         if (Input::server("REQUEST_METHOD") == "POST")
         {
             $validator = Validator::make(Input::all(), [
-                "username" => "required",
+                "email" => "required",
                 "password" => "required"
             ]);
 
             if ($validator->passes())
             {
                 $credentials = [
-                    "username" => Input::get("username"),
+                    "email" => Input::get("email"),
                     "password" => Input::get("password")
                 ];
                 if (Auth::attempt($credentials)) 

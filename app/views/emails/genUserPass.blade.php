@@ -8,7 +8,7 @@
 				Here is your initial username and password.
 				<br><br>
 				<p align="center">
-					username: {{ $username }}
+					username: {{ $email }}
 					<br>
 					password: {{ $password }}
 				</p>

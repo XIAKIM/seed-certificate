@@ -156,6 +156,7 @@ class RequestController extends BaseController {
 		$password = substr(str_shuffle($chars), 0, 10);
 
 		$user->password = Hash::make($password);
+		$user->email = Description::find($id)->email;
 		$user->role = 'entrepreneur';
 		$user->descriptionID = $id;
 		$user->save();
@@ -167,7 +168,7 @@ class RequestController extends BaseController {
 
 		//sending username and password to email
 		$data = array(
-    		'username' => $user->username,
+    		'email' => $user->email,
     		'password' => $password
 		);
 		Mail::send('emails.genUserPass', $data, function($message) use ($description)

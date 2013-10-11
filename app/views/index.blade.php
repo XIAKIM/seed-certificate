@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html>
 <head>
 	<title>Seed Certificate</title>
@@ -75,7 +75,7 @@
 					<div class="modal-body">
 						{{ Form::open(["route"       => "/login"]) }}
         					{{ Form::label("username", "Username") }}
-        					{{ Form::text("username", Input::get("username")) }}
+        					{{ Form::text("email", Input::get("email")) }}
         					{{ Form::label("password", "Password") }}
         					{{ Form::password("password") }}
         					@if ($error = $errors->first("password"))
