@@ -254,6 +254,6 @@ class RequestController extends BaseController {
 		$request->status = 'Denied';
 		$request->message = Input::get('comment');
 		$request->save();
-		return Redirect::route('/verificationSeed/pp1/{id}', $id);
+		return Redirect::route('/verificationSeed');
 	}
 }
