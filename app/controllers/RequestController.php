@@ -148,10 +148,8 @@ class RequestController extends BaseController {
 
 	public function accountApproveAction($id)
 	{
-		//generate new user
 		$user = new User;
 		$user->username = 'entrepreneur' . $id;
-		//random password
 		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		$password = substr(str_shuffle($chars), 0, 10);
 
