@@ -6,10 +6,10 @@ class UserSeederTableSeeder extends Seeder {
 	{
         $descriptions = [
             [
-                "name" => "Name",
-                "lastName" => "Lastname",
+                "name" => "Admin",
+                "lastName" => "Seedcertificate",
                 "age" => "20",
-                "email" => "pawisjoe@gmail.com",
+                "email" => "admin@seedcertificate.com",
                 "nationality" => "test",
                 "identificationType" => "test",
                 "identificationNumber" => "test",
@@ -38,7 +38,7 @@ class UserSeederTableSeeder extends Seeder {
             [
                 "username" => "admin",
                 "password" => Hash::make('admin'),
-                "email" => "pawisjoe@gmail.com",
+                "email" => "admin@seedcertificate.com",
                 "role"     => "officer",
                 "descriptionID" => 1
             ]
