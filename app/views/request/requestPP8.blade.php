@@ -111,7 +111,7 @@
     <th>Science Name</th>
     <th>Unit</th>
     <th>Amount</th>
-    <th>Value</th>
+    <th>Quantity</th>
     <th>Departure<br>Country</th>
     <th>Imported<br>Checkpoint</th>
     <th>Imported<br>Date</th>
