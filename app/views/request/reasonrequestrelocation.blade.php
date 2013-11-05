@@ -7,6 +7,9 @@
 <h3> New Location information</h3>
 <br>
 
+
+<!-- dont change route please change and created function it -->
+
 {{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"form-horizontal"]) }}
 
 
