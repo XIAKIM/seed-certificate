@@ -17,7 +17,7 @@ class CreateCertificateTable extends Migration {
 			$table->dateTime('expiredDate');
 			$table->string('certificateType');
 			$table->string('requestType');
-			$table->integer('ppID');
+			$table->integer('requestID');
 			$table->integer('userID');
 			$table->timestamps();
 		});
