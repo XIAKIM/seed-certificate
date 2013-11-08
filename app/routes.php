@@ -245,6 +245,9 @@ Route::get('/requestpassing', function() {
 	return View::make('request.requestpassing');
 });
 
+Route::get('/requestrm3', function() {
+	return View::make('request.requestrm3');
+});
 
 
 
