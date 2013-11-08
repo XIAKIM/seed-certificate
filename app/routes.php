@@ -363,3 +363,7 @@ Route::any('/lablist', [
 	'as' => '/lablist',
 	'uses' => 'NewPageController@goToLabList'
 ]);
+
+Route::get('/requestrm3table', function() {
+	return View::make('request.requestrm3table');
+});
