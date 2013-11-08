@@ -240,10 +240,78 @@ Route::get('/allRequest', function() {
 	return View::make('request.allRequest');
 });
 
+//*****************************************************************************************************
+//*************************** NEW CONTROLLER **********************************************************
+//NewAccountController
+
+Route::any('/saveUserInfo', [
+	'as' => '/saveUserInfo',
+	'uses' => 'NewAccountController@saveUserInfo'
+]);
+
+Route::any('/denyAccount', [
+	'as' => '/denyAccount',
+	'uses' => 'NewAccountController@denyAccount'
+]);
+
+Route::any('/approveAccount', [
+	'as' => '/approveAccount',
+	'uses' => 'NewAccountController@approveAccount'
+]);
+
+Route::any('/createUser', [
+	'as' => '/createUser',
+	'uses' => 'NewAccountController@createUser'
+]);
+
+Route::any('/changePassword', [
+	'as' => '/changePassword',
+	'uses' => 'NewAccountController@changePassword'
+]);
+
+Route::any('/login', [
+	'as' => '/login',
+	'uses' => 'NewAccountController@login'
+]);
+
+Route::any('/logout', [
+	'as' => '/logout',
+	'uses' => 'NewAccountController@logout'
+]);
 
 
+//NewCertificateController
 
+Route::any('/displayCertificate', [
+	'as' => '/displayCertificate',
+	'uses' => 'NewCertificateController@displayCertificate'
+]);
 
+//NewLabController
 
+Route::any('/checkLabResult', [
+	'as' => '/checkLabResult',
+	'uses' => 'NewLabController@checkLabResult'
+]);
 
+//NewPageController
 
+Route::any('/', [
+	'as' => '/',
+	'uses' => 'NewPageController@goToHomePage'
+]);
+
+Route::any('/about', [
+	'as' => '/about',
+	'uses' => 'NewPageController@goToAboutPage'
+]);
+
+Route::any('/details', [
+	'as' => '/details',
+	'uses' => 'NewPageController@goToDetailsPage'
+]);
+
+Route::any('/contact', [
+	'as' => '/contact',
+	'uses' => 'NewPageController@goToContactPage'
+]);
