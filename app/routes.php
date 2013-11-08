@@ -240,7 +240,11 @@ Route::get('/allRequest', function() {
 	return View::make('request.allRequest');
 });
 
+//*****************************************************************************************************
+//*************************** NEW CONTROLLER **********************************************************
+//NewAccountController
 
+<<<<<<< HEAD
 Route::get('/requestpassing', function() {
 	return View::make('request.requestpassing');
 });
@@ -248,8 +252,116 @@ Route::get('/requestpassing', function() {
 Route::get('/requestrm3', function() {
 	return View::make('request.requestrm3');
 });
+=======
+Route::any('/saveuserinfo', [
+	'as' => '/saveuserinfo',
+	'uses' => 'NewAccountController@saveUserInfo'
+]);
+
+Route::any('/denyaccount', [
+	'as' => '/denyaccount',
+	'uses' => 'NewAccountController@denyAccount'
+]);
+
+Route::any('/approveaccount', [
+	'as' => '/approveaccount',
+	'uses' => 'NewAccountController@approveAccount'
+]);
+
+Route::any('/createuser', [
+	'as' => '/createuser',
+	'uses' => 'NewAccountController@createUser'
+]);
+
+Route::any('/changepassword', [
+	'as' => '/changepassword',
+	'uses' => 'NewAccountController@changePassword'
+]);
+
+Route::any('/login', [
+	'as' => '/login',
+	'uses' => 'NewAccountController@login'
+]);
+
+Route::any('/logout', [
+	'as' => '/logout',
+	'uses' => 'NewAccountController@logout'
+]);
 
 
+//NewCertificateController
 
+Route::any('/displaycertificate', [
+	'as' => '/displaycertificate',
+	'uses' => 'NewCertificateController@displayCertificate'
+]);
 
+//NewLabController
 
+Route::any('/checklabresult', [
+	'as' => '/checklabresult',
+	'uses' => 'NewLabController@checkLabResult'
+]);
+
+//NewPageController
+
+Route::any('/', [
+	'as' => '/',
+	'uses' => 'NewPageController@goToHomePage'
+]);
+
+Route::any('/about', [
+	'as' => '/about',
+	'uses' => 'NewPageController@goToAboutPage'
+]);
+
+Route::any('/details', [
+	'as' => '/details',
+	'uses' => 'NewPageController@goToDetailsPage'
+]);
+
+Route::any('/contact', [
+	'as' => '/contact',
+	'uses' => 'NewPageController@goToContactPage'
+]);
+
+Route::any('/signup', [
+	'as' => '/signup',
+	'uses' => 'NewPageController@goToSignUpPage'
+]);
+
+Route::any('/profile', [
+	'as' => '/profile',
+	'uses' => 'NewPageController@goToProfilePage'
+]);
+>>>>>>> 6b7ed88ac0211265745f17b00d07b39e1bbc3f2f
+
+Route::any('/request', [
+	'as' => '/request',
+	'uses' => 'NewPageController@goToRequestPage'
+]);
+
+Route::any('/verification', [
+	'as' => '/verification',
+	'uses' => 'NewPageController@goToVerificationPage'
+]);
+
+Route::any('/requestlist', [
+	'as' => '/requestlist',
+	'uses' => 'NewPageController@goToRequestList'
+]);
+
+Route::any('/certificationlist', [
+	'as' => '/certificationlist',
+	'uses' => 'NewPageController@goToCertificationList'
+]);
+
+Route::any('/accountlist', [
+	'as' => '/accountlist',
+	'uses' => 'NewPageController@goToAccountList'
+]);
+
+Route::any('/lablist', [
+	'as' => '/lablist',
+	'uses' => 'NewPageController@goToLabList'
+]);
