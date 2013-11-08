@@ -132,6 +132,51 @@ function addRowsOfExport(){
 		emptyFill();
 	}
 }
+
+function addRowsOfSeedAnalysis(){
+	
+
+		alert("peach");
+
+		var numCol = new Array();
+		var node = document.getElementById('table').childNodes[1];
+		var newrow = document.createElement("tr");
+
+		
+
+		newCol1 = document.createElement("td");
+		newCol1.innerHTML = document.getElementsByName('type')[0].value;
+		newrow.appendChild(newCol1);
+
+		newCol2 = document.createElement("td");
+		newCol2.innerHTML = document.getElementsByName('name')[0].value;
+		newrow.appendChild(newCol2);
+
+		newCol3 = document.createElement("td");
+		newCol3.innerHTML = document.getElementsByName('location')[0].value;
+		newrow.appendChild(newCol3);
+
+		newCol4 = document.createElement("td");
+		newCol4.innerHTML = document.getElementsByName('yieldDate')[0].value;
+		newrow.appendChild(newCol4);
+
+		newCol5 = document.createElement("td");
+		newCol5.innerHTML = document.getElementsByName('chomical')[0].value;
+		newrow.appendChild(newCol5);
+
+		newCol6 = document.createElement("td");
+		newCol6.innerHTML = document.getElementsByName('quantity')[0].value;
+		newrow.appendChild(newCol6);
+
+		newCol7 = document.createElement("td");
+		newCol7.innerHTML = document.getElementsByName('weight')[0].value;
+		newrow.appendChild(newCol7);
+		node.appendChild(newrow);
+		
+
+		emptyFill();
+	
+}
 function checkFill()
 {
 	if(document.getElementsByName('type')[0].value==('')
