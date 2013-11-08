@@ -244,7 +244,6 @@ Route::get('/allRequest', function() {
 //*************************** NEW CONTROLLER **********************************************************
 //NewAccountController
 
-<<<<<<< HEAD
 Route::get('/requestpassing', function() {
 	return View::make('request.requestpassing');
 });
@@ -252,7 +251,7 @@ Route::get('/requestpassing', function() {
 Route::get('/requestrm3', function() {
 	return View::make('request.requestrm3');
 });
-=======
+
 Route::any('/saveuserinfo', [
 	'as' => '/saveuserinfo',
 	'uses' => 'NewAccountController@saveUserInfo'
@@ -334,7 +333,6 @@ Route::any('/profile', [
 	'as' => '/profile',
 	'uses' => 'NewPageController@goToProfilePage'
 ]);
->>>>>>> 6b7ed88ac0211265745f17b00d07b39e1bbc3f2f
 
 Route::any('/request', [
 	'as' => '/request',
