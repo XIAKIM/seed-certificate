@@ -241,6 +241,9 @@ Route::get('/allRequest', function() {
 });
 
 
+Route::get('/requestpassing', function() {
+	return View::make('request.requestpassing');
+});
 
 
 
