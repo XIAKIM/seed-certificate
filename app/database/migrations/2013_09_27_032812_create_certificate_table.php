@@ -18,6 +18,9 @@ class CreateCertificateTable extends Migration {
 			$table->string('certificateType');
 			$table->string('requestType');
 			$table->integer('requestID');
+			/**
+			 * Test
+			 */
 			$table->integer('userID');
 			$table->timestamps();
 		});
