@@ -244,28 +244,28 @@ Route::get('/allRequest', function() {
 //*************************** NEW CONTROLLER **********************************************************
 //NewAccountController
 
-Route::any('/saveUserInfo', [
-	'as' => '/saveUserInfo',
+Route::any('/saveuserinfo', [
+	'as' => '/saveuserinfo',
 	'uses' => 'NewAccountController@saveUserInfo'
 ]);
 
-Route::any('/denyAccount', [
-	'as' => '/denyAccount',
+Route::any('/denyaccount', [
+	'as' => '/denyaccount',
 	'uses' => 'NewAccountController@denyAccount'
 ]);
 
-Route::any('/approveAccount', [
-	'as' => '/approveAccount',
+Route::any('/approveaccount', [
+	'as' => '/approveaccount',
 	'uses' => 'NewAccountController@approveAccount'
 ]);
 
-Route::any('/createUser', [
-	'as' => '/createUser',
+Route::any('/createuser', [
+	'as' => '/createuser',
 	'uses' => 'NewAccountController@createUser'
 ]);
 
-Route::any('/changePassword', [
-	'as' => '/changePassword',
+Route::any('/changepassword', [
+	'as' => '/changepassword',
 	'uses' => 'NewAccountController@changePassword'
 ]);
 
@@ -282,15 +282,15 @@ Route::any('/logout', [
 
 //NewCertificateController
 
-Route::any('/displayCertificate', [
-	'as' => '/displayCertificate',
+Route::any('/displaycertificate', [
+	'as' => '/displaycertificate',
 	'uses' => 'NewCertificateController@displayCertificate'
 ]);
 
 //NewLabController
 
-Route::any('/checkLabResult', [
-	'as' => '/checkLabResult',
+Route::any('/checklabresult', [
+	'as' => '/checklabresult',
 	'uses' => 'NewLabController@checkLabResult'
 ]);
 
@@ -314,4 +314,44 @@ Route::any('/details', [
 Route::any('/contact', [
 	'as' => '/contact',
 	'uses' => 'NewPageController@goToContactPage'
+]);
+
+Route::any('/signup', [
+	'as' => '/signup',
+	'uses' => 'NewPageController@goToSignUpPage'
+]);
+
+Route::any('/profile', [
+	'as' => '/profile',
+	'uses' => 'NewPageController@goToProfilePage'
+]);
+
+Route::any('/request', [
+	'as' => '/request',
+	'uses' => 'NewPageController@goToRequestPage'
+]);
+
+Route::any('/verification', [
+	'as' => '/verification',
+	'uses' => 'NewPageController@goToVerificationPage'
+]);
+
+Route::any('/requestlist', [
+	'as' => '/requestlist',
+	'uses' => 'NewPageController@goToRequestList'
+]);
+
+Route::any('/certificationlist', [
+	'as' => '/certificationlist',
+	'uses' => 'NewPageController@goToCertificationList'
+]);
+
+Route::any('/accountlist', [
+	'as' => '/accountlist',
+	'uses' => 'NewPageController@goToAccountList'
+]);
+
+Route::any('/lablist', [
+	'as' => '/lablist',
+	'uses' => 'NewPageController@goToLabList'
 ]);
