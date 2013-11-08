@@ -215,4 +215,35 @@ Route::get('/about', function() {
 	return View::make('about');
 });
 
+Route::get('/requestprolong', function() {
+	return View::make('request.requestprolong');
+});
+
+
+Route::get('/requestrelocation', function() {
+	return View::make('request.requestrelocation');
+});
+
+Route::get('/requestsubstitute', function() {
+	return View::make('request.requestsubstitute');
+});
+
+Route::get('/reasonrequestrelocation', function() {
+	return View::make('request.reasonrequestrelocation');
+});
+
+Route::get('/reasonrequestsubstitute', function() {
+	return View::make('request.reasonrequestsubstitute');
+});
+
+Route::get('/allRequest', function() {
+	return View::make('request.allRequest');
+});
+
+
+
+
+
+
+
 
