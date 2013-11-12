@@ -496,3 +496,58 @@ Route::get('/requestpp2table', function() {
 	return View::make('request.requestpp2table');
 });
 
+Route::get('/dabout', function() {
+	return View::make('details.about');
+});
+
+Route::get('/dcontract', function() {
+	return View::make('details.contract');
+});
+
+Route::get('/alldetails', function() {
+	return View::make('details.alldetails');
+});
+
+Route::get('/getstart', function() {
+	return View::make('details.getstart');
+});
+
+Route::get('/howdoirequestpage', function() {
+	return View::make('details.howdoirequestpage');
+});
+
+Route::get('/howtochangeinfo', function() {
+	return View::make('details.howtochangeinfo');
+});
+
+Route::get('/howtogetcertification', function() {
+	return View::make('details.howtogetcertification');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtorequestpp1');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtorequestpp10');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtorequestpp11');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtorequestpp12');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtorequestpp2');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtorequestpp3');
+});
+
+Route::get('/howtorequestpp1', function() {
+	return View::make('details.howtoviewstatus');
+});
