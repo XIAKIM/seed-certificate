@@ -395,6 +395,9 @@ Route::any('/accountlist', [
 	'as' => '/accountlist',
 	'uses' => 'NewPageController@goToAccountListPage'
 ]);
+Route::any('/accountlist/{id}', [
+	'as' => '/accountlsit/{id}',
+	'uses' => 'NewPageController@goToVerificationUserAccountPage']);
 
 Route::any('/lablist', [
 	'as' => '/lablist',

@@ -80,7 +80,7 @@ class NewPageController extends BaseController {
 	}
 	public function goToVerificationUserAccountPage($id)
 	{
-		if(Description::find($id)->status != 0) return Redirect::route('/verificationAccount');
+		if(Description::find($id)->status != 0) return Redirect::route('/accountlist');
 		$description= Description::find($id);
 		$this->layout->content = View::make('request.verificationUser', compact('description'));
 	}
