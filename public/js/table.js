@@ -1,6 +1,6 @@
 var numImport=0;
 var numExport=0;
-
+var numPP2=0;
 
 
 function addRowsOfImport(){
@@ -66,6 +66,43 @@ function addRowsOfImport(){
 		numImport++;
 		emptyFill();
 	}
+}
+
+function addRowsOfPP2(){
+
+
+	var numCol = new Array();
+		var node = document.getElementById('table').childNodes[1];
+		var newrow = document.createElement("tr");
+		newCol0 = document.createElement("td");
+		newCol0.innerHTML = numPP2+1;
+		newrow.appendChild(newCol0);
+
+		newCol1 = document.createElement("td");
+		newCol1.innerHTML = document.getElementsByName('type')[0].value;
+		newrow.appendChild(newCol1);
+
+		newCol2 = document.createElement("td");
+		newCol2.innerHTML = document.getElementsByName('commonName')[0].value;
+		newrow.appendChild(newCol2);
+
+		newCol3 = document.createElement("td");
+		newCol3.innerHTML = document.getElementsByName('scienceName')[0].value;
+		newrow.appendChild(newCol3);
+
+		newCol4 = document.createElement("td");
+		newCol4.innerHTML = document.getElementsByName('unit')[0].value;
+		newrow.appendChild(newCol4);
+
+		newCol5 = document.createElement("td");
+		newCol5.innerHTML = document.getElementsByName('quantity')[0].value;
+		newrow.appendChild(newCol5);
+
+				node.appendChild(newrow);
+
+		numImport++;
+		emptyFill();
+
 }
 function addRowsOfExport(){
 	if(document.getElementsByName('type')[0].value==('')
