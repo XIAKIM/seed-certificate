@@ -7,7 +7,7 @@
 	<div class="page-header">
 		<h1>Register for new user</h1>
 	</div>
-	{{ Form::open(["route" => "/create", "class" => "form-horizontal"]) }}
+		{{ Form::open(["route" => "/createuser", "class" => "form-horizontal"]) }}
         <div class="form-group">
         	<label for="firstnameLabel" class="col-lg-2 control-label">First Name</label>
         	<div class="col-lg-8">

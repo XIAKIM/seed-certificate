@@ -12,7 +12,9 @@
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
         @foreach ($pp1s as $pp1)
-          <h3><a href="/verificationSeed/pp1/{{ $pp1->userID }}">{{ Description::find(User::find($pp1->userID)->descriptionID)->name }} {{ Description::find(User::find($pp1->userID)->descriptionID)->lastName }}</a></h3>
+          <!-- <h3><a href="/verificationSeed/pp1/{{ $pp1->userID }}">{{ Description::find(User::find($pp1->userID)->descriptionID)->name }} {{ Description::find(User::find($pp1->userID)->descriptionID)->lastName }}</a></h3>
+          -->
+          <h3><a href="/requestlist/pp1/{{ $pp1->userID }}">{{ Description::find(User::find($pp1->userID)->descriptionID)->name }} {{ Description::find(User::find($pp1->userID)->descriptionID)->lastName }}</a></h3>
         @endforeach
       </div>
     </div>

@@ -11,7 +11,10 @@
 		</tr>
 		@foreach($pp1s as $pp1)
 			<tr>
+				<!--
 				<td><a href="/verificationSeed/pp1/information/{{ $pp1->id }}">พพ{{ $pp1->certificateType }}.</a></td>
+				-->
+				<td><a href="/requestlist/pp1/information/{{ $pp1->id }}">พพ{{ $pp1->certificateType }}.</a></td>
 				<td>{{ Requests::find($pp1->requestID)->status }}</td>
 			</tr>
 		@endforeach

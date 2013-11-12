@@ -65,7 +65,7 @@
 					</div>
 					<hr>
 				</p>
-				{{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"form-horizontal"]) }}
+				{{ Form::open(["route" => "/saverequest", "role" => "form" , "class"=>"form-horizontal"]) }}
 				<!-- <form class="form-horizontal" role="form"> -->
 				<div class="form-group">
 					<label for="companyName" class="col-lg-2 control-label">Company Name</label>

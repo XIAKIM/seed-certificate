@@ -22,12 +22,15 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="/">Seed Certificate Application</a>
+					<a class="navbar-brand" href="/afterlogin">Seed Certificate Application</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
+						<li>
+							<a href="/afterlogin">Home</a>
+						</li>
 						<li>
 							<a href="/details">Details</a>
 						</li>
@@ -49,7 +52,7 @@
         						<a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Description::find(Auth::user()->descriptionID)->name }} {{ Description::find(Auth::user()->descriptionID)->lastName }}&nbsp;<b class="caret"></b></a>
         						<ul class="dropdown-menu">
           							<li><a href="/profile"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;&nbsp;Profile</a></li>
-          							<li><a href="/status"><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;&nbsp;Status</a></li>
+          							<li><a href="/certificationlist"><span class="glyphicon glyphicon-list"></span>&nbsp;&nbsp;&nbsp;Certification Status</a></li>
           							<li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;&nbsp;Logout</a></li>
         						</ul>
       						</li>

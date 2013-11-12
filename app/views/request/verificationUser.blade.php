@@ -107,7 +107,7 @@
 	<div class="panel-body">
 		<div class="row form-group">
 			<div class="col-sm-offset-8 col-sm-4">
-				{{ Form::open(array('action' => array('RequestController@accountApproveAction', $description->id)),["class"=>"form-horizontal"]) }}
+				{{ Form::open(array('action' => array('NewAccountController@approveAccount', $description->id)),["class"=>"form-horizontal"]) }}
 					<button data-toggle="modal" href="#denySignup" type="button" class="btn btn-default">Deny</button>
     				{{ Form::submit('Approve', ["class" => "btn btn-primary"])}}
 				{{ Form::close() }}
@@ -127,7 +127,7 @@
           				<h4 class="modal-title">Comment :</h4>
         				<!-- </div> -->
         				<div class="modal-body">
-          					{{ Form::open(array('action' => array('RequestController@accountDenyAction', $description->id))) }}
+          					{{ Form::open(array('action' => array('NewAccountController@denyAccount', $description->id))) }}
             					{{ Form::textarea('comment', null, ["rows" => "5", "cols" => "80"]) }}
         				</div>
         				<div class="modal-footer">

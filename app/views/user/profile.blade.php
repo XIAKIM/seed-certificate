@@ -107,7 +107,7 @@
 			</div>
 		</div>
 
-		<a href="/profile/edit" class="btn btn-default">Edit</a>
+		<a href="/profile/changepassword" class="btn btn-default">Change Password</a>
 		</form>
 	</div>
 </div>

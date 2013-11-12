@@ -132,7 +132,7 @@
 		<div class="row">
 			<div class="col-md-12">
 				@if(Requests::find($pp1->requestID)->status == 'Waiting')
-					{{ Form::open(["action" => ["RequestController@pp1VerifyAction", $pp1->id]]) }}
+					{{ Form::open(["action" => ["NewRequestController@verifyRequest", $pp1->id]]) }}
 	    				{{ Form::submit('Verify', ["class" => "btn btn-success"])}}
 					{{ Form::close() }}
 				<button data-toggle="modal" href="#denySignup" type="button" class="btn btn-danger">Deny</button>
@@ -146,7 +146,7 @@
 				          <h4 class="modal-title">Comment :</h4>
 				        <!-- </div> -->
 				        <div class="modal-body">
-				          	{{ Form::open(["action" => ["RequestController@pp1DenyAction", $pp1->id]]) }}
+				          	{{ Form::open(["action" => ["NewRequestController@denyRequest", $pp1->id]]) }}
 				            	{{ Form::textarea('comment', null, ["rows" => "5", "cols" => "80"]) }}
 				        </div>
 				        <div class="modal-footer">

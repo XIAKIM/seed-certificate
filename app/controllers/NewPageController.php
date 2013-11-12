@@ -1,10 +1,10 @@
 <?php
 
-class PageController extends Controller {
+class NewPageController extends BaseController {
 	protected $layout = "index";
 	
 	public function goToHomePage(){
-
+		$this->layout->content = View::make('mainpage');
 	}
 
 	public function goToAboutPage(){
@@ -20,35 +20,86 @@ class PageController extends Controller {
 	}
 
 	public function goToSignUpPage(){
-
+		$this->layout->content = View::make('user.signup');
 	}
-
+	public function goToAfterRegisterPage()	{
+		$this->layout->content = View::make('user.afterregister');
+	}		
+	public function goToAfterLoginPage()	{
+		if(Auth::guest()) return Redirect::route('/');
+		if(Auth::user()->role == 'officer' || Auth::user()->role == 'lab') return Redirect::route('/afteradminlogin');
+		$this->layout->content = View::make('user.afterlogin');	
+	}
+	public function goToAfterAdminLoginPage()	{
+		if(Auth::guest()) return Redirect::route('/');
+		if(Auth::user()->role == 'entrepreneur') return Redirect::route('/');
+		$description = Description::find(Auth::user()->descriptionID);
+		$this->layout->content = View::make('user.firstPageLab', compact('description'));
+	}
+	public function goToAfterRequestPage()	{
+		if(Auth::guest()) return Redirect::route('/');
+		$this->layout->content = View::make('request.afteruserrequest');
+	}
 	public function goToProfilePage(){
-
+		if(Auth::guest()) return Redirect::route('/');
+		$description = Description::find(Auth::user()->descriptionID);
+		$this->layout->content = View::make('user.profile', compact('description'));
 	}
 
 	public function goToRequestPage(){
-
+		if(Auth::guest()) return Redirect::route('/');
+		$this->layout->content = View::make('request.request');
 	}
 
 	public function goToVerificationPage(){
-
+		if(Auth::guest() || Auth::user()->role == 'entrepreneur') return Redirect::route('/');
+		$this->layout->content = View::make('request.verification');
 	}
 
-	public function goToRequestList(){
-
+	public function goToRequestListPage(){
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1s = Requests::where('type', '=', 'pp1')->groupBy('userID')->get();
+		$pp8s = Requests::where('type', '=', 'pp8')->groupBy('userID')->get();
+		$pp9s = Requests::where('type', '=', 'pp9')->groupBy('userID')->get();
+		$this->layout->content = View::make('request.verificationSeedAll', compact('pp1s', 'pp8s', 'pp9s'));
 	}
 
-	public function goToCertification(){
-
-	}
-
-	public function goToAccountList(){
-
+	public function goToCertificationList(){
+		if(Auth::guest()) return Redirect::route('/');
+		$pp1s = PP1::where('userID', '=', Auth::user()->id)->get();
+		$this->layout->content = View::make('user.status', compact('pp1s'));
 	}
 
 	public function goToLabList(){
 		
+	}
+	public function goToAccountListPage()	{
+		if(Auth::guest() || Auth::user()->role == "entrepreneur") return Redirect::route('/');
+		$descriptions = Description::all();
+		$this->layout->content = View::make('request.verificationAccountAll', compact('descriptions'));
+	}
+	public function goToVerificationUserAccountPage($id)
+	{
+		if(Description::find($id)->status != 0) return Redirect::route('/verificationAccount');
+		$description= Description::find($id);
+		$this->layout->content = View::make('request.verificationUser', compact('description'));
+	}
+	public function goToChangePasswordPage()	{
+		if(Auth::guest()) return Redirect::route('/');
+		$description = Description::find(Auth::user()->descriptionID);
+		// $this->layout->content = View::make('user.profileEdit', compact('description'));
+		$this->layout->content = View::make('user.profileEdit');
+	}
+
+	public function goToVerificationRequestPP1($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1s = PP1::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+	}
+	public function goToRequestInformationPP1Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1 = PP1::find($id);
+		$this->layout->content = View::make('request.verificationPP1', compact('pp1'));
 	}
 
 }
