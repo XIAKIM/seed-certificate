@@ -3,7 +3,7 @@
 <div class = 'page-header'>
 <h1>Seed Analysis</h1>
 </div>
-<h3>King of Analysis</h3>
+<h3>Kind of Analysis</h3>
 <br>
 <!-- <form> -->
 <div class="row">

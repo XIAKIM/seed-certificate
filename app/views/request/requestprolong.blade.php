@@ -32,14 +32,17 @@
 		</div>
 
 		<!-- dont change route please change and created function it -->
+		<br>
+		<br
 		{{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"form-horizontal"]) }}
 			<div class="row">
   				<div class="col-md-2 col-md-offset-2" style = "text-align:right">certification No</div>				
 				<div class="col-md-2">{{ Form::text("certificationNo", null, ["class" => "form-control" ]) }}</div>
-				<div class="col-md-1">{{ Form::button("Back", ["class"=>"btn btn-default btn-lg" ]) }}</div>
-				<div class="col-md-2">{{ Form::submit("Send Request", ["class"=>"btn btn-default btn-lg" , "style" => "display: block;"]) }}</div>
+				<div class="col-md-1">{{ Form::button("Back", ["class"=>"btn btn-default " ]) }}</div>
+				<div class="col-md-2">{{ Form::submit("Send Request", ["class"=>"btn btn-default " , "style" => "display: block;"]) }}</div>
 
 			</div>	
     	{{ Form::close() }}
+    	<br>
 	<!-- </form> -->
 @stop

@@ -4,7 +4,11 @@
 	<h1>Seed Passing Request</h1>
 </div>
 {{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"form-horizontal"]) }}
+<div class='row'>
+<div class ='col-md-5 col-md-offset-1'>
 Seed locatiion before passing 
+</div>
+</div>
 <br>
 <br>
 <div class ="row">
@@ -25,7 +29,11 @@ Seed locatiion before passing
 </div>
 
 <br>
+<div class='row'>
+<div class ='col-md-5 col-md-offset-1'>
 Seed location after passing 
+</div>
+</div>
 <br>
 <br>
 <div class ="row">
@@ -47,16 +55,19 @@ Seed location after passing
 <br>
 
 <div class='row'>
-	<div class ='col-md-3'>Road that we for transporting</div>
+	<div class ='col-md-1 col-md-offset-2 '>Road </div>
 	<div class ='col-md-3'>{{ Form::text("road", null, ["class" => "form-control"   ]) }}</div>
 </div>
 <br>
-<div class ='row'>
-	<div class='col-md-5'>Transporting and collecting seed location</div>
+<div class='row'>
+<div class ='col-md-5 col-md-offset-1'>
+Transporting and collecting seed location
 </div>
+</div>
+
 <hr>
 <div class='row'>
-	<div class= 'col-md-3'>Time duration </div>
+	<center><div class= 'col-md-2 col-md-offset-1'>Time duration </div></center>
 	<div class = 'col-md-3'>{{ Form::text("time", null, ["class" => "form-control"   ]) }}</div>
 </div>
 

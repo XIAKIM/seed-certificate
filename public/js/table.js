@@ -136,7 +136,7 @@ function addRowsOfExport(){
 function addRowsOfSeedAnalysis(){
 	
 
-		alert("peach");
+
 
 		var numCol = new Array();
 		var node = document.getElementById('table').childNodes[1];
