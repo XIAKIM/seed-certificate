@@ -465,3 +465,31 @@ Route::any('/pp1deny/{id}', [
 // 	'as' => '/verificationSeed/pp1/information/{id}',
 // 	'uses' => 'RequestController@verificationSeedPP1'
 // ]);
+
+Route::get('/formpp2', function() {
+	return View::make('form.formpp2');
+});
+
+Route::get('/formpp7', function() {
+	return View::make('form.formpp7');
+});
+
+Route::get('/formpp10', function() {
+	return View::make('form.formpp10');
+});
+
+Route::get('/formpp11', function() {
+	return View::make('form.formpp11');
+});
+
+Route::get('/formpp12', function() {
+	return View::make('form.formpp12');
+});
+
+Route::get('/formrm3', function() {
+	return View::make('form.formrm3');
+});
+Route::get('/requestpp2table', function() {
+	return View::make('request.requestpp2table');
+});
+
