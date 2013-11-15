@@ -1,4 +1,3 @@
-
 @extends('index')
 @section('content')
 <div class="head_sec text-right">
