@@ -399,10 +399,18 @@ Route::any('/accountlist/{id}', [
 	'as' => '/accountlsit/{id}',
 	'uses' => 'NewPageController@goToVerificationUserAccountPage']);
 
-Route::any('/lablist', [
+/*Route::any('/lablist', [
 	'as' => '/lablist',
 	'uses' => 'NewPageController@goToLabList'
-]);
+]);*/
+
+Route::get('/lablist', function() {
+	return View::make('request.verificationLab');
+});
+
+Route::get('/requestPP8', function() {
+	return View::make('request.requestPP8');
+});
 
 Route::any('/requestlist', [
 	'as' => '/requestlist',

@@ -42,9 +42,9 @@
             {{ Form::text("yieldDate", null, ["class" => "form-control"] ,["placeholder"=>"Unit"]) }}
           </div>
           <div class="input-group">
-            <span class="input-group-addon">Chomical</span>
+            <span class="input-group-addon">Chemical</span>
             <!-- <input type="text" class="form-control" name='amount' placeholder="Amount"> -->
-            {{ Form::text("chomical", null, ["class" => "form-control"] ,["placeholder"=>"Amount"]) }}
+            {{ Form::text("chemical", null, ["class" => "form-control"] ,["placeholder"=>"Amount"]) }}
           </div>
           <div class="input-group">
             <span class="input-group-addon">Quantity</span>

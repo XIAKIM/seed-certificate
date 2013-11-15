@@ -72,6 +72,7 @@ class NewPageController extends BaseController {
 
 	public function goToLabList(){
 		
+		
 	}
 	public function goToAccountListPage()	{
 		if(Auth::guest() || Auth::user()->role == "entrepreneur") return Redirect::route('/');
