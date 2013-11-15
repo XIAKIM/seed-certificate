@@ -6,7 +6,7 @@
 </div>
 
 <br>
-{{ Form::open(["route" => "/requestPP9", "class" => "form-horizontal"]) }}
+{{ Form::open(["route" => "/checkrequest", "class" => "form-horizontal"]) }}
 <div class="row">
   <div class="col-md-6">
    <!-- Button trigger modal -->

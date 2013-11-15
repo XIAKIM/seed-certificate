@@ -551,3 +551,7 @@ Route::get('/howtorequestpp1', function() {
 Route::get('/howtorequestpp1', function() {
 	return View::make('details.howtoviewstatus');
 });
+
+Route::get('/requestrm3table', function() {
+	return View::make('request.requestrm3table');
+});
