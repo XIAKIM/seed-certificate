@@ -85,7 +85,7 @@
     <th>Name</th>
     <th>Location</th>
     <th>Yield Date</th>
-    <th>Chomical</th>
+    <th>Chemical</th>
     <th>Quanlity</th>
     <th>Weight</th>
     

@@ -231,9 +231,9 @@
 // 	return View::make('request.reasonrequestsubstitute');
 // });
 
-// Route::get('/allRequest', function() {
-// 	return View::make('request.allRequest');
-// });
+Route::get('/allRequest', function() {
+	return View::make('request.allRequest');
+});
 
 //*****************************************************************************************************
 //*************************** NEW CONTROLLER **********************************************************
