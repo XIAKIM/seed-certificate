@@ -30,7 +30,7 @@
 	    		<h3 style="text-align: center">PP6</h3>
 			</div>
 		</div>
-		{{ Form::open(["route" => "/checkrequest"]) }}
+		{{ Form::open(["route" => "/checkrequestpp1"]) }}
 			<div class="row">
 				{{ Form::text("select-request", '3', ["id" => "select-request", "hidden"])}}
 				<!-- <button type="button" class="btn btn-default btn-lg" style="display: block; margin-left: auto; margin-right: auto">Send Request</button> -->

@@ -1,26 +1,32 @@
 <?php
 
-class PP12Controller extends BaseController{
+class PP10Controller extends BaseController{
 	protected $layout = "index";
 
-	public function checkRequestPP12()
+	public function checkRequestPP10()
 	{
+		if(Input::server("REQUEST_METHOD")=="POST")
+		{
+			return Redirect::route('/initRequestpp10');
+		}
 	}
 
-	public function initRequestPP12()
+	public function initRequestPP10()
 	{
+		if(Auth::guest()) return Redirect::route('/');
+		
 	}
 
-	public function saveRequestPP12()
+	public function saveRequestPP10()
 	{
 
 	}
 
-	public function denyRequestPP12($id){
+	public function denyRequestPP10($id){
 
 	}
 
-	public function verifyRequestPP12()	{
+	public function verifyRequestPP10()	{
 		
 	}
 
