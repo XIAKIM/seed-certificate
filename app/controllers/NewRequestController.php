@@ -3,12 +3,6 @@
 class NewRequestController extends BaseController {
 	protected $layout = "index";
 
-	public function checkPP(){
-
-		
-		
-	}
-
 	public function checkRequest()
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
@@ -101,9 +95,7 @@ class NewRequestController extends BaseController {
 	public function verifyRequest()	{
 		
 	}
-	public function makeAppointment()	{
-
-	}
+	
 	public function createCertificate($id)	{
 		//new cerificate
 		$pp1 = PP1::find($id);
@@ -168,8 +160,4 @@ class NewRequestController extends BaseController {
 		}
 
 	}
-	public function signCertificate()	{
-
-	}
-
 }
