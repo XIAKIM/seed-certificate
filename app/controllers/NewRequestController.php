@@ -98,7 +98,13 @@ class NewRequestController extends BaseController {
 		$request->save();
 		return Redirect::route('/requestlist');
 	}
-	public function verifyRequest($id)	{
+	public function verifyRequest()	{
+		
+	}
+	public function makeAppointment()	{
+
+	}
+	public function createCertificate($id)	{
 		//new cerificate
 		$pp1 = PP1::find($id);
 		if(Requests::find($pp1->requestID)->status != 'Waiting') { 
@@ -122,12 +128,6 @@ class NewRequestController extends BaseController {
 		$request->save();
 
 		return Redirect::route('/requestlist/pp1/{id}', $pp1->userID);
-	}
-	public function makeAppointment()	{
-
-	}
-	public function createCertificate()	{
-
 	}
 	public function extendCertificate($userID,$certificateType)	{
 

@@ -450,7 +450,7 @@ Route::any('/saverequest', [
 	]);
 Route::any('/pp1verify/{id}', [
 	'as' => '/pp1verify/{id}',
-	'uses' => 'NewRequestController@verifyRequest'
+	'uses' => 'NewRequestController@createCertificate'
 ]);
 
 Route::any('/pp1deny/{id}', [
