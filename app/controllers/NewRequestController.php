@@ -3,6 +3,12 @@
 class NewRequestController extends BaseController {
 	protected $layout = "index";
 
+	public function checkPP(){
+
+		
+		
+	}
+
 	public function checkRequest()
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
@@ -28,6 +34,8 @@ class NewRequestController extends BaseController {
 		Session::put('requestID', $request->id);
 		$this->layout->content = View::make('request.requestPP1', compact('description', 'type', 'request'));
 	}
+
+
 
 	public function saveRequest()
 	{
@@ -121,10 +129,43 @@ class NewRequestController extends BaseController {
 	public function createCertificate()	{
 
 	}
-	public function extendCertificate()	{
+	public function extendCertificate($userID,$certificateType)	{
 
+		
+		$certificate = Certificate::where('userID','=',$userID)->where('certificateType','=',$certificateType);
+		
+		$newDate = $certificate->expiredDate;
+		date_add($newDate,date_interval_create_from_date_string("1 years"));
+
+		$certificate->expiredDate = $newDate;
+		$certificate->save();				
+		
+
+		return Redirect::route('/requestlist');
 	}
-	public function substituteCertificate()	{
+	public function substituteCertificate($userID)	{
+
+		$certificate = Certificate::where('userID','=',$userID)->where('certificateType','=',$certificateType);
+
+		$validator = Validator::make(Input::all(),[
+				"companyName" => "required"
+			]);
+
+		if($validator->passes())
+		{
+			$pp11 = new pp11;
+			$pp11->certificateType = Session::get('type');
+
+			$pp11->companyName = Input::get('companyName');
+			$pp11->certificateNumber = Input::get('certificateNumber');
+			$pp11->reason = Input::get('reason');
+			$pp11->userID = Session::get('userID');
+			$pp11->requestID = Session::get('requestID');
+
+			$pp1->save();
+
+			return Redirect::route('/afterrequest');
+		}
 
 	}
 	public function signCertificate()	{
