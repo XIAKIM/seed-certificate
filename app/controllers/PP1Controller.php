@@ -3,7 +3,7 @@
 class PP1Controller extends BaseController{
 	protected $layout = "index";
 
-	public function checkRequest()
+	public function checkRequestPP1()
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
@@ -13,7 +13,7 @@ class PP1Controller extends BaseController{
 		}
 	}
 
-	public function initRequest()
+	public function initRequestPP1()
 	{
 		if(Auth::guest()) return Redirect::route('/');
 		$user = User::find(Session::get('userID'));
@@ -31,7 +31,7 @@ class PP1Controller extends BaseController{
 
 
 
-	public function saveRequest()
+	public function saveRequestPP1()
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
@@ -82,7 +82,7 @@ class PP1Controller extends BaseController{
 		}
 	}
 
-	public function denyRequest($id)	{
+	public function denyRequestPP1($id)	{
 		$request = Requests::find(PP1::find($id)->requestID);
 		if($request->status != 'Waiting') { 
 			return Redirect::route('/requestlist/pp1/{id}', $id);
@@ -93,7 +93,7 @@ class PP1Controller extends BaseController{
 		return Redirect::route('/requestlist');
 	}
 
-	public function createCertificate($id)	{
+	public function createCertificatePP1($id)	{
 		//new cerificate
 		$pp1 = PP1::find($id);
 		if(Requests::find($pp1->requestID)->status != 'Waiting') { 

@@ -3,24 +3,24 @@
 class PP12Controller extends BaseController{
 	protected $layout = "index";
 
-	public function checkRequest()
+	public function checkRequestPP12()
 	{
 	}
 
-	public function initRequest()
+	public function initRequestPP12()
 	{
 	}
 
-	public function saveRequest()
+	public function saveRequestPP12()
 	{
 
 	}
 
-	public function denyRequest($id){
+	public function denyRequestPP12($id){
 
 	}
 
-	public function verifyRequest()	{
+	public function verifyRequestPP12()	{
 		
 	}
 
