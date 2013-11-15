@@ -261,13 +261,187 @@ Route::get('/requestrm3table', function() {
 
 
 //PP1Controller
+Route::any('/checkrequestpp1', [
+	'as' => '/checkrequestpp1',
+	'uses' => 'PP1Controller@checkRequestPP1'
+]);
+
+Route::any('/initrequestpp1', [
+	'as' => '/initrequestpp1',
+	'uses' => 'PP1Controller@initRequestPP1'
+]);
+
+Route::any('/saverequestpp1', [
+	'as' => '/saverequestpp1',
+	'uses' => 'PP1Controller@saveRequestPP1'
+]);
+
+Route::any('/denyrequestpp1', [
+	'as' => '/denyrequestpp1',
+	'uses' => 'PP1Controller@denyRequestPP1'
+]);
+
+Route::any('/verifyrequestpp1', [
+	'as' => '/verifyrequestpp1',
+	'uses' => 'PP1Controller@verifyRequestPP1'
+]);
+
+Route::any('/createcertificatepp1', [
+	'as' => '/createcertificatepp1',
+	'uses' => 'PP1Controller@createCertificatePP1'
+]);
 
 //PP2Controller
+Route::any('/checkrequestpp2', [
+	'as' => '/checkrequestpp2',
+	'uses' => 'PP2Controller@checkRequestPP2'
+]);
+
+Route::any('/initrequestpp2', [
+	'as' => '/initrequestpp2',
+	'uses' => 'PP2Controller@initRequestPP2'
+]);
+
+Route::any('/saverequestpp2', [
+	'as' => '/saverequestpp2',
+	'uses' => 'PP2Controller@saveRequestPP2'
+]);
+
+Route::any('/denyrequestpp2', [
+	'as' => '/denyrequestpp2',
+	'uses' => 'PP2Controller@denyRequestPP2'
+]);
+
+Route::any('/verifyrequestpp2', [
+	'as' => '/verifyrequestpp2',
+	'uses' => 'PP2Controller@verifyRequestPP2'
+]);
+
+Route::any('/createcertificatepp2', [
+	'as' => '/createcertificatepp2',
+	'uses' => 'PP2Controller@createCertificatePP2'
+]);
 
 //PP10Controller
+Route::any('/checkrequestpp10', [
+	'as' => '/checkrequestpp10',
+	'uses' => 'PP10Controller@checkRequestPP10'
+]);
+
+Route::any('/initrequestpp10', [
+	'as' => '/initrequestpp10',
+	'uses' => 'PP10Controller@initRequestPP10'
+]);
+
+Route::any('/saverequestpp10', [
+	'as' => '/saverequestpp10',
+	'uses' => 'PP10Controller@saveRequestPP10'
+]);
+
+Route::any('/denyrequestpp10', [
+	'as' => '/denyrequestpp10',
+	'uses' => 'PP10Controller@denyRequestPP10'
+]);
+
+Route::any('/verifyrequestpp10', [
+	'as' => '/verifyrequestpp10',
+	'uses' => 'PP10Controller@verifyRequestPP10'
+]);
+
+Route::any('/createcertificatepp10', [
+	'as' => '/createcertificatepp10',
+	'uses' => 'PP10Controller@createCertificatePP10'
+]);
 
 //PP11Controller
+Route::any('/checkrequestpp11', [
+	'as' => '/checkrequestpp11',
+	'uses' => 'PP11Controller@checkRequestPP11'
+]);
+
+Route::any('/initrequestpp11', [
+	'as' => '/initrequestpp11',
+	'uses' => 'PP11Controller@initRequestPP11'
+]);
+
+Route::any('/saverequestpp11', [
+	'as' => '/saverequestpp11',
+	'uses' => 'PP11Controller@saveRequestPP11'
+]);
+
+Route::any('/denyrequestpp11', [
+	'as' => '/denyrequestpp11',
+	'uses' => 'PP11Controller@denyRequestPP11'
+]);
+
+Route::any('/verifyrequestpp11', [
+	'as' => '/verifyrequestpp11',
+	'uses' => 'PP11Controller@verifyRequestPP11'
+]);
+
+Route::any('/createcertificatepp11', [
+	'as' => '/createcertificatepp11',
+	'uses' => 'PP11Controller@createCertificatePP11'
+]);
 
 //PP12Controller
+Route::any('/checkrequestpp12', [
+	'as' => '/checkrequestpp12',
+	'uses' => 'PP12Controller@checkRequestPP12'
+]);
+
+Route::any('/initrequestpp12', [
+	'as' => '/initrequestpp12',
+	'uses' => 'PP12Controller@initRequestPP12'
+]);
+
+Route::any('/saverequestpp12', [
+	'as' => '/saverequestpp12',
+	'uses' => 'PP12Controller@saveRequestPP12'
+]);
+
+Route::any('/denyrequestpp12', [
+	'as' => '/denyrequestpp12',
+	'uses' => 'PP12Controller@denyRequestPP12'
+]);
+
+Route::any('/verifyrequestpp12', [
+	'as' => '/verifyrequestpp12',
+	'uses' => 'PP12Controller@verifyRequestPP12'
+]);
+
+Route::any('/createcertificatepp12', [
+	'as' => '/createcertificatepp12',
+	'uses' => 'PP12Controller@createCertificatePP12'
+]);
 
 //RM3Controller
+Route::any('/checkrequestrm3', [
+	'as' => '/checkrequestrm3',
+	'uses' => 'PP1Controller@checkRequestRM3'
+]);
+
+Route::any('/initrequestrm3', [
+	'as' => '/initrequestrm3',
+	'uses' => 'PP1Controller@initRequestRM3'
+]);
+
+Route::any('/saverequestrm3', [
+	'as' => '/saverequestrm3',
+	'uses' => 'PP1Controller@saveRequestRM3'
+]);
+
+Route::any('/denyrequestrm3', [
+	'as' => '/denyrequestrm3',
+	'uses' => 'PP1Controller@denyRequestRM3'
+]);
+
+Route::any('/verifyrequestrm3', [
+	'as' => '/verifyrequestrm3',
+	'uses' => 'PP1Controller@verifyRequestRM3'
+]);
+
+Route::any('/createcertificaterm3', [
+	'as' => '/createcertificaterm3',
+	'uses' => 'PP1Controller@createCertificateRM3'
+]);
