@@ -5,7 +5,7 @@
 </div>
 <div class="row">
  <div class="col-md-4" class='text-center'><a href="#">PP1 </a><span class="badge">Seed Transaction Request</span></div>
- <div class="col-md-4"><button type="button" class="btn btn-default btn-sm">Make Request</button></div>
+ <div class="col-md-4"><a href="/request" class="btn btn-default btn-sm">Make Request</a></div>
 </div>
 <br>
 <div class="row">
@@ -30,9 +30,7 @@
 <br>
 <div class="row">
  <div class="col-md-4" class='text-center'><a href="#">RM3 </a><span class="badge">Seed Analysis Request</span></div>
- <div class="col-md-4"><button type="button" class="btn btn-default btn-sm">Make Request</button></div>
+ <div class="col-md-4"><a href="/requestrm3" class="btn btn-default btn-sm">Make Request</a></div>
 </div>
 
 @stop
-
-

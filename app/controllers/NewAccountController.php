@@ -17,17 +17,19 @@ class NewAccountController extends BaseController {
 		});
 
 		$description->delete();
-		return Redirect::route('/verificationAccount');
+		return Redirect::route('/accountlist');
 	}
 
 	public function approveAccount($id){
+		$emailCheck = Description::find($id)->email;
+		if(User::where('email', '=', $emailCheck)->count() >= 1) return Redirect::route('/accountlist');
 		$user = new User;
 		$user->username = 'entrepreneur' . $id;
 		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		$password = substr(str_shuffle($chars), 0, 10);
 
 		$user->password = Hash::make($password);
-		$user->email = Description::find($id)->email;
+		$user->email = $emailCheck;
 		$user->role = 'entrepreneur';
 		$user->descriptionID = $id;
 		$user->save();
@@ -47,7 +49,7 @@ class NewAccountController extends BaseController {
     		$message->to($description->email)->subject('Welcome!');
 		});
 
-		return Redirect::route('/verificationAccount');
+		return Redirect::route('/accountlist');
 	}
 
 	public function createUser()	{

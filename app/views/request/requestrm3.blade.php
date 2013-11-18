@@ -32,7 +32,7 @@
 </div>
 
 <!-- dont change route please change and created function it -->
-{{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"radio"]) }}
+{{ Form::open(["route" => "/initrequestrm3", "role" => "form" , "class"=>"radio"]) }}
 Analyze by
 <div class="radio">
 	<label>

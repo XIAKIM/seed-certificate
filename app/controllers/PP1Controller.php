@@ -9,7 +9,7 @@ class PP1Controller extends BaseController{
 		{
 			$selectrequest = input::get("select-request");
 			Session::put('type', $selectrequest);
-			return Redirect::route('/initRequestpp1');
+			return Redirect::route('/initrequestpp1');
 		}
 	}
 

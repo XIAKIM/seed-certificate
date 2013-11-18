@@ -142,7 +142,7 @@ Route::any('/accountlist', [
 	'uses' => 'NewPageController@goToAccountListPage'
 ]);
 Route::any('/accountlist/{id}', [
-	'as' => '/accountlsit/{id}',
+	'as' => '/accountlist/{id}',
 	'uses' => 'NewPageController@goToVerificationUserAccountPage'
 ]);
 
@@ -276,14 +276,14 @@ Route::any('/saverequestpp1', [
 	'uses' => 'PP1Controller@saveRequestPP1'
 ]);
 
-Route::any('/denyrequestpp1', [
-	'as' => '/denyrequestpp1',
+Route::any('/denyrequestpp1/{id}', [
+	'as' => '/denyrequestpp1/{id}',
 	'uses' => 'PP1Controller@denyRequestPP1'
 ]);
 
 
-Route::any('/createcertificatepp1', [
-	'as' => '/createcertificatepp1',
+Route::any('/createcertificatepp1/{id}', [
+	'as' => '/createcertificatepp1/{id}',
 	'uses' => 'PP1Controller@createCertificatePP1'
 ]);
 
