@@ -15,32 +15,8 @@ class CreatePp10Table extends Migration {
 		Schema::create('pp10', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('certificateType');
-			$table->integer('certifivateNumber');
-			$table->string('companyName');
-			$table->string('ownerName');
-
-			// $table->text('companyAddress');
-			$table->text('companyAddressNo');
-			$table->text('companyAddressMoo');
-			$table->text('companyAddressSoi');
-			$table->text('companyAddressRoad');
-			$table->text('companyAddressSubDistrict');
-			$table->text('companyAddressDistrict');
-			$table->text('companyAddressProvince');
-			$table->text('companyAddressPostalCode');
-
-			// $table->text('collectingLocation');
-			$table->text('collectingLocationNo');
-			$table->text('collectingLocationMoo');
-			$table->text('collectingLocationSoi');
-			$table->text('collectingLocationRoad');
-			$table->text('collectingLocationSubDistrict');
-			$table->text('collectingLocationDistrict');
-			$table->text('collectingLocationProvince');
-			$table->text('collectingLocationPostalCode');
-
-
-			$table->text('storingLocation');
+			$table->integer('certificateID');
+			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
 		});

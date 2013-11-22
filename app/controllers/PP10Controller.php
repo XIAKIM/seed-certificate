@@ -7,14 +7,26 @@ class PP10Controller extends BaseController{
 	{
 		if(Input::server("REQUEST_METHOD")=="POST")
 		{
-			return Redirect::route('/initRequestpp10');
+			$selectrequest = input::get("select-request");
+			Session::put('pp10type', $selectrequest);
+			return Redirect::route('/initrequestpp10');
 		}
 	}
 
 	public function initRequestPP10()
 	{
 		if(Auth::guest()) return Redirect::route('/');
-		
+		$user = User::find(Session::get('userID'));
+		$description = Description::find($user->descriptionID);
+		$type = ['type' => Session::get('type')];
+		$request = new Requests;
+		$request->status = 'Waiting';
+		$request->userID = Session::get('userID');
+		$request->message = 'waiting';
+		$request->type = 'pp10';
+		$request->save();
+		Session::put('requestID', $request->id);
+		$this->layout->content = View::make('request.requestPP1', compact('description', 'type', 'request'));
 	}
 
 	public function saveRequestPP10()
@@ -30,18 +42,13 @@ class PP10Controller extends BaseController{
 		
 	}
 
-	public function extendCertificate($userID,$certificateType)	{
-
-		
-		$certificate = Certificate::where('userID','=',$userID)->where('certificateType','=',$certificateType);
-		
-		$newDate = $certificate->expiredDate;
-		date_add($newDate,date_interval_create_from_date_string("1 years"));
-
-		$certificate->expiredDate = $newDate;
+	public function extendCertificate()	{
+		$certificate = Certificate::where('certificateType', '=', 3)->where('userID', '=', Auth::user()->id)->first();
+		$expiredDate = new DateTime();
+		$expiredDate->add(new DateInterval('P1Y'));
+		$certificate->expiredDate = $expiredDate;
+		$certificate->certificateType = Session::get('pp10type');
 		$certificate->save();				
-		
-
 		return Redirect::route('/requestlist');
 	}
 

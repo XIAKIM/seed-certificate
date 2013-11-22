@@ -121,6 +121,11 @@ Route::any('/request', [
 	'uses' => 'NewPageController@goToRequestPage'
 ]);
 
+Route::any('/requestprolong', [
+	'as' => '/requestprolong',
+	'uses' => 'NewPageController@goToRequestProlong'
+]);
+
 Route::any('/verification', [
 	'as' => '/verification',
 	'uses' => 'NewPageController@goToVerificationPage'
@@ -170,6 +175,49 @@ Route::any('/requestlist/pp1/{id}', [
 Route::any('/requestlist/pp1/information/{id}', [
 	'as' => '/requestlist/pp1/information/{id}',
 	'uses' => 'NewPageController@goToRequestInformationPP1Page'
+]);
+
+Route::any('/requestlist/pp2/{id}', [
+	'as' => '/requestlist/pp2/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestPP2'
+]);
+
+Route::any('/requestlist/pp2/information/{id}', [
+	'as' => '/requestlist/pp2/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationPP2Page'
+]);
+
+
+Route::any('/requestlist/pp10/{id}', [
+	'as' => '/requestlist/pp10/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestPP10'
+]);
+
+Route::any('/requestlist/pp10/information/{id}', [
+	'as' => '/requestlist/pp10/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationPP10Page'
+]);
+
+
+Route::any('/requestlist/pp11/{id}', [
+	'as' => '/requestlist/pp11/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestPP11'
+]);
+
+Route::any('/requestlist/pp11/information/{id}', [
+	'as' => '/requestlist/pp11/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationPP11Page'
+]);
+
+
+Route::any('/requestlist/pp12/{id}', [
+	'as' => '/requestlist/pp12/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestPP12'
+]);
+
+Route::any('/requestlist/pp12/information/{id}', [
+	'as' => '/requestlist/pp12/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationPP12Page'
 ]);
 
 Route::get('/formpp2', function() {

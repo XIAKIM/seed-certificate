@@ -97,10 +97,69 @@ class NewPageController extends BaseController {
 		$pp1s = PP1::where('userID', '=', $id)->get();
 		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
 	}
+
 	public function goToRequestInformationPP1Page($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$pp1 = PP1::find($id);
 		$this->layout->content = View::make('request.verificationPP1', compact('pp1'));
+	}
+
+	public function goToVerificationRequestPP2($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1s = PP2::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+	}
+	
+	public function goToRequestInformationPP2Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp2 = PP2::find($id);
+		$this->layout->content = View::make('form.formpp2', compact('pp2'));
+	}
+
+	public function goToVerificationRequestPP10($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1s = PP10::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+	}
+	
+	public function goToRequestInformationPP10Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp10 = PP10::find($id);
+		$this->layout->content = View::make('form.formpp11', compact('pp10'));
+	}
+
+	public function goToVerificationRequestPP11($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1s = PP11::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+	}
+	
+	public function goToRequestInformationPP11Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp11 = PP11::find($id);
+		$this->layout->content = View::make('form.formpp11', compact('pp11'));
+	}
+
+	public function goToVerificationRequestPP12($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp1s = PP12::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+	}
+	
+	public function goToRequestInformationPP12Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp12 = PP12::find($id);
+		$this->layout->content = View::make('form.formpp12', compact('pp12'));
+	}
+
+	public function goToRequestProlong() {
+		if(Auth::guest()) return Redirect::route('/');
+		$this->layout->content = View::make('request.requestprolong');
+	}
+
+	public function goToRequestSubstitute() {
+		if(Auth::guest()) return Redirect::route('/');
+		$this->layout->content = View::make('request.requestsubstitute');	
 	}
 
 }

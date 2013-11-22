@@ -108,12 +108,18 @@
 		<div class="panel panel-default">
 			@yield('content')
 		</div>
-	</div>
+	
 	<!-- end content -->
 
 
 	<!-- footer -->
+		<footer>
+        	<hr>
+    		<p>XIKIM 2013</p>
+    	</footer>
 	<!-- end footer -->
+
+	</div>
 
 
 	<!-- javascript library -->
