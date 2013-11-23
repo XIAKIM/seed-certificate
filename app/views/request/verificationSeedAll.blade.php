@@ -39,7 +39,7 @@
         </div>
       </div>
 	 @endif
-
+<!--
     @if(count($pp8s) != 0)
       <div class="panel panel-default">
         <div class="panel-heading">
@@ -77,7 +77,7 @@
         </div>
       </div>
     @endif
-
+-->
     @if(count($pp10s) != 0)
       <div class="panel panel-default">
         <div class="panel-heading">

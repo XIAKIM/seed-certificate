@@ -50,7 +50,7 @@
 			if($validator->passes())
 			{
 				$pp2 = new PP2;
-				
+				$pp2->certificateType = "2";
 				$pp2->companyName = Input::get('companyName');
 				$pp2->ownerName = Input::get('ownerName');
 				$pp2->companyAddressNo = Input::get('companyAddressNo');

@@ -9,12 +9,19 @@
 			<th>Type</th>
 			<th>Status</th>	
 		</tr>
-		@foreach($pp1s as $pp1)
-			<tr>
-				<td><a href="/requestlist/pp1/information/{{ $pp1->id }}">พพ{{ $pp1->certificateType }}.</a></td>
-				<td>{{ Requests::find($pp1->requestID)->status }}</td>
-			</tr>
-		@endforeach
+		@if(count($pp1s) != 0)
+			@foreach($pp1s as $pp1)
+				<tr>
+					@if($pp1->certificateType == 3 || $pp1->certificateType == 4 || $pp1->certificateType == 5 || $pp1->certificateType == 3)
+						<td><a href="/requestlist/pp1/information/{{ $pp1->id }}">pp{{ $pp1->certificateType }}.</a></td>
+					@else
+						<td><a href="/requestlist/pp{{$pp1->certificateType}}/information/{{ $pp1->id }}">pp{{ $pp1->certificateType }}.</a></td>
+					@endif
+					<td>{{ Requests::find($pp1->requestID)->status }}</td>
+				</tr>
+			@endforeach
+		@endif
+	
 	</table>
 </div>
 @stop

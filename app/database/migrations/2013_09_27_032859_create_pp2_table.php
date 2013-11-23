@@ -14,6 +14,7 @@ class CreatePp2Table extends Migration {
 	{
 		Schema::create('pp2', function(Blueprint $table) {
 			$table->increments('id');
+			$table->string('certificateType');
 			
 			$table->string('arrivalCity');
 			$table->string('arrivalCountry');
