@@ -14,8 +14,7 @@ class CreatePp2Table extends Migration {
 	{
 		Schema::create('pp2', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('companyName');
-			$table->string('ownerName');
+			
 			$table->string('arrivalCity');
 			$table->string('arrivalCountry');
 			$table->string('arrivalCheckpoint');
@@ -31,12 +30,13 @@ class CreatePp2Table extends Migration {
 			$table->integer('requestID');
 			$table->timestamps();
 
-
+			$table->string('companyName');
+			$table->string('ownerName');
 			$table->string('companyAddressNo');
 			$table->string('companyAddressMoo');
 			$table->string('companyAddressSoi');
 			$table->string('companyAddressRoad');
-			$table->string('companyAddressTambol');
+			$table->string('companyAddressSubDistrict');
 			$table->string('companyAddressDistrict');
 			$table->string('companyAddressProvince');
 			$table->string('companyAddressPostalCode');

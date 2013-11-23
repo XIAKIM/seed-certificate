@@ -10,7 +10,7 @@
 <br>
 <div class="row">
  <div class="col-md-4" class='text-center'><a href="#">PP2 </a><span class="badge">Seed Passing Request</span></div>
- <div class="col-md-4"><button type="button" class="btn btn-default btn-sm">Make Request</button></div>
+ <div class="col-md-4"><a href="/initrequestpp2" class="btn btn-default btn-sm"> Make Request</a></div>
 </div>
 <br>
 <div class="row">
