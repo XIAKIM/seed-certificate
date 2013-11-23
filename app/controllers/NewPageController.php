@@ -58,10 +58,15 @@ class NewPageController extends BaseController {
 
 	public function goToRequestListPage(){
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
-		$pp1s = Requests::where('type', '=', 'pp1')->groupBy('userID')->get();
-		$pp8s = Requests::where('type', '=', 'pp8')->groupBy('userID')->get();
-		$pp9s = Requests::where('type', '=', 'pp9')->groupBy('userID')->get();
-		$this->layout->content = View::make('request.verificationSeedAll', compact('pp1s', 'pp8s', 'pp9s'));
+		$pp1s = Requests::where('type','=','pp1')->groupBy('userID')->get();
+		$pp2s = Requests::where('type','=','pp2')->groupBy('userID')->get();
+		$pp8s = Requests::where('type','=','pp8')->groupBy('userID')->get();
+		$pp9s = Requests::where('type','=','pp9')->groupBy('userID')->get();
+		$pp10s = Requests::where('type','=','pp10')->groupBy('userID')->get();
+		$pp11s = Requests::where('type','=','pp11')->groupBy('userID')->get();
+		$pp12s = Requests::where('type','=','pp12')->groupBy('userID')->get();
+		$rm3s = Requests::where('type','=','rm3')->groupBy('userID')->get();
+		$this->layout->content = View::make('request.verificationSeedAll', compact('pp1s','pp2s','pp8s', 'pp9s','pp10s','pp11s','pp12s','rm3s'));
 	}
 
 	public function goToCertificationList(){
