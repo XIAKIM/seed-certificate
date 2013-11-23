@@ -115,7 +115,7 @@
 	<!-- footer -->
 		<footer>
         	<hr>
-    		<p>XIKIM 2013</p>
+    		<p>XIAKIM 2013</p>
     	</footer>
 	<!-- end footer -->
 
