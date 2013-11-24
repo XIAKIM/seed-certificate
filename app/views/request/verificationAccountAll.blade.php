@@ -14,10 +14,10 @@
             <tr>
               @if($description->status == 0)
                 <td><a href="/accountlist/{{ $description->id }}">{{ $description->name }} {{ $description->lastName }}</a></td>
-                <td><p style="color: red">Waiting</p></td>
+                <td><p class="label label-default">Waiting</p></td>
               @else
                 <td>{{ $description->name }} {{ $description->lastName }}</td>
-                <td><p style="color: green">Approved</p></td>
+                <td><p class="label label-success">Approved</p></td>
               @endif
             </tr>
           @endforeach
