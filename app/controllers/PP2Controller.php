@@ -83,11 +83,39 @@
 		}
 	}
 
-	public function denyRequestPP2()	{
-	
+	public function denyRequestPP2($id)	{
+		$request = Requests::find(PP2::find($id)->requestID);
+		if($request->status != "Waiting")	{
+		}	
+		$request->status ='Denied';
+		$request->message = Input::get('comment');
+		$request->save();
+		return Redirect::route('/requestlist');
+		
 	}
 
-	public function createCertifcatePP2()	{
+	public function createCertificatePP2($id)	{
+		$pp2 = PP2::find($id);
+		if(Requests::find($pp2->requestID)->status != 'Waiting') { 
+		}
+		Log::error(Requests::find($pp2->requestID)->status);
+		$certificate = new Certificate;
+		$expiredDate = new DateTime();
+		$expiredDate->add(new DateInterval('P1Y'));
+		$certificate->expiredDate = $expiredDate;
+		$certificate->certificateType = $pp2->certificateType;
+		$certificate->requestType = 'pp2';
+		// $certificate->ppID = $pp1->id;
+		$certificate->requestID = $pp2->requestID;
+		$certificate->userID = $pp2->userID;
+		$certificate->save();
+
+		//set status
+		$request = Requests::find($pp2->requestID);
+		$request->status = 'Approved';
+		$request->save();
+
+		return Redirect::route('/requestlist/pp2/{id}', $pp2->userID);
 	
 	}
 }
