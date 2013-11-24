@@ -72,7 +72,14 @@ class NewPageController extends BaseController {
 	public function goToCertificationList(){
 		if(Auth::guest()) return Redirect::route('/');
 		$pp1s = PP1::where('userID', '=', Auth::user()->id)->get();
-		$this->layout->content = View::make('user.status', compact('pp1s'));
+		$pp2s = PP2::where('userID', '=', Auth::user()->id)->get();
+		$pp8s = PP8::where('userID', '=', Auth::user()->id)->get();
+		$pp9s = PP9::where('userID', '=', Auth::user()->id)->get();
+		$pp10s = PP10::where('userID', '=', Auth::user()->id)->get();
+		$pp11s = PP11::where('userID', '=', Auth::user()->id)->get();
+		$pp12s = PP12::where('userID', '=', Auth::user()->id)->get();
+		$rm3s = RM3::where('userID', '=', Auth::user()->id)->get();	
+		$this->layout->content = View::make('user.status', compact('pp1s','pp2s','pp8s','pp9s','pp10s','pp11s','pp12s','rm3s'));
 	}
 
 	public function goToLabList(){
@@ -99,8 +106,8 @@ class NewPageController extends BaseController {
 
 	public function goToVerificationRequestPP1($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
-		$pp1s = PP1::where('userID', '=', $id)->get();
-		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+		$documents = PP1::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
 	}
 
 	public function goToRequestInformationPP1Page($id)	{
@@ -111,8 +118,8 @@ class NewPageController extends BaseController {
 
 	public function goToVerificationRequestPP2($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
-		$pp1s = PP2::where('userID', '=', $id)->get();
-		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+		$documents = PP2::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
 	}
 	
 	public function goToRequestInformationPP2Page($id)	{
@@ -123,8 +130,8 @@ class NewPageController extends BaseController {
 
 	public function goToVerificationRequestPP10($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
-		$pp1s = PP10::where('userID', '=', $id)->get();
-		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+		$documents = PP10::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
 	}
 	
 	public function goToRequestInformationPP10Page($id)	{
@@ -135,8 +142,8 @@ class NewPageController extends BaseController {
 
 	public function goToVerificationRequestPP11($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
-		$pp1s = PP11::where('userID', '=', $id)->get();
-		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+		$documents = PP11::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
 	}
 	
 	public function goToRequestInformationPP11Page($id)	{
@@ -147,8 +154,8 @@ class NewPageController extends BaseController {
 
 	public function goToVerificationRequestPP12($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
-		$pp1s = PP12::where('userID', '=', $id)->get();
-		$this->layout->content = View::make('request.verificationSeedPerson', compact('pp1s'));
+		$documents = PP12::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
 	}
 	
 	public function goToRequestInformationPP12Page($id)	{
