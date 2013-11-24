@@ -3,25 +3,37 @@
 <div class = "container">
 	<h1>Seed Verification</h1>
 	<br>
-	<h2>{{ Description::find(User::find($pp1s[0]->userID)->descriptionID)->name }} {{ Description::find(User::find($pp1s[0]->userID)->descriptionID)->lastName }} request list</h2>
+	<h2>{{ Description::find(User::find($documents[0]->userID)->descriptionID)->name }} {{ Description::find(User::find($documents[0]->userID)->descriptionID)->lastName }} request list</h2>
 	<table class="table">
 		<tr>
 			<th>Type</th>
 			<th>Status</th>	
 		</tr>
-		@if(count($pp1s) != 0)
-			@foreach($pp1s as $pp1)
+		@if(count($documents) != 0)
+			@foreach($documents as $document)
 				<tr>
-					@if($pp1->certificateType == 3 || $pp1->certificateType == 4 || $pp1->certificateType == 5 || $pp1->certificateType == 3)
-						<td><a href="/requestlist/pp1/information/{{ $pp1->id }}">pp{{ $pp1->certificateType }}.</a></td>
+					@if($document->certificateType == 3 || $document->certificateType == 4 || $document->certificateType == 5 || $document->certificateType == 6)
+						<td><a href="/requestlist/pp1/information/{{ $document->id }}">pp{{ $document->certificateType }}.</a></td>
 					@else
-						<td><a href="/requestlist/pp{{$pp1->certificateType}}/information/{{ $pp1->id }}">pp{{ $pp1->certificateType }}.</a></td>
+						<td><a href="/requestlist/pp{{$document->certificateType}}/information/{{ $document->id }}">pp{{ $document->certificateType }}.</a></td>
 					@endif
-					<td>{{ Requests::find($pp1->requestID)->status }}</td>
+					@if( Requests::find($document->requestID)->status == "Approved")
+						<td>
+							<span class="label label-success">{{ Requests::find($document->requestID)->status }}</span>
+						</td>
+
+					@elseif(Requests::find($document->requestID)->status == "Denied")
+						<td>
+							<span class="label label-danger">{{ Requests::find($document->requestID)->status }}</span>
+						</td>
+					@elseif(Requests::find($document->requestID)->status == "Waiting")
+						<td>
+							<span class="label label-default">{{ Requests::find($document->requestID)->status }}</span>
+						</td>
+					@endif
 				</tr>
 			@endforeach
 		@endif
-	
 	</table>
 </div>
 @stop
