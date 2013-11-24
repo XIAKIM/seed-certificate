@@ -351,14 +351,14 @@ Route::any('/saverequestpp2', [
 	'uses' => 'PP2Controller@saveRequestPP2'
 ]);
 
-Route::any('/denyrequestpp2', [
-	'as' => '/denyrequestpp2',
+Route::any('/denyrequestpp2/{id}', [
+	'as' => '/denyrequestpp2/{id}',
 	'uses' => 'PP2Controller@denyRequestPP2'
 ]);
 
 
-Route::any('/createcertificatepp2', [
-	'as' => '/createcertificatepp2',
+Route::any('/createcertificatepp2/{id}', [
+	'as' => '/createcertificatepp2/{id}',
 	'uses' => 'PP2Controller@createCertificatePP2'
 ]);
 
