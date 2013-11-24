@@ -10,66 +10,48 @@
   		<th>Certificate Type</th>
   		<th>Status</th>
   </tr>
-
-  @foreach($pp1s as $pp1)
-  <tr>
-      @if($pp1->certificateType == 3)
-  		  <td>PP3</td>
+    @foreach($pp1s as $pp1)
+    <tr>
+      @if($pp1->certificateType == 3 || $pp1->certificateType == 4 || $pp1->certificateType == 5 || $pp1->certificateType == 6 )
+  		  <td>PP{{$pp1->certificateType}}</td>
   		  @if(Requests::find($pp1->requestID)->status == 'Approved')
-  		  	<td><p style="color: green">{{ Requests::find($pp1->requestID)->status }}</p></td>
-  		  @elseif(Requests::find($pp1->requestID)->status == 'Denied')
-          <td><p style="color: red">{{ Requests::find($pp1->requestID)->status }} ({{ Requests::find($pp1->requestID)->message }})</p></td>
-        @else
-          <td>{{ Requests::find($pp1->requestID)->status }}</td>
-  		  @endif
-  	  @endif
-  </tr>
-  @endforeach
-
-  @foreach($pp1s as $pp1)
-  <tr>
-      @if($pp1->certificateType == 4)
-  		  <td>PP4</td>
-  		  @if(Requests::find($pp1->requestID)->status == 'Approved')
-  		  	<td><p style="color: green">{{ Requests::find($pp1->requestID)->status }}</p></td>
+  		    <td>
+              <span class="label label-success">{{ Requests::find($pp1->requestID)->status }}</span>
+          </td>
         @elseif(Requests::find($pp1->requestID)->status == 'Denied')
-          <td><p style="color: red">{{ Requests::find($pp1->requestID)->status }} ({{ Requests::find($pp1->requestID)->message }})</p></td>
-  		  @else
-  		  	<td>{{ Requests::find($pp1->requestID)->status }}</td>
+          <td>
+              <span class="label label-danger">{{ Requests::find($pp1->requestID)->status }}</span>
+              <span class="label label-info">{{ Requests::find($pp1->requestID)->message }}</span>
+          </td>
+        @else
+          <td>
+              <span class="label label-default">{{ Requests::find($pp1->requestID)->status }}</span>
+          </td>
   		  @endif
-  	  @endif
-  </tr>
+      @endif
+    </tr>
+    @endforeach
+
+  @foreach($pp2s as $pp2)
+    <tr>
+        <td>PP2</td>
+        @if(Requests::find($pp2->requestID)->status == 'Approved')
+          <td>
+              <span class="label label-success">{{ Requests::find($pp2->requestID)->status }}</span>
+          </td>
+        @elseif(Requests::find($pp2->requestID)->status == 'Denied')
+          <td>
+              <span class="label label-danger">{{ Requests::find($pp2->requestID)->status }}</span>
+              <span class="label label-info">{{ Requests::find($pp2->requestID)->message }}</span>
+          </td>
+        @else
+          <td>
+              <span class="label label-default">{{ Requests::find($pp2->requestID)->status }}</span>
+          </td>
+        @endif
+    </tr>
   @endforeach
 
-  @foreach($pp1s as $pp1)
-  <tr>
-      @if($pp1->certificateType == 5)
-  		  <td>PP5</td>
-  		  @if(Requests::find($pp1->requestID)->status == 'Approved')
-  		  	<td><p style="color: green">{{ Requests::find($pp1->requestID)->status }}</p></td>
-  		  @elseif(Requests::find($pp1->requestID)->status == 'Denied')
-          <td><p style="color: red">{{ Requests::find($pp1->requestID)->status }} ({{ Requests::find($pp1->requestID)->message }})</p></td>
-        @else
-          <td>{{ Requests::find($pp1->requestID)->status }}</td>
-  		  @endif
-  	  @endif
-  </tr>
-  @endforeach
-
-  @foreach($pp1s as $pp1)
-  <tr>
-      @if($pp1->certificateType == 6)
-  		  <td>PP6</td>
-  		  @if(Requests::find($pp1->requestID)->status == 'Approved')
-  		  	<td><p style="color: green">{{ Requests::find($pp1->requestID)->status }}</p></td>
-  		  @elseif(Requests::find($pp1->requestID)->status == 'Denied')
-          <td><p style="color: red">{{ Requests::find($pp1->requestID)->status }} ({{ Requests::find($pp1->requestID)->message }})</p></td>
-        @else
-          <td>{{ Requests::find($pp1->requestID)->status }}</td>
-  		  @endif
-  	  @endif
-  </tr>
-  @endforeach
 </table>
 
 @stop
