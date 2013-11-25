@@ -25,7 +25,7 @@
 <br>
 <div class="row">
  <div class="col-md-4" class='text-center'><a href="#">PP12 </a><span class="badge">Seed Relocation Request</span></div>
- <div class="col-md-4"><a href="/requestrelocation" class="btn btn-default btn-sm">Make Request</a></div>
+ <div class="col-md-4"><a href="/initrequestpp12" class="btn btn-default btn-sm">Make Request</a></div>
 </div>
 <br>
 <div class="row">

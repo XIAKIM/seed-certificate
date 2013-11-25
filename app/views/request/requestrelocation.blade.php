@@ -33,8 +33,9 @@
 		<br>
 		<br>
 
+		
 		<!-- dont change route please change and created function it -->
-		{{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"form-horizontal"]) }}
+		{{ Form::open(["route" => "/initrequestpp1", "role" => "form" , "class"=>"form-horizontal"]) }}
 			<div class="row">
   				<div class="col-md-2 col-md-offset-2" style = "text-align:right">certification No</div>				
 				<div class="col-md-2">{{ Form::text("certificationNo", null, ["class" => "form-control" ]) }}</div>
@@ -43,6 +44,7 @@
 
 			</div>	
     	{{ Form::close() }}
+		
     	<br>
 	<!-- </form> -->
 @stop

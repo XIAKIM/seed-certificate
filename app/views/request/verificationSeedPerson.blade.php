@@ -8,6 +8,7 @@
 		<tr>
 			<th>Type</th>
 			<th>Status</th>	
+			<th>Comment</th>
 		</tr>
 		@if(count($documents) != 0)
 			@foreach($documents as $document)
@@ -21,15 +22,20 @@
 						<td>
 							<span class="label label-success">{{ Requests::find($document->requestID)->status }}</span>
 						</td>
+						<td></td>
 
 					@elseif(Requests::find($document->requestID)->status == "Denied")
 						<td>
-							<span class="label label-danger">{{ Requests::find($document->requestID)->status }}</span>
+							<span class="label label-danger">{{ Requests::find($document->requestID)->status }} </span>
+						</td>
+						<td>
+							<span class="label label-warning">{{ Requests::find($document->requestID)->message }} </span>
 						</td>
 					@elseif(Requests::find($document->requestID)->status == "Waiting")
 						<td>
 							<span class="label label-default">{{ Requests::find($document->requestID)->status }}</span>
 						</td>
+						<td></td>
 					@endif
 				</tr>
 			@endforeach
