@@ -54,7 +54,6 @@ class PP11Controller extends BaseController{
  	}
  
  	public function denyRequestPP11($id){
- 
 		$request = Requests::find(PP11::find($id)->requestID);
 		if($request->status != 'Waiting') { 
 			return Redirect::route('/requestlist', $id);

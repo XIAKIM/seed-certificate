@@ -44,7 +44,7 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12"><p><strong>to take care of the company on behalf of</strong> {{ $pp11->companyName }} <strong>that are allowed to</strong> PP{{ $pp11->substituteType }}</p></div>
+  <div class="col-md-12"><p><strong>to take care of the company on behalf of</strong> {{ $pp1->ownerName }} <strong>that are allowed to</strong> {{ $pp11->companyName }}</p></div>
 </div>
 
 <div class="row">

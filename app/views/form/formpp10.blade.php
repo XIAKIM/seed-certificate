@@ -8,83 +8,83 @@
         <br>
         <div class="main">
          <div class="row">
-            <div class="col-md-7"><p><strong>Name</strong>{{ $description->name }} {{ $description->lastName }}</p></div>
-            <div class="col-md-2"><p><strong>Age</strong>{{ $description->age }}</p></div>
-            <div class="col-md-3"><p><strong>Nationality</strong>{{ $description->nationality }}</p></div>
+            <div class="col-md-7"><p><strong>Name</strong> {{ $description->name }} {{ $description->lastName }}</p></div>
+            <div class="col-md-2"><p><strong>Age</strong> {{ $description->age }}</p></div>
+            <div class="col-md-3"><p><strong>Nationality</strong> {{ $description->nationality }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6"><p><strong>Identification Type</strong>{{ $description->identificationType }}</p></div>
-            <div class="col-md-4"><p><strong>Identification Number</strong>{{ $description->identificationNumber }}</p></div>
+            <div class="col-md-6"><p><strong>Identification Type</strong> {{ $description->identificationType }}</p></div>
+            <div class="col-md-4"><p><strong>Identification Number</strong> {{ $description->identificationNumber }}</p></div>
           </div>
 
         
           <div class="row">
-            <div class="col-md-4"><p><strong>Address no</strong>{{ $description->userAddressNo }}</p></div>
-            <div class="col-md-2"><p><strong>Moo</strong>{{ $description->userAddressMoo }}</p></div>
-            <div class="col-md-2"><p><strong>Soi</strong>{{ $description->userAddressSoi }}</p></div>
-            <div class="col-md-4"><p><strong>Road</strong>{{ $description->userAddressRoad }}</p></div>
+            <div class="col-md-4"><p><strong>Address no</strong> {{ $description->userAddressNo }}</p></div>
+            <div class="col-md-2"><p><strong>Moo</strong> {{ $description->userAddressMoo }}</p></div>
+            <div class="col-md-2"><p><strong>Soi</strong> {{ $description->userAddressSoi }}</p></div>
+            <div class="col-md-4"><p><strong>Road</strong> {{ $description->userAddressRoad }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-4"><p><strong>Tambol</strong>{{ $description->userAddressSubDistrict }}</p></div>
-            <div class="col-md-4"><p><strong>District</strong>{{ $description->userAddressDistrict }}</p></div>
-            <div class="col-md-4"><p><strong>Province</strong>{{ $description->userAddressProvince }}</p></div>
+            <div class="col-md-4"><p><strong>Tambol</strong> {{ $description->userAddressSubDistrict }}</p></div>
+            <div class="col-md-4"><p><strong>District</strong> {{ $description->userAddressDistrict }}</p></div>
+            <div class="col-md-4"><p><strong>Province</strong> {{ $description->userAddressProvince }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6"><p><strong>Post code</strong>{{ $description->userAddressPostalCode }}</p></div>
+            <div class="col-md-6"><p><strong>Post code</strong> {{ $description->userAddressPostalCode }}</p></div>
             <div class="col-md-6">
-              <p><strong>Phone</strong>{{ $description->telNumber }}</p>
+              <p><strong>Phone</strong> {{ $description->telNumber }}</p>
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-12"><p><strong>want to prolong the certification of</strong>PP{{ $pp10->prolongType }}</p></div>
+            <div class="col-md-12"><p><strong>want to prolong the certification of</strong> PP{{ $pp10->prolongType }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6"><p><strong>On behalf of<span class="pull-right">(Enterprenuer or Juristic person)</span></strong></p></div>
+            <div class="col-md-6"><p><strong>On behalf of<span class="pull-right">{{ $pp1->ownerName }}</span></strong></p></div>
             </div>
           </div>
           
           <div class="row">
-            <div class="col-md-4"><p><strong>Company address no</strong>{{ $pp1->companyAddressNo }}</p></div>
-            <div class="col-md-2"><p><strong>Moo</strong>{{ $pp1->companyAddressMoo }}</p></div>
-            <div class="col-md-2"><p><strong>Soi</strong>{{ $pp1->companyAddressSoi }}</p></div>
-            <div class="col-md-4"><p><strong>Road</strong>{{ $pp1->companyAddressRoad }}</p></div>
+            <div class="col-md-4"><p><strong>Company address no</strong> {{ $pp1->companyAddressNo }}</p></div>
+            <div class="col-md-2"><p><strong>Moo</strong> {{ $pp1->companyAddressMoo }}</p></div>
+            <div class="col-md-2"><p><strong>Soi</strong> {{ $pp1->companyAddressSoi }}</p></div>
+            <div class="col-md-4"><p><strong>Road</strong> {{ $pp1->companyAddressRoad }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-4"><p><strong>Tambol</strong>{{ $pp1->companyAddressTambol }}</p></div>
-            <div class="col-md-4"><p><strong>District</strong>{{ $pp1->companyAddressDistrict }}</p></div>
-            <div class="col-md-4"><p><strong>Province</strong>{{ $pp1->companyAddressProvince }}</p></div>
+            <div class="col-md-4"><p><strong>Tambol</strong> {{ $pp1->companyAddressTambol }}</p></div>
+            <div class="col-md-4"><p><strong>District</strong> {{ $pp1->companyAddressDistrict }}</p></div>
+            <div class="col-md-4"><p><strong>Province</strong> {{ $pp1->companyAddressProvince }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6"><p><strong>Post code</strong>{{ $pp1->companyAddressPostalCode }}</p></div>
+            <div class="col-md-6"><p><strong>Post code</strong> {{ $pp1->companyAddressPostalCode }}</p></div>
             <div class="col-md-6">
-              <p><strong>Phone</strong>{{ $description->telNumber }}</p>
+              <p><strong>Phone</strong> {{ $description->telNumber }}</p>
             </div>
           </div>
 
             <div class="row">
-            <div class="col-md-4"><p><strong>Storage address no</strong>{{ $pp1->storingAddressNo }}</p></div>
-            <div class="col-md-2"><p><strong>Moo</strong>{{ $pp1->storingAddressMoo }}</p></div>
-            <div class="col-md-2"><p><strong>Soi</strong>{{ $pp1->storingAddressSoi }}</p></div>
+            <div class="col-md-4"><p><strong>Storage address no</strong> {{ $pp1->storingAddressNo }}</p></div>
+            <div class="col-md-2"><p><strong>Moo</strong> {{ $pp1->storingAddressMoo }}</p></div>
+            <div class="col-md-2"><p><strong>Soi</strong> {{ $pp1->storingAddressSoi }}</p></div>
             <div class="col-md-4"><p><strong>Road</strong>{{ $pp1->storingAddressRoad }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-4"><p><strong>Tambol</strong>{{ $pp1->storingAddressTambol }}</p></div>
-            <div class="col-md-4"><p><strong>District</strong>{{ $pp1->storingAddressDistrict }}</p></div>
-            <div class="col-md-4"><p><strong>Province</strong>{{ $pp1->storingAddressProvince }}</p></div>
+            <div class="col-md-4"><p><strong>Tambol</strong> {{ $pp1->storingAddressTambol }}</p></div>
+            <div class="col-md-4"><p><strong>District</strong> {{ $pp1->storingAddressDistrict }}</p></div>
+            <div class="col-md-4"><p><strong>Province</strong> {{ $pp1->storingAddressProvince }}</p></div>
           </div>
 
           <div class="row">
-            <div class="col-md-6"><p><strong>Post code</strong>{{ $pp1->storingAddressPostalCode }}</p></div>
+            <div class="col-md-6"><p><strong>Post code</strong> {{ $pp1->storingAddressPostalCode }}</p></div>
             <div class="col-md-6">
-              <p><strong>Phone</strong>{{ $description->telNumber }}</p>
+              <p><strong>Phone</strong> {{ $description->telNumber }}</p>
             </div>
           </div>
 

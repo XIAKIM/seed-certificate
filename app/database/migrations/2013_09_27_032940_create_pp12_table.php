@@ -14,17 +14,9 @@ class CreatePp12Table extends Migration {
 	{
 		Schema::create('pp12', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('companyName');
 			$table->string('certificateType');
-			$table->integer('certificateNumber');
-			$table->string('locationType');
-			$table->text('newLocation');
-			$table->integer('userID');
-			$table->integer('requestID');
-			$table->timestamps();
-			
-
-			// $table->string('newLocation'); 
+			$table->integer('certificateID');
+			$table->string('relocationType');
 			$table->string('newLocationAddressNo');
 			$table->string('newLocationAddressMoo');
 			$table->string('newLocationAddressSoi');
@@ -32,8 +24,11 @@ class CreatePp12Table extends Migration {
 			$table->string('newLocationAddressSubDistrict');
 			$table->string('newLocationAddressDistrict');
 			$table->string('newLocationAddressProvince');
-			$table->string('newLocationAddressPostCoe');
-		
+			$table->string('newLocationAddressPostalCode');
+			$table->string('reason');
+			$table->integer('userID');
+			$table->integer('requestID');
+			$table->timestamps();
 		});
 
 	}

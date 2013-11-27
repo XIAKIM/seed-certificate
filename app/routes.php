@@ -131,6 +131,11 @@ Route::any('/requestsubstitute', [
 	'uses' => 'NewPageController@goToRequestSubstitute'
 ]);
 
+Route::any('requestrelocation', [
+	'as' => '/requestrelocation',
+	'uses' => 'NewPageController@goToRequestRelocation'
+]);
+
 Route::any('/verification', [
 	'as' => '/verification',
 	'uses' => 'NewPageController@goToVerificationPage'
@@ -407,14 +412,14 @@ Route::any('/saverequestpp12', [
 	'uses' => 'PP12Controller@saveRequestPP12'
 ]);
 
-Route::any('/denyrequestpp12', [
-	'as' => '/denyrequestpp12',
+Route::any('/denyrequestpp12/{id}', [
+	'as' => '/denyrequestpp12/{id}',
 	'uses' => 'PP12Controller@denyRequestPP12'
 ]);
 
-Route::any('/verifyrequestpp12', [
-	'as' => '/verifyrequestpp12',
-	'uses' => 'PP12Controller@verifyRequestPP12'
+Route::any('/relocationcertificate/{id}', [
+	'as' => '/relocationcertificate/{id}',
+	'uses' => 'PP12Controller@relocationCertificate'
 ]);
 
 

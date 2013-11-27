@@ -156,7 +156,8 @@ class NewPageController extends BaseController {
 		$user = User::find($pp11->userID);
 		$description = Description::find($user->descriptionID);
 		$certificate = Certificate::where('certificateType', '=', $pp11->substituteType)->where('userID', '=', $user->id)->first();
-		$this->layout->content = View::make('form.formpp11', compact('pp11', 'description', 'certificate'));
+		$pp1 = PP1::where('requestID', '=', $certificate->requestID)->first();
+		$this->layout->content = View::make('form.formpp11', compact('pp11', 'description', 'certificate', 'pp1'));
 	}
 
 	public function goToVerificationRequestPP12($id)	{
@@ -168,7 +169,11 @@ class NewPageController extends BaseController {
 	public function goToRequestInformationPP12Page($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$pp12 = PP12::find($id);
-		$this->layout->content = View::make('form.formpp12', compact('pp12'));
+		$user = User::find($pp12->userID);
+		$description = Description::find($user->descriptionID);
+		$certificate = Certificate::where('certificateType', '=', $pp12->relocationType)->where('userID', '=', $user->id)->first();
+		$pp1 = PP1::where('requestID', '=', $certificate->requestID)->first();
+		$this->layout->content = View::make('form.formpp12', compact('pp12', 'description', 'certificate', 'pp1'));
 	}
 
 	public function goToRequestProlong() {
@@ -179,6 +184,11 @@ class NewPageController extends BaseController {
 	public function goToRequestSubstitute() {
 		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('request.requestsubstitute');	
+	}
+
+	public function goToRequestRelocation() {
+		if(Auth::guest()) return Redirect::route('/');
+		$this->layout->content = View::make('request.requestrelocation');	
 	}
 
 }
