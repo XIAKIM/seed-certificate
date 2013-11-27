@@ -378,18 +378,13 @@ Route::any('/saverequestpp10', [
 	'uses' => 'PP10Controller@saveRequestPP10'
 ]);
 
-Route::any('/denyrequestpp10', [
-	'as' => '/denyrequestpp10',
+Route::any('/denyrequestpp10/{id}', [
+	'as' => '/denyrequestpp10/{id}',
 	'uses' => 'PP10Controller@denyRequestPP10'
 ]);
 
-Route::any('/verifyrequestpp10', [
-	'as' => '/verifyrequestpp10',
-	'uses' => 'PP10Controller@verifyRequestPP10'
-]);
-
-Route::any('/extendcertificate', [
-	'as' => '/extendcertificate',
+Route::any('/extendcertificate/{id}', [
+	'as' => '/extendcertificate/{id}',
 	'uses' => 'PP10Controller@extendCertificate'
 ]);
 

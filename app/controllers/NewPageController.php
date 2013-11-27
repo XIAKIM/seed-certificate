@@ -137,7 +137,11 @@ class NewPageController extends BaseController {
 	public function goToRequestInformationPP10Page($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$pp10 = PP10::find($id);
-		$this->layout->content = View::make('form.formpp10', compact('pp10'));
+		$user = User::find($pp10->userID);
+		$description = Description::find($user->descriptionID);
+		$certificate = Certificate::where('certificateType', '=', $pp10->prolongType)->where('userID', '=', $user->id)->first();
+		$pp1 = PP1::where('requestID', '=', $certificate->requestID)->first();
+		$this->layout->content = View::make('form.formpp10', compact('pp10', 'description', 'pp1'));
 	}
 
 	public function goToVerificationRequestPP11($id)	{

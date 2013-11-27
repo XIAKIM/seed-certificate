@@ -16,6 +16,7 @@ class CreatePp10Table extends Migration {
 			$table->increments('id');
 			$table->string('certificateType');
 			$table->integer('certificateID');
+			$table->string('prolongType');
 			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
