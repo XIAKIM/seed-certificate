@@ -126,6 +126,11 @@ Route::any('/requestprolong', [
 	'uses' => 'NewPageController@goToRequestProlong'
 ]);
 
+Route::any('/requestsubstitute', [
+	'as' => '/requestsubstitute',
+	'uses' => 'NewPageController@goToRequestSubstitute'
+]);
+
 Route::any('/verification', [
 	'as' => '/verification',
 	'uses' => 'NewPageController@goToVerificationPage'
@@ -209,7 +214,6 @@ Route::any('/requestlist/pp11/information/{id}', [
 	'uses' => 'NewPageController@goToRequestInformationPP11Page'
 ]);
 
-
 Route::any('/requestlist/pp12/{id}', [
 	'as' => '/requestlist/pp12/{id}',
 	'uses' => 'NewPageController@goToVerificationRequestPP12'
@@ -219,33 +223,6 @@ Route::any('/requestlist/pp12/information/{id}', [
 	'as' => '/requestlist/pp12/information/{id}',
 	'uses' => 'NewPageController@goToRequestInformationPP12Page'
 ]);
-
-Route::get('/formpp2', function() {
-	return View::make('form.formpp2');
-});
-
-Route::get('/formpp7', function() {
-	return View::make('form.formpp7');
-});
-
-Route::get('/formpp10', function() {
-	return View::make('form.formpp10');
-});
-
-Route::get('/formpp11', function() {
-	return View::make('form.formpp11');
-});
-
-Route::get('/formpp12', function() {
-	return View::make('form.formpp12');
-});
-
-Route::get('/formrm3', function() {
-	return View::make('form.formrm3');
-});
-Route::get('/requestpp2table', function() {
-	return View::make('request.requestpp2table');
-});
 
 Route::get('/dabout', function() {
 	return View::make('details.about');
@@ -404,18 +381,13 @@ Route::any('/saverequestpp11', [
 	'uses' => 'PP11Controller@saveRequestPP11'
 ]);
 
-Route::any('/denyrequestpp11', [
-	'as' => '/denyrequestpp11',
+Route::any('/denyrequestpp11/{id}', [
+	'as' => '/denyrequestpp11/{id}',
 	'uses' => 'PP11Controller@denyRequestPP11'
 ]);
 
-Route::any('/verifyrequestpp11', [
-	'as' => '/verifyrequestpp11',
-	'uses' => 'PP11Controller@verifyRequestPP11'
-]);
-
-Route::any('/substitutecertificate', [
-	'as' => '/substitutecertificate',
+Route::any('/substitutecertificate/{id}', [
+	'as' => '/substitutecertificate/{id}',
 	'uses' => 'PP11Controller@substituteCertificate'
 ]);
 

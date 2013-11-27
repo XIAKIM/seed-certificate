@@ -35,14 +35,21 @@ class PP10Controller extends BaseController{
 	}
 
 	public function denyRequestPP10($id){
-
-	}
-
-	public function verifyRequestPP10()	{
-		
+		$request = Requests::find(PP10::find($id)->requestID);
+		if($request->status != 'Waiting') { 
+			return Redirect::route('/requestlist', $id);
+		}
+		$request->status ='Denied';
+		$request->message = Input::get('comment');
+		$request->save();
+		return Redirect::route('/requestlist/pp10/{id}', $pp10->userID);
 	}
 
 	public function extendCertificate($id)	{
+		$request = Requests::find(PP10::find($id)->requestID);
+		if($request->status != 'Waiting') { 
+			return Redirect::route('/requestlist', $id);
+		}
 		$pp10 = PP10::find($id);
 		$certificate = Certificate::where('certificateType', '=', $pp10->prolongType)->where('userID', '=', $pp10->userID)->first();
 		$expiredDate = new DateTime();
@@ -53,7 +60,7 @@ class PP10Controller extends BaseController{
 		$request = Requests::find($pp10->requestID);
 		$request->status = 'Approved';
 		$request->save();			
-		return Redirect::route('/requestlist');
+		return Redirect::route('/requestlist/pp10/{id}', $pp10->userID);
 	}
 
 }

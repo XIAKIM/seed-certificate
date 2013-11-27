@@ -109,7 +109,7 @@
         <div id="collapseSix" class="panel-collapse collapse">
           <div class="panel-body">
             @foreach($pp11s as $pp11)
-              <h3><a href="/requestlist/pp10/{{$pp10->userID}}"> {{Description::find(User::find($pp11->userID)->descriptionID)->name}} {{Description::find(User::find($pp11->userID)->descriptionID)->lastName }} </a></h3>
+              <h3><a href="/requestlist/pp11/{{$pp11->userID}}"> {{Description::find(User::find($pp11->userID)->descriptionID)->name}} {{Description::find(User::find($pp11->userID)->descriptionID)->lastName }} </a></h3>
             @endforeach
           </div>
         </div>

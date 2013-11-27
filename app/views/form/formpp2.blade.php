@@ -32,7 +32,7 @@
   	</div>
 	<div class="row"> 	
 		<p>
-		<div class="col-xs-3 text-right"> <strong> Adress : </strong> </div> 
+		<div class="col-xs-3 text-right"> <strong> Address : </strong> </div> 
 		<div class="col-xs-9 text-left"> 
 			{{ Description::find(User::find($pp2->userID)->descriptionID)->userAddressNo }} 
 			m.{{ Description::find(User::find($pp2->userID)->descriptionID)->userAddressMoo }}

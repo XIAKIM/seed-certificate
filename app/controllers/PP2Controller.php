@@ -90,8 +90,7 @@
 		$request->status ='Denied';
 		$request->message = Input::get('comment');
 		$request->save();
-		return Redirect::route('/requestlist');
-		
+		return Redirect::route('/requestlist/pp2/{id}', $pp2->userID);
 	}
 
 	public function createCertificatePP2($id)	{

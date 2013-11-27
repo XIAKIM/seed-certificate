@@ -17,6 +17,7 @@ class CreatePp11Table extends Migration {
 			$table->string('companyName');
 			$table->string('certificateType');
 			$table->integer('certificateID');
+			$table->string('substituteType');
 			$table->string('reason');
 			$table->integer('userID');
 			$table->integer('requestID');

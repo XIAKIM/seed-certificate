@@ -5,10 +5,16 @@
 	<hr>
 
 
-	<h3>Reason for substitute</h3>
-	<br>
+	
 	<!-- dont change route please change and created function it -->
-		{{ Form::open(["route" => "/createPP1Request", "role" => "form" , "class"=>"form-horizontal"]) }}
+		{{ Form::open(["route" => "/saverequestpp11", "role" => "form" , "class"=>"form-horizontal"]) }}
+				<h3>New company name</h3>
+				<br>
+				<div class='row'>
+					<div class='col-md-8'>	{{ Form::text("companyName", null, ["class" => "form-control"]) }}</div>
+				</div>	
+				<h3>Reason for substitute</h3>
+				<br>
 				<div class='row'>
 					<div class='col-md-8'>	{{ Form::textarea("reason", null, ["class" => "form-control" ,"row" =>"3"  ]) }}</div>
 				</div>	
