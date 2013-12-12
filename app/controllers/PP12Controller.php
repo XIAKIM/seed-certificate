@@ -68,7 +68,8 @@ class PP12Controller extends BaseController{
 	}
 
 	public function denyRequestPP12($id) {
-		$request = Requests::find(PP12::find($id)->requestID);
+		$pp12 = PP12::find($id);
+		$request = Requests::find($pp12->requestID);
 		if($request->status != 'Waiting') { 
 			return Redirect::route('/requestlist', $id);
 		}

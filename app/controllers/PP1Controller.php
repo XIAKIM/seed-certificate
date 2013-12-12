@@ -100,20 +100,24 @@ class PP1Controller extends BaseController{
 			return Redirect::route('/requestlist/pp1/{id}', $pp1->userID);
 		}
 		Log::error(Requests::find($pp1->requestID)->status);
-		$certificate = new Certificate;
-		$expiredDate = new DateTime();
-		$expiredDate->add(new DateInterval('P1Y'));
-		$certificate->expiredDate = $expiredDate;
-		$certificate->certificateType = $pp1->certificateType;
-		$certificate->requestType = 'pp1';
-		// $certificate->ppID = $pp1->id;
-		$certificate->requestID = $pp1->requestID;
-		$certificate->userID = $pp1->userID;
-		$certificate->save();
+		if($pp1->certificateType == 3 || $pp1->certificateType == 4) {
+			$certificate = new Certificate;
+			$expiredDate = new DateTime();
+			$expiredDate->add(new DateInterval('P1Y'));
+			$certificate->expiredDate = $expiredDate;
+			$certificate->certificateType = $pp1->certificateType;
+			$certificate->requestType = 'pp1';
+			// $certificate->ppID = $pp1->id;
+			$certificate->requestID = $pp1->requestID;
+			$certificate->userID = $pp1->userID;
+			$certificate->save();
+		}
 
 		//set status
 		$request = Requests::find($pp1->requestID);
-		$request->status = 'Approved';
+		if($pp1->certificateType == 3 || $pp1->certificateType == 4) $request->status = 'Approved';
+		else if($pp1->certificateType == 5) $request->status = 'Waiting for PP8 Request';
+		else $request->status = 'Waiting for PP9 Request';
 		$request->save();
 
 		return Redirect::route('/requestlist/pp1/{id}', $pp1->userID);

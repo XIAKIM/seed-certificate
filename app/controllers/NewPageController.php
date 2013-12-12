@@ -176,6 +176,20 @@ class NewPageController extends BaseController {
 		$this->layout->content = View::make('form.formpp12', compact('pp12', 'description', 'certificate', 'pp1'));
 	}
 
+	public function goToVerificationRequestRM3($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$documents = RM3::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
+	}
+	
+	public function goToRequestInformationRM3Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$rm3 = RM3::find($id);
+		$user = User::find($rm3->userID);
+		$description = Description::find($user->descriptionID);
+		$this->layout->content = View::make('form.formrm3', compact('rm3', 'description'));
+	}
+
 	public function goToRequestProlong() {
 		if(Auth::guest()) return Redirect::route('/');
 		$this->layout->content = View::make('request.requestprolong');

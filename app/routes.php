@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/allRequest', function() {
+Route::get('/allrequest', function() {
 	return View::make('request.allRequest');
 });
 
@@ -229,6 +229,16 @@ Route::any('/requestlist/pp12/information/{id}', [
 	'uses' => 'NewPageController@goToRequestInformationPP12Page'
 ]);
 
+Route::any('/requestlist/rm3/{id}', [
+	'as' => '/requestlist/rm3/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestrm3'
+]);
+
+Route::any('/requestlist/rm3/information/{id}', [
+	'as' => '/requestlist/rm3/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationRM3Page'
+]);
+
 Route::get('/dabout', function() {
 	return View::make('details.about');
 });
@@ -344,6 +354,50 @@ Route::any('/createcertificatepp2/{id}', [
 	'uses' => 'PP2Controller@createCertificatePP2'
 ]);
 
+//PP8Controller /////////////////////////////////////////////////////////////////////
+Route::any('/initrequestpp8', [
+	'as' => '/initrequestpp8',
+	'uses' => 'PP8Controller@initRequestPP8'
+]);
+
+Route::any('/saverequestpp8', [
+	'as' => '/saverequestpp8',
+	'uses' => 'PP8Controller@saveRequestPP8'
+]);
+
+Route::any('/denyrequestpp8/{id}', [
+	'as' => '/denyrequestpp8/{id}',
+	'uses' => 'PP8Controller@denyRequestPP8'
+]);
+
+
+Route::any('/createcertificatepp8/{id}', [
+	'as' => '/createcertificatepp8/{id}',
+	'uses' => 'PP8Controller@createCertificatePP8'
+]);
+
+//PP9Controller /////////////////////////////////////////////////////////////////////
+Route::any('/initrequestpp9', [
+	'as' => '/initrequestpp9',
+	'uses' => 'PP9Controller@initRequestPP9'
+]);
+
+Route::any('/saverequestpp9', [
+	'as' => '/saverequestpp9',
+	'uses' => 'PP9Controller@saveRequestPP9'
+]);
+
+Route::any('/denyrequestpp9/{id}', [
+	'as' => '/denyrequestpp9/{id}',
+	'uses' => 'PP9Controller@denyRequestPP9'
+]);
+
+
+Route::any('/createcertificatepp9/{id}', [
+	'as' => '/createcertificatepp9/{id}',
+	'uses' => 'PP9Controller@createCertificatePP9'
+]);
+
 //PP10Controller/////////////////////////////////////////////////////////////////////
 Route::any('/checkrequestpp10', [
 	'as' => '/checkrequestpp10',
@@ -427,26 +481,52 @@ Route::any('/relocationcertificate/{id}', [
 //RM3Controller//////////////////////////////////////////////////////////////////////
 Route::any('/checkrequestrm3', [
 	'as' => '/checkrequestrm3',
-	'uses' => 'PP1Controller@checkRequestRM3'
+	'uses' => 'RM3Controller@checkRequestRM3'
 ]);
 
 Route::any('/initrequestrm3', [
 	'as' => '/initrequestrm3',
-	'uses' => 'PP1Controller@initRequestRM3'
+	'uses' => 'RM3Controller@initRequestRM3'
 ]);
 
 Route::any('/saverequestrm3', [
 	'as' => '/saverequestrm3',
-	'uses' => 'PP1Controller@saveRequestRM3'
+	'uses' => 'RM3Controller@saveRequestRM3'
 ]);
 
-Route::any('/denyrequestrm3', [
-	'as' => '/denyrequestrm3',
-	'uses' => 'PP1Controller@denyRequestRM3'
+Route::any('/denyrequestrm3/{id}', [
+	'as' => '/denyrequestrm3/{id}',
+	'uses' => 'RM3Controller@denyRequestRM3'
 ]);
 
-Route::any('/verifyrequestrm3', [
-	'as' => '/verifyrequestrm3',
-	'uses' => 'PP1Controller@verifyRequestRM3'
+Route::any('/verifyrequestrm3/{id}', [
+	'as' => '/verifyrequestrm3/{id}',
+	'uses' => 'RM3Controller@verifyRequestRM3'
 ]);
 
+
+//PDF Form
+Route::any('/signature/pp3/{id}', [
+	'as' => '/signature/pp3/{id}',
+	'uses' => 'FormController@showPDFPP3'
+]);
+
+Route::any('/signature/pp4/{id}', [
+	'as' => '/signature/pp4/{id}',
+	'uses' => 'FormController@showPDFPP4'
+]);
+
+Route::any('/signature/pp5/{id}', [
+	'as' => '/signature/pp5/{id}',
+	'uses' => 'FormController@showPDFPP5'
+]);
+
+Route::any('/signature/pp6/{id}', [
+	'as' => '/signature/pp6/{id}',
+	'uses' => 'FormController@showPDFPP6'
+]);
+
+Route::any('/signature/pp7/{id}', [
+	'as' => '/signature/pp7/{id}',
+	'uses' => 'FormController@showPDFPP7'
+]);

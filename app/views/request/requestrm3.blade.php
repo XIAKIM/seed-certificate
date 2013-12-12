@@ -31,29 +31,11 @@
 
 </div>
 
-<!-- dont change route please change and created function it -->
-{{ Form::open(["route" => "/initrequestrm3", "role" => "form" , "class"=>"radio"]) }}
-Analyze by
-<div class="radio">
-	<label>
-		{{ Form::radio("a", "option1", true) }}
-		<div class ='row'>
-			<div class='col-md-1'> Only </div>
-			<div class='col-md-3'> {{ Form::text("number", null, ["class" => "form-control"   ]) }}</div>
-			<div class = 'col-md-3'>amount of example</div>
-	</div>
-	</label>
-	<br>
-	<label>
-		{{ Form::radio("a", "option2") }}
-		All of lot that give to the officer
-	</label>
-</div>
-<div class ='row'>
-	<div class = 'col-md-1 col-md-offset-8'>{{ Form::button("Back",  ["class" => "btn btn-default "   ]) }}</div>
-	<div class = 'col-md-1'>{{ Form::button("Next",  ["class" => "btn btn-default "   ]) }}</div>
-</div>
-{{ Form::text("select-request", '1', ["id" => "select-request", "hidden"])}}
-{{ Form::close() }}
+{{ Form::open(["route" => "/checkrequestrm3"]) }}
+		<div class="row">
+			{{ Form::text("select-request", '1', ["id" => "select-request", "hidden"])}}
+			{{ Form::submit("Send Request", ["class"=>"btn btn-default btn-lg" , "style" => "display: block; margin-left: auto; margin-right: auto; margin-top: 30px;"]) }}
+		</div>	
+    {{ Form::close() }}
 <!-- </form> -->
 @stop

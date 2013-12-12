@@ -14,21 +14,13 @@ class CreatePp8Table extends Migration {
 	{
 		Schema::create('pp8', function(Blueprint $table) {
 			$table->increments('id');
-			$table->string('companyName');
-			$table->integer('certificateNumber');
-			$table->dateTime('createDate');
-			$table->dateTime('expiredDate');
 			$table->string('speciesType');
-			$table->string('scientificName');
 			$table->string('speciesName');
+			$table->string('scientificName');
 			$table->integer('unit');
-			$table->integer('amount');
-			$table->integer('value');
-			$table->string('arrivalCountry');
 			$table->string('source');
-			$table->integer('PPNumber');
-			$table->string('arrivalCheckpoint');
-			$table->dateTime('arrivalDate');
+			$table->integer('amount');
+			$table->integer('pp1ID');
 			$table->integer('userID');
 			$table->integer('requestID');
 			$table->timestamps();
