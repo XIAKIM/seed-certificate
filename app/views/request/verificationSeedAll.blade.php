@@ -77,7 +77,7 @@
         </div>
       </div>
     @endif
-
+    
     @if(count($pp10s) != 0)
       <div class="panel panel-default">
         <div class="panel-heading">
