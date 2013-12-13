@@ -19,7 +19,23 @@
   		  <td>
               <span class="label label-success">{{ Requests::find($pp1->requestID)->status }}</span>
           </td>
-		  <td></td>
+		    <td>
+          
+        </td>
+        @elseif(Requests::find($pp1->requestID)->status == 'Waiting for PP8 Request')
+        <td>
+              <span class="label label-success">{{ Requests::find($pp1->requestID)->status }}</span>
+          </td>
+      <td>
+        <a href="/initrequestpp8">request PP8</a>
+      </td>
+      @elseif(Requests::find($pp1->requestID)->status == 'Waiting for PP9 Request')
+        <td>
+              <span class="label label-success">{{ Requests::find($pp1->requestID)->status }}</span>
+          </td>
+      <td>
+        <a href="/initrequestpp9">request PP9</a>
+      </td>
         @elseif(Requests::find($pp1->requestID)->status == 'Denied')
           <td>
               <span class="label label-danger">{{ Requests::find($pp1->requestID)->status }}</span>
