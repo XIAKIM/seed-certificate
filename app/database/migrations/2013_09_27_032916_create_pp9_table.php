@@ -14,6 +14,7 @@ class CreatePp9Table extends Migration {
 	{
 		Schema::create('pp9', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('certificateType');
 			$table->string('speciesType');
 			$table->string('speciesName');
 			$table->string('scientificName');

@@ -38,6 +38,7 @@ class PP8Controller extends BaseController{
 				$pp8->speciesType = Input::get('speciesType');
 				$pp8->speciesName = Input::get('speciesName');
 				$pp8->scientificName = Input::get('scientificName');
+				$pp8->certificateType = 8;
 				$pp8->unit = Input::get('unit');
 				$pp8->source = Input::get('source');
 				$pp8->amount = Input::get('amount');

@@ -29,6 +29,7 @@ class PP9Controller extends BaseController{
 			if($validator->passes())
 			{
 				$pp9 = new PP9;
+				$pp8->certificateType = 9;
 				$pp9->speciesType = Input::get('speciesType');
 				$pp9->speciesName = Input::get('speciesName');
 				$pp9->scientificName = Input::get('scientificName');

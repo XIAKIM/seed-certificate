@@ -182,6 +182,26 @@ Route::any('/requestlist/pp2/information/{id}', [
 	'uses' => 'NewPageController@goToRequestInformationPP2Page'
 ]);
 
+Route::any('/requestlist/pp8/{id}', [
+	'as' => '/requestlist/pp8/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestPP8'
+]);
+
+Route::any('/requestlist/pp8/information/{id}', [
+	'as' => '/requestlist/pp8/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationPP8Page'
+]);
+
+Route::any('/requestlist/pp9/{id}', [
+	'as' => '/requestlist/pp9/{id}',
+	'uses' => 'NewPageController@goToVerificationRequestPP9'
+]);
+
+Route::any('/requestlist/pp9/information/{id}', [
+	'as' => '/requestlist/pp9/information/{id}',
+	'uses' => 'NewPageController@goToRequestInformationPP9Page'
+]);
+
 
 Route::any('/requestlist/pp10/{id}', [
 	'as' => '/requestlist/pp10/{id}',

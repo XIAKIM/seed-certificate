@@ -14,6 +14,7 @@ class CreatePp8Table extends Migration {
 	{
 		Schema::create('pp8', function(Blueprint $table) {
 			$table->increments('id');
+			$table->integer('certificateType');
 			$table->string('speciesType');
 			$table->string('speciesName');
 			$table->string('scientificName');

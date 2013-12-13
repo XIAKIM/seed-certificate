@@ -128,6 +128,18 @@ class NewPageController extends BaseController {
 		$this->layout->content = View::make('form.formpp2', compact('pp2'));
 	}
 
+	public function goToVerificationRequestPP8($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$documents = PP8::where('userID', '=', $id)->get();
+		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
+	}
+	
+	public function goToRequestInformationPP8Page($id)	{
+		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
+		$pp8 = PP8::find($id);
+		$this->layout->content = View::make('request.vertifyPP8', compact('pp8'));
+	}
+
 	public function goToVerificationRequestPP10($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');
 		$documents = PP10::where('userID', '=', $id)->get();
