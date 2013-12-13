@@ -7,10 +7,16 @@ class PP9Controller extends BaseController{
 	{
 		if(Auth::guest()) return Redirect::route('/');
 		$pp1 = PP1::where('certificateType', '=', 6)->where('userID', '=', Auth::user()->id)->first();
-		$request = Requests::find($pp1->requestID);
-		if($request->status != 'Waiting for PP9 Request') return Redirect::route('/');
-		Session::put('requestID', $request->id);
+		$requestCheck = Requests::find($pp1->requestID);
+		if($requestCheck->status != 'Waiting for PP8 Request') return Redirect::route('/');
 		Session::put('pp1ID', $pp1->id);
+		$request = new Requests;
+		$request->status = 'Waiting';
+		$request->userID = Session::get('userID');
+		$request->message = 'waiting';
+		$request->type = 'pp9';
+		$request->save();
+		Session::put('requestID', $request->id);
 		$this->layout->content = View::make('request.requestPP9');
 	}
 

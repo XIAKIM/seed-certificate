@@ -77,6 +77,54 @@
     </tr>
   @endforeach
 
+  @foreach($pp8s as $pp8)
+    <tr>
+        <td>PP2</td>
+        @if(Requests::find($pp8->requestID)->status == 'Approved')
+          <td>
+              <span class="label label-success">{{ Requests::find($pp8->requestID)->status }}</span>
+          </td>
+      <td></td>
+        @elseif(Requests::find($pp8->requestID)->status == 'Denied')
+          <td>
+              <span class="label label-danger">{{ Requests::find($pp8->requestID)->status }}</span>
+          </td>
+      <td>
+              <span class="label label-warning">{{ Requests::find($pp8->requestID)->message }}</span>
+      </td>
+        @else
+          <td>
+              <span class="label label-default">{{ Requests::find($pp8->requestID)->status }}</span>
+          </td>
+      <td></td>
+        @endif
+    </tr>
+  @endforeach
+
+  @foreach($pp9s as $pp9)
+    <tr>
+        <td>PP2</td>
+        @if(Requests::find($pp9->requestID)->status == 'Approved')
+          <td>
+              <span class="label label-success">{{ Requests::find($pp9->requestID)->status }}</span>
+          </td>
+      <td></td>
+        @elseif(Requests::find($pp9->requestID)->status == 'Denied')
+          <td>
+              <span class="label label-danger">{{ Requests::find($pp9->requestID)->status }}</span>
+          </td>
+      <td>
+              <span class="label label-warning">{{ Requests::find($pp9->requestID)->message }}</span>
+      </td>
+        @else
+          <td>
+              <span class="label label-default">{{ Requests::find($pp9->requestID)->status }}</span>
+          </td>
+      <td></td>
+        @endif
+    </tr>
+  @endforeach
+
   @foreach($pp10s as $pp10)
     <tr>
         <td>PP10</td>
