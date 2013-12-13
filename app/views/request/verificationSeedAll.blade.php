@@ -39,7 +39,6 @@
         </div>
       </div>
 	 @endif
-<<<<<<< 9526c92c3274afa40f5bacc868f6522c9babb43b
 
     @if(count($pp8s) != 0)
       <div class="panel panel-default">
@@ -78,10 +77,7 @@
         </div>
       </div>
     @endif
-
-=======
-
->>>>>>> 445e28bbc53c586c4d28212f5adce00cede7faf9
+    
     @if(count($pp10s) != 0)
       <div class="panel panel-default">
         <div class="panel-heading">

@@ -535,3 +535,24 @@ Route::any('/signature/pp7/{id}', [
 	'as' => '/signature/pp7/{id}',
 	'uses' => 'FormController@showPDFPP7'
 ]);
+
+
+
+
+
+
+Route::get('/report1', function() {
+	return View::make('report.report1');
+});
+Route::get('/report2', function() {
+	return View::make('report.report2');
+});
+Route::get('/report3', function() {
+	return View::make('report.report3');
+});
+Route::get('/report4', function() {
+	return View::make('report.report4');
+});
+Route::get('/report5', function() {
+	return View::make('report.report5');
+});
