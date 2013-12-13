@@ -11,6 +11,6 @@
 			Step 3 : Click "Request" button in approval page. (insert image)
 			</p>
 			<br><br>
-			<p><a class="btn btn-default" href="#" role="button">Back</a></p>
+			
 		</div>
 @stop

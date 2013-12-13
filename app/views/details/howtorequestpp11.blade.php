@@ -10,5 +10,5 @@
 			Step 3 : Fill in the reason for your substitution request in the box. (insert image)
 			</p>
 			<br><br>
-			<a class="btn btn-default" href="#" role="button">Back</a>
+			
 @stop

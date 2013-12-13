@@ -19,7 +19,5 @@
 			</div>
 		</div>
 		<hr><br>
-		<p>
-		<a class="btn btn-default" href="#" role="button">Back</a>
-		</p>
+		
 @stop

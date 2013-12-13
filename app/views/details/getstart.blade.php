@@ -12,5 +12,5 @@
 			<a class="btn btn-link" href="/howtogetcertification" role="button">How do I get my Certification from Officer</a>
 			</p>
 			<br><br>
-			<a class="btn btn-default" href="#" role="button">Back</a>	
+			
 @stop

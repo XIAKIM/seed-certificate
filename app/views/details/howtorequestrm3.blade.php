@@ -8,5 +8,5 @@
 			Step 2 : Choose analysis approach then click next. (insert image)
 			</p>
 			<br><br>
-			<a class="btn btn-default" href="#" role="button">Back</a>
+			
 @stop

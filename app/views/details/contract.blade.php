@@ -8,5 +8,5 @@
 			<h2>Department of Agriculture</h2>
 			<p class = "lead">www.doa.go.th</p>
 			<br><br>
-			<p><a class="btn btn-default" href="#" role="button">Back</a></p>
+			
 @stop

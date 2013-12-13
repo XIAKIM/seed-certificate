@@ -10,5 +10,5 @@
 			Step 3 : Fill in the company information at information page, after finished filling, click "Submit". (insert image)
 			</p>
 			<br><br>
-			<a class="btn btn-default" href="#" role="button">Back</a>
+			
 @stop

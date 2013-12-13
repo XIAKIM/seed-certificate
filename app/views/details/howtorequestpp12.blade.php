@@ -10,5 +10,5 @@
 			Step 3 : Fill in your new location information and the reason that you make request. (insert image)
 			</p>
 			<br><br>
-			<a class="btn btn-default" href="#" role="button">Back</a>
+			
 @stop

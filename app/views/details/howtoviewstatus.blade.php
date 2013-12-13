@@ -8,5 +8,5 @@
 			Step 2 : There are certifications that you made request in status page, its status is shown besides your request. (insert image)
 			</p>
 			<br><br>
-			<a class="btn btn-default" href="#" role="button">Back</a>
+			
 @stop

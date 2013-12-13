@@ -19,7 +19,5 @@
 				<a class="btn btn-link" href="/howtorequestpp12" role="button">How to request PP12</a><br>
 				<a class="btn btn-link" href="/requestrm3table" role="button">How to request RM3</a>
 			</p>
-			<p>
-				<a class="btn btn-default" href="#" role="button">Back</a>
-			</p>
+			
 @stop
