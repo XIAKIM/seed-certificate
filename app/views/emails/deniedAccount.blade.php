@@ -4,7 +4,8 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <h2>Bye</h2>
+        <h2>Your request has been deny !!!</h2>
+        <p>reason</p>
         <div>{{ $comment }}</div>
     </body>
 </html>
