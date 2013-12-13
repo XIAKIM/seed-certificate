@@ -8,15 +8,15 @@ class NewPageController extends BaseController {
 	}
 
 	public function goToAboutPage(){
-
+		$this->layout->content = View::make('/dabout');
 	}
 
 	public function goToDetailsPage(){
-
+		$this->layout->content = View::make('/getstart');
 	}
 
 	public function goToContactPage(){
-
+		$this->layout->content = View::make('/dcontract');
 	}
 
 	public function goToSignUpPage(){
