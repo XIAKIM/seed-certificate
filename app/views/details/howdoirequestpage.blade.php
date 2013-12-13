@@ -12,12 +12,12 @@
 			Step 4 : Click on the "Make Request" button to make the request.
 			</p>	
 			<p>
-				<a class="btn btn-link" href="#" role="button">How to request PP1</a><br>
-				<a class="btn btn-link" href="#" role="button">How to request PP2</a><br>
-				<a class="btn btn-link" href="#" role="button">How to request PP10</a><br>
-				<a class="btn btn-link" href="#" role="button">How to request PP11</a><br>
-				<a class="btn btn-link" href="#" role="button">How to request PP12</a><br>
-				<a class="btn btn-link" href="#" role="button">How to request RM3</a>
+				<a class="btn btn-link" href="/howtorequestpp1" role="button">How to request PP1</a><br>
+				<a class="btn btn-link" href="/howtorequestpp2" role="button">How to request PP2</a><br>
+				<a class="btn btn-link" href="/howtorequestpp10" role="button">How to request PP10</a><br>
+				<a class="btn btn-link" href="/howtorequestpp11" role="button">How to request PP11</a><br>
+				<a class="btn btn-link" href="/howtorequestpp12" role="button">How to request PP12</a><br>
+				<a class="btn btn-link" href="/requestrm3table" role="button">How to request RM3</a>
 			</p>
 			<p>
 				<a class="btn btn-default" href="#" role="button">Back</a>

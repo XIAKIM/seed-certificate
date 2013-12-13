@@ -271,27 +271,27 @@ Route::get('/howtorequestpp1', function() {
 	return View::make('details.howtorequestpp1');
 });
 
-Route::get('/howtorequestpp1', function() {
+Route::get('/howtorequestpp10', function() {
 	return View::make('details.howtorequestpp10');
 });
 
-Route::get('/howtorequestpp1', function() {
+Route::get('/howtorequestpp11', function() {
 	return View::make('details.howtorequestpp11');
 });
 
-Route::get('/howtorequestpp1', function() {
+Route::get('/howtorequestpp12', function() {
 	return View::make('details.howtorequestpp12');
 });
 
-Route::get('/howtorequestpp1', function() {
+Route::get('/howtorequestpp2', function() {
 	return View::make('details.howtorequestpp2');
 });
 
-Route::get('/howtorequestpp1', function() {
+Route::get('/howtorequestpp3', function() {
 	return View::make('details.howtorequestpp3');
 });
 
-Route::get('/howtorequestpp1', function() {
+Route::get('/howtoviewstatus', function() {
 	return View::make('details.howtoviewstatus');
 });
 
