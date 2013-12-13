@@ -73,21 +73,6 @@ Route::any('/', [
 	'uses' => 'NewPageController@goToHomePage'
 ]);
 
-Route::any('/about', [
-	'as' => '/about',
-	'uses' => 'NewPageController@goToAboutPage'
-]);
-
-Route::any('/details', [
-	'as' => '/details',
-	'uses' => 'NewPageController@goToDetailsPage'
-]);
-
-Route::any('/contact', [
-	'as' => '/contact',
-	'uses' => 'NewPageController@goToContactPage'
-]);
-
 Route::any('/signup', [
 	'as' => '/signup',
 	'uses' => 'NewPageController@goToSignUpPage'
@@ -239,11 +224,11 @@ Route::any('/requestlist/rm3/information/{id}', [
 	'uses' => 'NewPageController@goToRequestInformationRM3Page'
 ]);
 
-Route::get('/dabout', function() {
+Route::get('/about', function() {
 	return View::make('details.about');
 });
 
-Route::get('/dcontract', function() {
+Route::get('/contact', function() {
 	return View::make('details.contract');
 });
 

@@ -32,7 +32,7 @@
 							<a href="/afterlogin">Home</a>
 						</li>
 						<li>
-							<a href="/details">Details</a>
+							<a href="/getstart">Details</a>
 						</li>
 						<li>
 							<a href="/about">About</a>
@@ -105,9 +105,7 @@
 
 	<!-- content -->
 	<div class="container">
-		<div class="panel panel-default">
 			@yield('content')
-		</div>
 	
 	<!-- end content -->
 
