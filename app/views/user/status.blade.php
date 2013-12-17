@@ -79,7 +79,7 @@
 
   @foreach($pp8s as $pp8)
     <tr>
-        <td>PP2</td>
+        <td>PP8</td>
         @if(Requests::find($pp8->requestID)->status == 'Approved')
           <td>
               <span class="label label-success">{{ Requests::find($pp8->requestID)->status }}</span>
@@ -103,7 +103,7 @@
 
   @foreach($pp9s as $pp9)
     <tr>
-        <td>PP2</td>
+        <td>PP9</td>
         @if(Requests::find($pp9->requestID)->status == 'Approved')
           <td>
               <span class="label label-success">{{ Requests::find($pp9->requestID)->status }}</span>
@@ -175,7 +175,7 @@
 
   @foreach($pp12s as $pp12)
     <tr>
-        <td>PP2</td>
+        <td>PP12</td>
         @if(Requests::find($pp12->requestID)->status == 'Approved')
           <td>
               <span class="label label-success">{{ Requests::find($pp12->requestID)->status }}</span>

@@ -536,10 +536,15 @@ Route::any('/signature/pp7/{id}', [
 	'uses' => 'FormController@showPDFPP7'
 ]);
 
+Route::any('/signature', [
+	'as' => '/signature',
+	'uses' => 'NewPageController@goToFormPDF'
+]);
 
 
-
-
+Route::get('/report', function() {
+	return View::make('report.report');
+});
 
 Route::get('/report1', function() {
 	return View::make('report.report1');

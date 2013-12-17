@@ -39,30 +39,37 @@
         </tbody>
       </table>
 
+  <div class="row">
+      <div class="col-md-12">
+        @if(Requests::find($pp8->requestID)->status == 'Waiting')
+          {{ Form::open(["action" => ["PP8Controller@createCertificatePP8", $pp8->id]]) }}
+              {{ Form::submit('Verify', ["class" => "btn btn-success"])}}
+          {{ Form::close() }}
+        <button data-toggle="modal" href="#denySignup" type="button" class="btn btn-danger">Deny</button>
+          <!-- Modal -->
+          <div class="modal fade" id="denySignup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+               <!--  <div class="modal-header">
+                 -->  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                  <br>
+                  <h4 class="modal-title">Comment :</h4>
+                <!-- </div> -->
+                <div class="modal-body">
+                    {{ Form::open(["action" => ["PP8Controller@denyRequestPP8", $pp8->id]]) }}
+                      {{ Form::textarea('comment', null, ["rows" => "5", "cols" => "80"]) }}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      {{ Form::submit('Submit', ["class" => "btn btn-primary"])}}  
+                  {{ Form::close() }}
 
-<div class="btn-group">
-
-	<button type="button" class="btn btn-default">Verify</button>
-	<button data-toggle="modal" href="#vertifyPP8" type="button" class="btn btn-default">Deny</button>
-	<!-- Modal -->
-	<div class="modal fade" id="vertifyPP8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-	   <!--  <div class="modal-header">-->  
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-   				<br>
-			   	<h4 class="modal-title">Comment :</h4>
-   <!-- </div> -->
-				<div class="modal-body">
-					<textarea rows='5' cols="85"></textarea>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-					<button type="button" class="btn btn-primary">Submit</button>
-			   	</div>
-			</div><!-- /.modal-content -->
-		</div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-</div>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+        @endif
+      </div>
+    </div>
 
 @stop

@@ -31,8 +31,8 @@
           <div class="col-md-4">
             <div class="thumbnail">
               <div class="caption">
-                <h2>Accurate Veryfying</h2>
-                <p>Seed request veryfying by lab using data in database to compare with data that user sent to lab, if lab deny their request user can view comment from lab.</p>
+                <h2>Accurate Verifying</h2>
+                <p>Seed request verifying by lab using data in database to compare with data that user sent to lab, if lab deny their request user can view comment from lab.</p>
                 </div>
             </div>
           </div>

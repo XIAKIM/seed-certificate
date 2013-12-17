@@ -1,14 +1,14 @@
 @extends('index')
 @section('content')
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Year', 'Apporved', 'denied'],
-          ['2013',  7 , 3 ]     ]
+          ['2013',  7 , 3 ]     
         ]);
 
         var options = {

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/css/bootstrap.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('bootstrap/css/bootstrap-theme.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/style.css')}}">
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
 <body>
 	<!-- header -->
@@ -40,6 +41,25 @@
 						<li>
 							<a href="/contact">Contact us</a>
 						</li>
+						@if(Auth::guest())
+						@else
+							@if(Auth::user()->role == 'officer') 
+								<li>
+									<a href="/verification">Verification</a>
+								</li>
+								<li>
+									<a href="/report">Report</a>
+								</lia>
+							@elseif(Auth::user()->role == 'entrepreneur')
+								<li>
+									<a href="/allrequest">Request</a>
+								</li>
+							@elseif(Auth::user()->role == 'signature')
+								<li>
+									<a href="/signature">Print Report</a>
+								</li>
+							@endif
+						@endif
 
 					</ul>
 					

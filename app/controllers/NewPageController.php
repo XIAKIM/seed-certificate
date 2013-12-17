@@ -145,6 +145,12 @@ class NewPageController extends BaseController {
 		$documents = PP10::where('userID', '=', $id)->get();
 		$this->layout->content = View::make('request.verificationSeedPerson', compact('documents'));
 	}
+
+	public function goToFormPDF()	{
+		if(Auth::guest() || Auth::user()->role != "signature") return Redirect::route('/');
+		$documents = Certificate::all();
+		$this->layout->content = View::make('request.printForm', compact('documents'));
+	}
 	
 	public function goToRequestInformationPP10Page($id)	{
 		if(Auth::guest() || Auth::user()->role != "officer") return Redirect::route('/');

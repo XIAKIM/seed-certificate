@@ -1,7 +1,6 @@
 @extends('index')
 @section('content')
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
+     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
@@ -16,8 +15,8 @@
           ['PP8',  11       ],
           ['PP10',  5      ],
           ['PP11',  9      ],
-          ['PP12',  20     ]
-          ['RM3',  3       ],
+          ['PP12',  20     ],
+          ['RM3',  3       ]
         ]);
 
         var options = {
@@ -28,6 +27,6 @@
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
-  </script>
-  <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    </script>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
 @stop

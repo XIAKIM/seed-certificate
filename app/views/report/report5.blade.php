@@ -1,18 +1,18 @@
 @extends('index')
 @section('content')
 
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+   
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Year', 'Apporve',],
-          ['2013',  5     ]
+          ['Year', 'Apporve','denied'],
+          ['2013',  10 , 4    ]
         ]);
 
         var options = {
-          title: 'Total approved user per year',
+          title: 'Total approved / denied user per year',
           hAxis: {title: 'Year', titleTextStyle: {color: 'red'}}
         };
 
